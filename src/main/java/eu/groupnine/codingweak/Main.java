@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import eu.groupnine.codingweak.stockage.Student;
+
 import com.google.gson.Gson;
 
 public class Main extends Application {
@@ -34,5 +36,8 @@ public class Main extends Application {
         primaryStage.setTitle("CodingWeak");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        Student student = new Student(2,"szdc");
+        Student.init();
     }
 }
