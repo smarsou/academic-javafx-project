@@ -1,30 +1,49 @@
 @startuml
 
+class Main{
 
-class Main {
+}
+
+interface Observer{
+    +refresh()
+}
+
+abstract Observateur{
+    ArrayList<Observer> observers
+    +callObservers()
+}
+
+class Model{
+
+  SceneController sc
+  Stockage stockFromDisk
+  +generateStatsGlobal()
   
 }
 
-class Model {
-
-}
-
-class SceneController {
-afficher()
+class SceneController{
+    -Scene accueil
+    -Scene jouer
+    -Scene reglage
+    -Scene question
+    -Scene reponse
+    -Scene StatPartie
+    -Scene StatGlobale
++afficher()
 }
 
 class Stockage {
-loadListePile()
-loadPile(nomPile)
-save()
-
+- ArrayList<Pile> EnsembleDesPiles
+void load()
+void save()
+Pile getPile(String nom)
 }
 
 json JSON {
 
 }
 
-class VueStatGlobaleController {
+class VueStatGlobaleController implements Observer{
 
 }
 
@@ -32,7 +51,7 @@ object VueStatGlobale.fxml {
 
 }
 
-class VueStatPartieController {
+class VueStatPartieController implements Observer{
 
 }
 
@@ -40,7 +59,7 @@ object VueStatPartie.fxml {
 
 }
 
-class VueAccueilController {
+class VueAccueilController implements Observer{
 
 }
 
@@ -48,7 +67,7 @@ object VueAccueil.fxml {
 
 }
 
-class VueJouerController {
+class VueJouerController implements Observer{
 
 }
 
@@ -56,7 +75,7 @@ object VueJouer.fxml {
 
 }
 
-class VueReglageController {
+class VueReglageController implements Observer{
 
 }
 
@@ -64,7 +83,7 @@ object VueReglage.fxml {
 
 }
 
-class VueReponseController {
+class VueReponseController implements Observer{
 
 }
 
@@ -72,16 +91,42 @@ object VueReponse.fxml {
 
 }
 
-class VueQuestionController {
+class VueQuestionController implements Observer{
 
 }
+
+class Pile{
+    String nom
+    String description 
+    ArrayList<Cartes> cartes
+    Stats stats
+    +setNom()
+    +setDescription()
+}
+
+class Cartes{
+    String question
+    String réponse 
+}
+
+class Stats{
+    int cartesJouees
+    int cartesTrouvees
+    int cartesNonTrouvees
+    float cartesParMinutes
+    int tempsPasse
+}
+
 
 object VueQuestion.fxml {
 
 }
 
+Pile -down- "*" Cartes
+Pile -right- "1" Stats
 
 Main -up- Model
+Model -right-|> Observateur
 SceneController -up- Model
 Stockage -up- Model
 Stockage -- JSON

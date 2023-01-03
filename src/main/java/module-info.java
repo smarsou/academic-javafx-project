@@ -6,4 +6,5 @@ module eu.telecomnancy.visualcards {
 
     opens eu.groupnine.codingweak to javafx.fxml;
     exports eu.groupnine.codingweak;
+    
 }
