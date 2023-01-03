@@ -1,6 +1,4 @@
-package eu.groupnine.codingweak.controller;
-
-import eu.groupnine.codingweak.Model;
+package eu.groupnine.codingweak;
 
 public class VueReglageController implements Observer{
     Model model;

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class SceneController {
+    //Le scene controller permet de changer de Scene...
     private HashMap<String, Parent> sceneMap = new HashMap<>();
     private Scene main;
 

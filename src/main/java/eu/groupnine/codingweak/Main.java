@@ -1,6 +1,5 @@
 package eu.groupnine.codingweak;
 
-import eu.groupnine.codingweak.controller.VueAccueilController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,7 +24,7 @@ public class Main extends Application {
 
         SceneController sc = new SceneController();
         model.sc = sc;
-        Parent root = sc.addScene("Page", "Hello.fxml", new VueAccueilController(model));
+        Parent root = sc.addScene("Page", "accueil-view.fxml", new VueAccueilController(model));
 
         Scene scene = new Scene(root);
         sc.setMain(scene);

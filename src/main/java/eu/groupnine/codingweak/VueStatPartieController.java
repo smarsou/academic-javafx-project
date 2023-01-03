@@ -1,7 +1,4 @@
-package eu.groupnine.codingweak.controller;
-
-import eu.groupnine.codingweak.Model;
-import eu.groupnine.codingweak.Observer;
+package eu.groupnine.codingweak;
 
 public class VueStatPartieController implements Observer{
     Model model;
