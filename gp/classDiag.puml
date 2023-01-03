@@ -22,18 +22,16 @@ class Model{
 }
 
 class SceneController{
-    -Scene accueil
-    -Scene jouer
-    -Scene reglage
-    -Scene question
-    -Scene reponse
-    -Scene StatPartie
-    -Scene StatGlobale
-+afficher()
+    -HashMap<String, Parent> sceneMap
+    -Scene main
+    +setMain(Scene main)
+    +addScene(String name, String view, Object controller)
+    +afficherParent(String name)
+    +removeScene(String name)
 }
 
 class Stockage {
-- ArrayList<Pile> EnsembleDesPiles
++ HashMap<String,Pile> EnsembleDesPiles
 void load()
 void save()
 Pile getPile(String nom)
@@ -100,13 +98,13 @@ class Pile{
     String description 
     ArrayList<Cartes> cartes
     Stats stats
-    +setNom()
-    +setDescription()
+    +setNom(String nom)
+    +setDescription(String desc)
 }
 
 class Cartes{
     String question
-    String réponse 
+    String reponse 
 }
 
 class Stats{
@@ -131,17 +129,17 @@ SceneController -up- Model
 Stockage -up- Model
 Stockage -- JSON
 
-VueQuestionController -- Model
-VueReponseController -- Model
-VueStatGlobaleController -- Model
-VueStatPartieController -- Model
-VueAccueilController -- Model
-VueJouerController -- Model
-VueReglageController -- Model
+VueQuestionController --> Model
+VueReponseController --> Model
+VueStatGlobalController --> Model
+VueStatPartieController --> Model
+VueAccueilController --> Model
+VueJouerController --> Model
+VueReglageController --> Model
 
 VueQuestionController -up- VueQuestion.fxml
 VueReponseController -up- VueReponse.fxml
-VueStatGlobaleController -up- VueStatGlobale.fxml
+VueStatGlobalController -up- VueStatGlobale.fxml
 VueStatPartieController -up- VueStatPartie.fxml
 VueAccueilController -up- VueAccueil.fxml
 VueJouerController -up- VueJouer.fxml
