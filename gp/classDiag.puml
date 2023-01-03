@@ -31,7 +31,7 @@ class SceneController{
 }
 
 class Stockage {
-- ArrayList<Pile> EnsembleDesPiles
++ HashMap<String,Pile> EnsembleDesPiles
 void load()
 void save()
 Pile getPile(String nom)
@@ -129,17 +129,17 @@ SceneController -up- Model
 Stockage -up- Model
 Stockage -- JSON
 
-VueQuestionController -- Model
-VueReponseController -- Model
-VueStatGlobaleController -- Model
-VueStatPartieController -- Model
-VueAccueilController -- Model
-VueJouerController -- Model
-VueReglageController -- Model
+VueQuestionController --> Model
+VueReponseController --> Model
+VueStatGlobalController --> Model
+VueStatPartieController --> Model
+VueAccueilController --> Model
+VueJouerController --> Model
+VueReglageController --> Model
 
 VueQuestionController -up- VueQuestion.fxml
 VueReponseController -up- VueReponse.fxml
-VueStatGlobaleController -up- VueStatGlobale.fxml
+VueStatGlobalController -up- VueStatGlobale.fxml
 VueStatPartieController -up- VueStatPartie.fxml
 VueAccueilController -up- VueAccueil.fxml
 VueJouerController -up- VueJouer.fxml

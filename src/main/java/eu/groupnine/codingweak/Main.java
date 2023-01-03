@@ -1,5 +1,6 @@
 package eu.groupnine.codingweak;
 
+import eu.groupnine.codingweak.controller.VueAccueilController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,8 +15,20 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Hello.fxml"));
+        // Parent root = FXMLLoader.load(getClass().getResource("Hello.fxml"));
+        // Scene scene = new Scene(root);
+
+        // primaryStage.setTitle("CodingWeak");
+        // primaryStage.setScene(scene);
+        // primaryStage.show();
+        Model model = new Model();
+
+        SceneController sc = new SceneController();
+        model.sc = sc;
+        Parent root = sc.addScene("Page", "Hello.fxml", new VueAccueilController(model));
+
         Scene scene = new Scene(root);
+        sc.setMain(scene);
 
         primaryStage.setTitle("CodingWeak");
         primaryStage.setScene(scene);
