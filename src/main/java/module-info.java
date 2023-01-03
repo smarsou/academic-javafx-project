@@ -3,7 +3,7 @@ module eu.telecomnancy.visualcards {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
-
+    requires com.google.gson;
     opens eu.groupnine.codingweak to javafx.fxml;
     exports eu.groupnine.codingweak;
     
