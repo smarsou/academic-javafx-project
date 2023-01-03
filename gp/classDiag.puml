@@ -22,14 +22,12 @@ class Model{
 }
 
 class SceneController{
-    -Scene accueil
-    -Scene jouer
-    -Scene reglage
-    -Scene question
-    -Scene reponse
-    -Scene StatPartie
-    -Scene StatGlobale
-+afficher()
+    -HashMap<String, Parent> sceneMap
+    -Scene main
+    +setMain(Scene main)
+    +addScene(String name, String view, Object controller)
+    +afficherParent(String name)
+    +removeScene(String name)
 }
 
 class Stockage {
@@ -100,13 +98,13 @@ class Pile{
     String description 
     ArrayList<Cartes> cartes
     Stats stats
-    +setNom()
-    +setDescription()
+    +setNom(String nom)
+    +setDescription(String desc)
 }
 
 class Cartes{
     String question
-    String réponse 
+    String reponse 
 }
 
 class Stats{
