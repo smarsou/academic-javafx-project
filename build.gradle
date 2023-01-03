@@ -5,7 +5,7 @@ plugins {
     id 'org.beryx.jlink' version '2.24.1'
 }
 
-group 'eu.group9'
+group 'eu.telecomnancy'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'eu.group9.codingweak'
-    mainClass = 'eu.group9.codingweak.Main'
+    mainModule = 'eu.telecomnancy.visualcards'
+    mainClass = 'eu.telecomnancy.visualcards.Main'
 }
 
 javafx {

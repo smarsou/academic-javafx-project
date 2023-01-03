@@ -4,6 +4,6 @@ module eu.telecomnancy.visualcards {
 
     requires org.controlsfx.controls;
 
-    opens eu.group9.codingweak to javafx.fxml;
-    exports eu.group9.codingweak;
+    opens eu.telecomnancy.visualcards to javafx.fxml;
+    exports eu.telecomnancy.visualcards;
 }
