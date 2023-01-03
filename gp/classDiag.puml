@@ -1,0 +1,105 @@
+@startuml
+
+
+class Main {
+  
+}
+
+class Model {
+
+}
+
+class SceneController {
+afficher()
+}
+
+class Stockage {
+loadListePile()
+loadPile(nomPile)
+save()
+
+}
+
+json JSON {
+
+}
+
+class VueStatGlobaleController {
+
+}
+
+object VueStatGlobale.fxml {
+
+}
+
+class VueStatPartieController {
+
+}
+
+object VueStatPartie.fxml {
+
+}
+
+class VueAccueilController {
+
+}
+
+object VueAccueil.fxml {
+
+}
+
+class VueJouerController {
+
+}
+
+object VueJouer.fxml {
+
+}
+
+class VueReglageController {
+
+}
+
+object VueReglage.fxml {
+
+}
+
+class VueReponseController {
+
+}
+
+object VueReponse.fxml {
+
+}
+
+class VueQuestionController {
+
+}
+
+object VueQuestion.fxml {
+
+}
+
+
+Main -up- Model
+SceneController -up- Model
+Stockage -up- Model
+Stockage -- JSON
+
+VueQuestionController -- Model
+VueReponseController -- Model
+VueStatGlobaleController -- Model
+VueStatPartieController -- Model
+VueAccueilController -- Model
+VueJouerController -- Model
+VueReglageController -- Model
+
+VueQuestionController -up- VueQuestion.fxml
+VueReponseController -up- VueReponse.fxml
+VueStatGlobaleController -up- VueStatGlobale.fxml
+VueStatPartieController -up- VueStatPartie.fxml
+VueAccueilController -up- VueAccueil.fxml
+VueJouerController -up- VueJouer.fxml
+VueReglageController -up- VueReglage.fxml
+
+@enduml
