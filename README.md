@@ -11,3 +11,14 @@ Il se peut que vous rencontriez des problèmes. Voici quelques solutions :
 
 Cette configuration peut également être importer dans IntelliJ pour créer un projet fonctionnelle à partir de celle-ci. Pour cela, lors de la création de votre projet IntelliJ, il faut sélectionner le fichier `build.gradle` et non pas uniquement le répertoire du projet.
 
+# Conception DAY 1
+
+Aujourd'hui, nous avons fait une conception global de l'application. Nous avons dessiner les croquis de toutes les vues que l'on aimerais avoir, ainsi qu'un diagramme de classe.
+
+## Diagramme de classe
+
+Voir gp/classDiag.puml
+
+### Resultat DAY 1
+
+Le résultat est une projet Gradle fonctionnelle. Il affiche le menu principale et n'est pour l'instant pas intéractif. Nous avons sous-estimé le travail à faire.
