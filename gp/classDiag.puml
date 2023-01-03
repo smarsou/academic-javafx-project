@@ -1,0 +1,148 @@
+@startuml
+
+class Main{
+
+}
+
+interface Observer{
+    +refresh()
+}
+
+abstract Observateur{
+    ArrayList<Observer> observers
+    +callObservers()
+}
+
+class Model{
+
+  SceneController sc
+  Stockage stockFromDisk
+  +generateStatsGlobal()
+  
+}
+
+class SceneController{
+    -HashMap<String, Parent> sceneMap
+    -Scene main
+    +setMain(Scene main)
+    +addScene(String name, String view, Object controller)
+    +afficherParent(String name)
+    +removeScene(String name)
+}
+
+class Stockage {
++ HashMap<String,Pile> EnsembleDesPiles
+void load()
+void save()
+Pile getPile(String nom)
+}
+
+json JSON {
+
+}
+
+class VueStatGlobaleController implements Observer{
+
+}
+
+object VueStatGlobale.fxml {
+
+}
+
+class VueStatPartieController implements Observer{
+
+}
+
+object VueStatPartie.fxml {
+
+}
+
+class VueAccueilController implements Observer{
+
+}
+
+object VueAccueil.fxml {
+
+}
+
+class VueJouerController implements Observer{
+
+}
+
+object VueJouer.fxml {
+
+}
+
+class VueReglageController implements Observer{
+
+}
+
+object VueReglage.fxml {
+
+}
+
+class VueReponseController implements Observer{
+
+}
+
+object VueReponse.fxml {
+
+}
+
+class VueQuestionController implements Observer{
+
+}
+
+class Pile{
+    String nom
+    String description 
+    ArrayList<Cartes> cartes
+    Stats stats
+    +setNom(String nom)
+    +setDescription(String desc)
+}
+
+class Cartes{
+    String question
+    String reponse 
+}
+
+class Stats{
+    int cartesJouees
+    int cartesTrouvees
+    int cartesNonTrouvees
+    float cartesParMinutes
+    int tempsPasse
+}
+
+
+object VueQuestion.fxml {
+
+}
+
+Pile -down- "*" Cartes
+Pile -right- "1" Stats
+
+Main -up- Model
+Model -right-|> Observateur
+SceneController -up- Model
+Stockage -up- Model
+Stockage -- JSON
+
+VueQuestionController --> Model
+VueReponseController --> Model
+VueStatGlobalController --> Model
+VueStatPartieController --> Model
+VueAccueilController --> Model
+VueJouerController --> Model
+VueReglageController --> Model
+
+VueQuestionController -up- VueQuestion.fxml
+VueReponseController -up- VueReponse.fxml
+VueStatGlobalController -up- VueStatGlobale.fxml
+VueStatPartieController -up- VueStatPartie.fxml
+VueAccueilController -up- VueAccueil.fxml
+VueJouerController -up- VueJouer.fxml
+VueReglageController -up- VueReglage.fxml
+
+@enduml
