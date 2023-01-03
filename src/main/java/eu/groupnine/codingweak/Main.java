@@ -37,7 +37,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        Student student = new Student(2,"szdc");
-        Student.init();
+
     }
 }

@@ -70,3 +70,10 @@ public class Student {
         System.out.println("Students written to file");
     }
 }
+
+
+/*
+ * dans main:
+ *         Student student = new Student(2,"szdc");
+        Student.init();
+ */
