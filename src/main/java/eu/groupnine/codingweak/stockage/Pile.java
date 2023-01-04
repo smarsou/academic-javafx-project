@@ -20,6 +20,14 @@ public class Pile {
         this.description = desc;
     }
 
+    public String getNom(){
+        return this.nom;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
     public String getDescription() {
         return this.description;
     }

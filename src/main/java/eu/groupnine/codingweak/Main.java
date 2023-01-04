@@ -29,6 +29,8 @@ public class Main extends Application {
         SceneController sc = new SceneController();
         model.sc = sc;
         Parent root = sc.addScene("Page", "accueil-view.fxml", new VueAccueilController(model));
+        sc.addScene("Jeu", "VueQuestionReponse.fxml", new VueQuestionController(model));
+        //sc.addScene("Reglage", "VueReglage.fxml", new VueReglageController(model));
 
         Scene scene = new Scene(root);
         sc.setMain(scene);
