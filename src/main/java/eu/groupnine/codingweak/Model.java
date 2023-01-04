@@ -13,7 +13,7 @@ import eu.groupnine.codingweak.stockage.Stockage;
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
-    public long time;
+    public long time = 5;
 
 
     Stockage stockFromDisk;

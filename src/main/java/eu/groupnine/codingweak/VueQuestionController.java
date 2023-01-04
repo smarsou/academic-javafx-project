@@ -57,7 +57,7 @@ public class VueQuestionController implements Observer, Initializable {
     public void ShowAnswer() {
         
         int id = VueQuestionController.indexCourant;
-        System.out.println(id);
+        
         Carte c = this.model.PileCartes.get(id);
         System.out.println(c.getReponse());
         this.Reponse.setText(c.getReponse());
@@ -77,7 +77,7 @@ public class VueQuestionController implements Observer, Initializable {
 
         this.trouve.setDisable(false);
         this.pastrouve.setDisable(false);
-        this.brep.setDisable(true);
+        //this.brep.setDisable(true);
         
     }
     @FXML
@@ -85,7 +85,7 @@ public class VueQuestionController implements Observer, Initializable {
         //mettre à jour les stats
 
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()) {
+        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
             this.refresh();
 
@@ -97,7 +97,7 @@ public class VueQuestionController implements Observer, Initializable {
     public void NotFound() throws InterruptedException {
         //mettre à jour les stats
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()) {
+        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
             this.refresh();
 
