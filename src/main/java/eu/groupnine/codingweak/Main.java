@@ -38,6 +38,9 @@ public class Main extends Application {
         primaryStage.show();
 
         Stockage stockage = new Stockage();
+
+        stockage.load();
+
         stockage.init();
 
         stockage.save();
