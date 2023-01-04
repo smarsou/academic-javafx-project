@@ -1,9 +1,1 @@
-[
-  "Lundi",
-  "Mardi",
-  "Mercredi",
-  "Jeudi",
-  "Vendredi",
-  "Samedi",
-  "Dimanche"
-]
+"{\n  \"1\": \"new Employee(1l, , LocalDate.of(1990, 01, 01)\",\n  \"2\": \"new Employee(2l, , LocalDate.of(1990, 02, 01)\"\n}"

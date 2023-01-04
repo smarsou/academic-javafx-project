@@ -6,9 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import eu.groupnine.codingweak.stockage.Student;
-
 import com.google.gson.Gson;
+
+import eu.groupnine.codingweak.stockage.*;
 
 public class Main extends Application {
     public static void main(String[] args)
@@ -37,6 +37,10 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        Stockage stockage = new Stockage();
+        stockage.init();
 
+        stockage.save();
+        
     }
 }
