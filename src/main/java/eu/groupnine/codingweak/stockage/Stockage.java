@@ -20,8 +20,9 @@ import com.google.gson.JsonElement;
 import eu.groupnine.codingweak.stockage.Pile;
 
 
+
 public class Stockage {
-    public static HashMap<String,Pile> EnsembleDesPiles;
+    public HashMap<String,Pile> EnsembleDesPiles;
     
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();
@@ -36,8 +37,7 @@ public class Stockage {
         EnsembleDesPiles2.put("pile1",pile1);
         EnsembleDesPiles2.put("pile2",pile2);
         this.EnsembleDesPiles = EnsembleDesPiles2;
-
-
+    
     }
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
