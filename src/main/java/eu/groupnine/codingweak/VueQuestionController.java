@@ -37,8 +37,11 @@ public class VueQuestionController implements Observer, Initializable {
 
     private static int indexCourant = 0;
 
-    public void start(){
+    public void start() throws InterruptedException {
         System.out.println("Game started");
+        this.refresh();
+        Answer();
+        
     }
 
     public void initialize(URL location,ResourceBundle resouces) {
@@ -54,12 +57,13 @@ public class VueQuestionController implements Observer, Initializable {
     }
 
     @FXML
-    public void ShowAnswer() {
+    public void ShowAnswer() throws InterruptedException {
+        
         
         int id = VueQuestionController.indexCourant;
         
         Carte c = this.model.PileCartes.get(id);
-        System.out.println(c.getReponse());
+        //System.out.println(c.getReponse());
         this.Reponse.setText(c.getReponse());
 
         this.trouve.setText("TROUVE");
@@ -70,14 +74,15 @@ public class VueQuestionController implements Observer, Initializable {
 
     }
 
-    public void Answer() {
+    public void Answer() throws InterruptedException {
+        //Set Time
         int id = VueQuestionController.indexCourant;
         Carte c = this.model.PileCartes.get(id);
         this.Reponse.setText(c.getReponse());
 
         this.trouve.setDisable(false);
         this.pastrouve.setDisable(false);
-        //this.brep.setDisable(true);
+        this.brep.setDisable(true);
         
     }
     @FXML
@@ -88,6 +93,7 @@ public class VueQuestionController implements Observer, Initializable {
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
             this.refresh();
+            this.Answer();
 
         }
 
@@ -100,6 +106,7 @@ public class VueQuestionController implements Observer, Initializable {
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
             this.refresh();
+            this.Answer();
 
         }
         
@@ -115,8 +122,8 @@ public class VueQuestionController implements Observer, Initializable {
         this.Question.setText(card.getQuestion());
         this.brep.setDisable(false);
         //Set le temps
-        TimeUnit.SECONDS.sleep(this.model.time);
-        Answer();
+        
+        
         
     }
 }

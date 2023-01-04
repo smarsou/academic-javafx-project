@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 
 import java.util.HashMap;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class VueJouerController implements Observer{
     Model model;
@@ -35,7 +36,7 @@ public class VueJouerController implements Observer{
     public void choixOrdre(){
         
     }
-    public void choixJouer(){
+    public void choixJouer() throws InterruptedException{
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
     }
