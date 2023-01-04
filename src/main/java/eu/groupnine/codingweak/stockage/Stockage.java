@@ -37,8 +37,7 @@ public class Stockage {
         EnsembleDesPiles2.put("pile1",pile1);
         EnsembleDesPiles2.put("pile2",pile2);
         this.EnsembleDesPiles = EnsembleDesPiles2;
-
-
+    
     }
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
