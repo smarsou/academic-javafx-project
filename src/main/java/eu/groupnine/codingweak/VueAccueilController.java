@@ -3,19 +3,22 @@ package eu.groupnine.codingweak;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.GridPane;
 
+import java.net.URL;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 import java.util.Set;
 
-public class VueAccueilController implements Observer{
+public class VueAccueilController implements Observer, Initializable{
     
     Model model;
 
     @FXML
-    ListView<String> PileSpace = new ListView<>();
+    ListView<String> PileSpace;
 
     @FXML
     Button PlayButton;
@@ -24,12 +27,27 @@ public class VueAccueilController implements Observer{
     Button DeleteButton;
 
     @FXML
-    Button AddButton;
+    Button SeetingsButton;
 
+    @FXML
+    Button AddButton;
+    
+    
     public VueAccueilController(Model model){
         this.model = model;
-        chargePile();
     }
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        PlayButton.setDisable(true);
+        DeleteButton.setDisable(true);
+        SeetingsButton.setDisable(true);
+        chargePile();
+        
+    }
+    
+
 
     public void chargePile(){
         //Obtenir l'ensemble des clés du dictionnaire
@@ -54,16 +72,22 @@ public class VueAccueilController implements Observer{
     }
 
     public void Play(){
-        model.sc.afficherParent(null);
+        model.sc.afficherParent("Jeu");
     }
 
     public void Seetings(){
-        model.sc.afficherParent(null);
+        model.sc.afficherParent("Reglage");
     }
 
 
     public void addPile(){
         model.sc.afficherParent(null);
+    }
+
+    public void ActivateButton(){
+        PlayButton.setDisable(false);
+        DeleteButton.setDisable(false);
+        SeetingsButton.setDisable(false);
     }
     
 
@@ -71,5 +95,6 @@ public class VueAccueilController implements Observer{
     public void refresh(){
         model.callObservers();
     }
+
 
 }
