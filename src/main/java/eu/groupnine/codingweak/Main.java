@@ -37,13 +37,15 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        Stockage stockage = new Stockage();
 
-        stockage.load();
+        /* essais stockage louis */
+        // Stockage stockage = new Stockage();
 
-        // stockage.init();
+        // stockage.load();
 
-        stockage.save();
+        // // stockage.init();
+
+        // stockage.save();
         
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Pile {
     public String nom;
     private String description;
-    ArrayList<Carte> cartes;
+    public ArrayList<Carte> cartes;
     Stats stats;
     public Pile() {
         cartes = new ArrayList<>();
@@ -18,13 +18,5 @@ public class Pile {
 
     public void setDescription(String desc){
         this.description = desc;
-    }
-
-    public String getNom(){
-        return this.nom;
-    }
-
-    public String getDescription(){
-        return this.description;
     }
 }

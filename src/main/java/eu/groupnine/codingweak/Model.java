@@ -16,7 +16,17 @@ public class Model extends Observateur{
 
     
 
+    public void setCard(){
+        
+        Carte carte1 = new Carte(1,"question1","reponse1");
+        Carte carte2 = new Carte(2,"question1","reponse1");
+        Carte carte3 = new Carte(3,"question1","reponse1");
 
-
+        
+        this.PileCartes.add(carte1);
+        this.PileCartes.add(carte2);
+        this.PileCartes.add(carte3);
+        
+    }
     
 }
