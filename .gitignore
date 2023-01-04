@@ -4,9 +4,11 @@
 
 /.vscode
 
-/.bin
+/bin
 
 /build
 
 *.class
 *.bin
+
+/gradlew.bat
