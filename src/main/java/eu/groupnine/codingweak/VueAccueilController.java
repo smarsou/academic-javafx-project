@@ -8,6 +8,10 @@ public class VueAccueilController implements Observer{
         this.model = model;
     }
 
+    public void chargePile(){
+
+    }
+
     public void refresh(){
         
     }
