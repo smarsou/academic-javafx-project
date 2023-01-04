@@ -39,13 +39,11 @@ public class VueJouerController implements Observer{
     @FXML
     public void ShowAnswer() {
         int id = VueJouerController.indexCourant;
-        Pile c = this.model.jeuCourant.get(id);
-        this.Reponse.setText(null);
+        Carte c = this.model.PileCartes.get(id);
+        this.Reponse.setText(c.getReponse());
 
         trouve.setDisable(false);
         pastrouve.setDisable(false);
-
-
 
     }
     @FXML
@@ -74,7 +72,9 @@ public class VueJouerController implements Observer{
     public void refresh(){
         //choisir question et reponses dans pile
         int id = VueJouerController.indexCourant;
-        this.model
+        Carte card = this.model.PileCartes.get(id);
+        this.Question.setText(card.getQuestion());
+        
         
         
 
