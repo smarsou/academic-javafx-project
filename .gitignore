@@ -1,9 +1,12 @@
-.gradle/
+/.gradle
 
-.idea/
+/.idea
 
-.vscode/
+/.vscode
 
-.bin/
+/.bin
 
-build/
+/build
+
+*.class
+*.bin
