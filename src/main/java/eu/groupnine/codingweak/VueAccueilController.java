@@ -15,7 +15,7 @@ public class VueAccueilController implements Observer{
     Model model;
 
     @FXML
-    ListView<String> PileSpace;
+    ListView<String> PileSpace = new ListView<>();
 
     @FXML
     Button PlayButton;
@@ -33,8 +33,8 @@ public class VueAccueilController implements Observer{
 
     public void chargePile(){
         //Obtenir l'ensemble des clés du dictionnaire
+        Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
         
-        Set<String> pileNames = (Set<String>) model.stockFromDisk.EnsembleDesPiles;
         if (pileNames == null){
             return;
         }
@@ -43,7 +43,7 @@ public class VueAccueilController implements Observer{
             String NameDescription;
             String Name= model.stockFromDisk.EnsembleDesPiles.get(pileName).getNom();
             String Description= model.stockFromDisk.EnsembleDesPiles.get(pileName).getDescription();
-            NameDescription = Name + "   :  " + Description;
+            NameDescription = Name + " : " + Description;
             PileSpace.getItems().add(NameDescription);
         }
     }
@@ -53,7 +53,7 @@ public class VueAccueilController implements Observer{
     }
 
     public void Seetings(){
-        model.sc.afficherParent("Reglage");
+        model.sc.afficherParent(null);
     }
 
 

@@ -13,7 +13,7 @@ Cette configuration peut également être importer dans IntelliJ pour créer un 
 
 # Conception DAY 1
 
-Aujourd'hui, nous avons fait une conception global de l'application. Nous avons dessiner les croquis de toutes les vues que l'on aimerais avoir, ainsi qu'un diagramme de classe.
+Aujourd'hui, nous avons fait une conception globale de l'application. Nous avons dessiné les croquis de toutes les vues que l'on aimerais avoir, ainsi qu'un diagramme de classe. Nous nous sommes partagés le travail à pour la journée.
 
 ## Diagramme de classe
 
@@ -21,4 +21,9 @@ Voir gp/classDiag.puml
 
 ### Resultat DAY 1
 
-Le résultat est une projet Gradle fonctionnelle. Il affiche le menu principale et n'est pour l'instant pas intéractif. Nous avons sous-estimé le travail à faire.
+Le résultat est une projet Gradle fonctionnel. Il affiche le menu principal et n'est pour l'instant pas intéractif.
+
+# Conception DAY 2
+
+Aujourd'hui, nous avons commencé par nous partager le travail à faire dans la journée. Pour développer notre application de manière itérative, nous nous sommes organisés pour être capables de rendre une application exécutable à la fin de la journée. Nous commençons par nous partager le travail: nous allons travailler sur 3 vues aujourd'hui: la vue du "menu" et les vues du mode "apprentissage", et nous devons aussi avoir terminé le stockage et la récupération de données en utilisant le format .json.
+Beaucoup de problèmes liés au GitLab nous ralentissent durant notre travail, ce qui nous fait perdre du temps. On a fait attention à bien mettre en place le .gitignore gagner en efficacité.

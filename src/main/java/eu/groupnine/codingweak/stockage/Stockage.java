@@ -12,10 +12,12 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
+import java.lang.reflect.Type;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 
 import eu.groupnine.codingweak.stockage.Pile;
 
@@ -24,6 +26,10 @@ import eu.groupnine.codingweak.stockage.Pile;
 public class Stockage {
     public HashMap<String,Pile> EnsembleDesPiles;
     
+    public Stockage() throws FileNotFoundException, IOException{
+        // this.load();
+    }
+
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();
         Pile pile1 = new Pile();
@@ -37,6 +43,22 @@ public class Stockage {
         EnsembleDesPiles2.put("pile1",pile1);
         EnsembleDesPiles2.put("pile2",pile2);
         this.EnsembleDesPiles = EnsembleDesPiles2;
+
+        Carte carte1 = new Carte(1,"question1","reponse1");
+        Carte carte2 = new Carte(2,"question1","reponse1");
+        Carte carte3 = new Carte(3,"question1","reponse1");
+
+        ArrayList<Carte> cars = new ArrayList<Carte>();
+        cars.add(carte1);
+        cars.add(carte2);
+        cars.add(carte3);
+        pile1.cartes = cars;
+
+        ArrayList<Carte> cars2 = new ArrayList<Carte>();
+        cars2.add(carte1);
+        cars2.add(carte2);
+        cars2.add(carte3);
+        pile2.cartes = cars2;
     
     }
 
@@ -45,14 +67,13 @@ public class Stockage {
         String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
         Path path = Paths.get(fileName);
 
-
         try (Reader reader = Files.newBufferedReader(path);) {
 
             Gson gson = new Gson();
-            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, HashMap.class);
+            Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();  
+            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, fooType);
             this.EnsembleDesPiles = EnsembleDesPiles2;
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
-
         }
 
     }

@@ -69,5 +69,8 @@
          </children>
         </GridPane>
       <fx:include source="menu-view.fxml" />
+      <Button layoutX="263.0" layoutY="346.0" mnemonicParsing="false" text="Réponse" AnchorPane.bottomAnchor="30.0" />
+      <Button disable="true" layoutX="57.0" layoutY="346.0" mnemonicParsing="false" text="Trouvé" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" />
+      <Button disable="true" layoutX="457.0" layoutY="346.0" mnemonicParsing="false" text="Pas trouvé" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0" />
     </children>
 </AnchorPane>
