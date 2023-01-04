@@ -19,7 +19,7 @@ import com.google.gson.JsonElement;
 import eu.groupnine.codingweak.stockage.Pile;
 
 public class Stockage {
-    HashMap<String,Pile> EnsembleDesPiles;
+    public HashMap<String,Pile> EnsembleDesPiles;
     
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();

@@ -15,4 +15,12 @@ public class Pile {
     public void setDescription(String desc){
         this.description = desc;
     }
+
+    public String getNom(){
+        return this.nom;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
 }
