@@ -1,5 +1,8 @@
 package eu.groupnine.codingweak;
 
+import eu.groupnine.codingweak.stockage.Carte;
+import eu.groupnine.codingweak.stockage.Pile;
+import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -16,7 +19,7 @@ public class VueJouerController implements Observer{
 
     @FXML
     private ProgressBar bar;
-
+                                                               
     @FXML
     private Button trouve;
 
@@ -35,6 +38,9 @@ public class VueJouerController implements Observer{
 
     @FXML
     public void ShowAnswer() {
+        int id = VueJouerController.indexCourant;
+        Pile c = this.model.jeuCourant.get(id);
+        this.Reponse.setText(null);
 
         trouve.setDisable(false);
         pastrouve.setDisable(false);
@@ -62,9 +68,16 @@ public class VueJouerController implements Observer{
 
     }
 
+    
+
 
     public void refresh(){
         //choisir question et reponses dans pile
+        int id = VueJouerController.indexCourant;
+        this.model
+        
+        
+
         
         
     }
