@@ -37,16 +37,16 @@ public class VueQuestionController implements Observer, Initializable {
 
     private static int indexCourant = 0;
 
+    public void start(){
+        System.out.println("Game started");
+    }
+
     public void initialize(URL location,ResourceBundle resouces) {
         int id = VueQuestionController.indexCourant;
         Carte c = this.model.PileCartes.get(id);
         this.Question.setText(c.getQuestion());
         
     }
-
-    
-
-    
 
     public VueQuestionController(Model model){
         this.model = model;
@@ -106,8 +106,6 @@ public class VueQuestionController implements Observer, Initializable {
         
 
     }
-
-    
 
 
     public void refresh() throws InterruptedException {
