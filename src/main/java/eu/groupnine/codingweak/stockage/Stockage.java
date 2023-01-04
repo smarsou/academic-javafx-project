@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Reader;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -17,6 +18,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 
 import eu.groupnine.codingweak.stockage.Pile;
+import eu.groupnine.codingweak.stockage.Student;
+
 
 public class Stockage {
     public HashMap<String,Pile> EnsembleDesPiles;
@@ -39,15 +42,22 @@ public class Stockage {
     }
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
-    public void load(){
+    public void load() throws FileNotFoundException, IOException {
+        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
+        Path path = Paths.get(fileName);
+
+
+        try (Reader reader = Files.newBufferedReader(path);) {
+
+            Gson gson = new Gson();
+            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, HashMap.class);
+            // System.out.println(EnsembleDesPiles2.get("pile1").nom);
+
+        }
 
     }
     //Permet de mettre à jour les données stockées en dur par rapport à EnsembleDesPiles
     public void save() throws FileNotFoundException, IOException {
-        HashMap<Integer, String> employeeMap = new HashMap<>();
-
-        employeeMap.put(1, "new Employee(1l, , LocalDate.of(1990, 01, 01)");
-        employeeMap.put(2, "new Employee(2l, , LocalDate.of(1990, 02, 01)");
 
         String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
         Path path = Paths.get(fileName);
@@ -56,9 +66,7 @@ public class Stockage {
 
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-            String jsonString = gson.toJson(employeeMap);            
-            gson.toJson(jsonString, writer);
-            // gson.toJson(tree, writer);
+            gson.toJson(EnsembleDesPiles, writer);
 
         }
 

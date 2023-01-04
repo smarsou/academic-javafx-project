@@ -16,29 +16,49 @@ import com.google.gson.JsonElement;
 
 public class Student {
 
-    private long studentId;
-    private String studentName;
 
-    public Student(long studentId, String studentName) {
-        super();
-        this.studentId = studentId;
-        this.studentName = studentName;
+    public String firstName;
+    public String lastName;
+    public int age;
+    public String address;
+    public Student(String firstName, String lastName, int age, String address) {
+       super();
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.age = age;
+       this.address = address;
     }
-
-    public long getStudentId() {
-        return studentId;
+    public String getFirstName() {
+       return firstName;
     }
-
-    public void setStudentId(long studentId) {
-        this.studentId = studentId;
+    public void setFirstName(String firstName) {
+       this.firstName = firstName;
     }
-
-    public String getStudentName() {
-        return studentName;
+    public String getLastName() {
+       return lastName;
     }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setLastName(String lastName) {
+       this.lastName = lastName;
+    }
+    public int getAge() {
+       return age;
+    }
+    public void setAge(int age) {
+       this.age = age;
+    }
+    public String getAddress() {
+       return address;
+    }
+    public void setAddress(String address) {
+       this.address = address;
+    }
+    public String toString() {
+       return "Student[ " +
+                " firstName = " + firstName +
+                ", lastName = " + lastName +
+                ", age = " + age +
+                ", address = " + address +
+                " ]";
     }
 
 

@@ -6,5 +6,9 @@ module eu.telecomnancy.visualcards {
     requires com.google.gson;
     opens eu.groupnine.codingweak to javafx.fxml;
     exports eu.groupnine.codingweak;
+
+    exports eu.groupnine.codingweak.stockage;
+    opens eu.groupnine.codingweak.stockage;
+    
     
 }

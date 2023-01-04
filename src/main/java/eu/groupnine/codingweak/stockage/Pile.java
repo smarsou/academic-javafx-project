@@ -3,7 +3,7 @@ package eu.groupnine.codingweak.stockage;
 import java.util.ArrayList;
 
 public class Pile {
-    private String nom;
+    public String nom;
     private String description;
     ArrayList<Carte> cartes;
     Stats stats;

@@ -46,6 +46,22 @@ public class VueAccueilController implements Observer{
             PileSpace.getItems().add(NameDescription);
         }
     }
+
+    public void Play(){
+        
+    }
+
+    public void Seetings(){
+
+    }
+
+    public void delete(){
+
+    }
+
+    public void addPile(){
+        
+    }
     
 
 
