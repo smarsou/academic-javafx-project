@@ -53,10 +53,10 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="PlayButton" mnemonicParsing="false" text="Jouer" GridPane.halignment="CENTER" />
-                  <Button fx:id="SettingsButton" mnemonicParsing="false" text="Réglage" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                  <Button fx:id="DeleteButton" mnemonicParsing="false" text="Supprimer" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                  <Button fx:id="AddButton" mnemonicParsing="false" text="Ajouter" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                  <Button fx:id="PlayButton" onAction="#Play" mnemonicParsing="false" text="Jouer" GridPane.halignment="CENTER" />
+                  <Button fx:id="SettingsButton" onAction="Seetings" mnemonicParsing="false" text="Réglage" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Button fx:id="DeleteButton" onAction="refresh" mnemonicParsing="false" text="Supprimer" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Button fx:id="AddButton" onAction="addPile" mnemonicParsing="false" text="Ajouter" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
             <Label text="TN Flash Cards" GridPane.halignment="CENTER" />
