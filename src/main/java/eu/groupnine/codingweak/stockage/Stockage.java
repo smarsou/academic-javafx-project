@@ -18,11 +18,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 
 import eu.groupnine.codingweak.stockage.Pile;
-import eu.groupnine.codingweak.stockage.Student;
 
 
 public class Stockage {
-    HashMap<String,Pile> EnsembleDesPiles;
+    public static HashMap<String,Pile> EnsembleDesPiles;
     
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();
@@ -51,6 +50,7 @@ public class Stockage {
 
             Gson gson = new Gson();
             HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, HashMap.class);
+            this.EnsembleDesPiles = EnsembleDesPiles2;
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
 
         }

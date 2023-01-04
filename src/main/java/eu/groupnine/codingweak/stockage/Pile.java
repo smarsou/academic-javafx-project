@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Pile {
     public String nom;
-    private String description;
+    public String description;
     ArrayList<Carte> cartes;
     Stats stats;
 
