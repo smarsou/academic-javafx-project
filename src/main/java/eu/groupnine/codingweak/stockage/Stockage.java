@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class Stockage {
     HashMap<String,Pile> EnsembleDesPiles;
     
+    Pile pile = new Pile();
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
     public void load(){

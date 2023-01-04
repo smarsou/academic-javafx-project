@@ -1,1 +1,7 @@
-.gradle/7.4/fileHashes/*
+.gradle/
+
+.idea/
+
+.vscode/
+
+.bin/
