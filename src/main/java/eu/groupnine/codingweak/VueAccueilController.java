@@ -89,7 +89,7 @@ public class VueAccueilController implements Observer, Initializable{
 
 
     public void refresh(){
-        model.callObservers();
+        
     }
 
 
