@@ -31,8 +31,8 @@ public class Model extends Observateur{
         this.PileCartes = new ArrayList<>();
         
         Carte carte1 = new Carte(1,"question1","reponse1");
-        Carte carte2 = new Carte(2,"question1","reponse1");
-        Carte carte3 = new Carte(3,"question1","reponse1");
+        Carte carte2 = new Carte(2,"question2","reponse2");
+        Carte carte3 = new Carte(3,"question3","reponse3");
 
         
         this.PileCartes.add(carte1);
