@@ -15,7 +15,7 @@ public class VueAccueilController implements Observer{
     Model model;
 
     @FXML
-    ListView<String> PileSpace;
+    ListView<String> PileSpace = new ListView<>();
 
     @FXML
     Button PlayButton;
@@ -48,7 +48,7 @@ public class VueAccueilController implements Observer{
             String NameDescription;
             String Name= model.stockFromDisk.EnsembleDesPiles.get(pileName).getNom();
             String Description= model.stockFromDisk.EnsembleDesPiles.get(pileName).getDescription();
-            NameDescription = Name + "   :  " + Description;
+            NameDescription = Name + " : " + Description;
             PileSpace.getItems().add(NameDescription);
         }
     }

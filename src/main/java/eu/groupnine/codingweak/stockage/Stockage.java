@@ -12,10 +12,12 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
+import java.lang.reflect.Type;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 
 import eu.groupnine.codingweak.stockage.Pile;
 
@@ -65,14 +67,13 @@ public class Stockage {
         String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
         Path path = Paths.get(fileName);
 
-
         try (Reader reader = Files.newBufferedReader(path);) {
 
             Gson gson = new Gson();
-            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, HashMap.class);
+            Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();  
+            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, fooType);
             this.EnsembleDesPiles = EnsembleDesPiles2;
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
-
         }
 
     }
