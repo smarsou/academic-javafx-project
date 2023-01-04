@@ -26,17 +26,6 @@
             <Label text="Question ?" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Label text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Line endX="100.0" startX="-100.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <Button mnemonicParsing="false" text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button disable="true" mnemonicParsing="false" text="Trouvé" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="50.0" />
-               </GridPane.margin>
-            </Button>
-            <Button disable="true" mnemonicParsing="false" text="Pas trouvé" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets right="50.0" />
-               </GridPane.margin>
-            </Button>
             <GridPane prefHeight="79.0" prefWidth="600.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -69,5 +58,8 @@
          </children>
         </GridPane>
       <fx:include source="menu-view.fxml" />
+      <Button layoutX="263.0" layoutY="346.0" mnemonicParsing="false" text="Réponse" AnchorPane.bottomAnchor="30.0" />
+      <Button disable="true" layoutX="57.0" layoutY="346.0" mnemonicParsing="false" text="Trouvé" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" />
+      <Button disable="true" layoutX="457.0" layoutY="346.0" mnemonicParsing="false" text="Pas trouvé" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0" />
     </children>
 </AnchorPane>
