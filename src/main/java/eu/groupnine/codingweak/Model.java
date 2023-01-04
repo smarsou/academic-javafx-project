@@ -12,6 +12,7 @@ public class Model extends Observateur{
     SceneController sc;
     Stockage stockFromDisk;
     ArrayList<Carte> PileCartes;
+    public long time;
 
 
     

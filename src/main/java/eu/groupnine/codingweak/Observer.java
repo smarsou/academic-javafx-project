@@ -2,6 +2,6 @@ package eu.groupnine.codingweak;
 
 public interface Observer {
     
-    public void refresh();
+    public void refresh() throws InterruptedException;
 
 }

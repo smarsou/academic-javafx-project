@@ -62,7 +62,7 @@ public class VueAccueilController implements Observer{
     
 
 
-    public void refresh(){
+    public void refresh() throws InterruptedException{
         model.callObservers();
     }
 

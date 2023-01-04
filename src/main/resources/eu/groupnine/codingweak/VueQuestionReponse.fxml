@@ -23,16 +23,16 @@
                 <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
             </rowConstraints>
          <children>
-            <Label text="Question ?" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Label text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label fx:id="Question" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label fx:id="Reponse" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Line endX="100.0" startX="-100.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <Button mnemonicParsing="false" text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button disable="true" mnemonicParsing="false" text="Trouvé" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" text="Réponse" fx:id="brep" onaction="ShowAnswer" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button disable="true" mnemonicParsing="false" fx:id="trouve" onaction="Found" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="50.0" />
                </GridPane.margin>
             </Button>
-            <Button disable="true" mnemonicParsing="false" text="Pas trouvé" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <Button disable="true" mnemonicParsing="false" fx:id="pastrouve" onaction="NotFound" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>
