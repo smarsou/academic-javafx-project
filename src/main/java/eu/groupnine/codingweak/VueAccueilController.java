@@ -49,7 +49,8 @@ public class VueAccueilController implements Observer{
     }
 
     public void Play(){
-        model.sc.afficherParent("Jeu");
+        model.sc.afficherParent("Jouer");
+        // model.sc.callFunctFromController("startQuestion");
     }
 
     public void Seetings(){
@@ -60,8 +61,6 @@ public class VueAccueilController implements Observer{
     public void addPile(){
         model.sc.afficherParent(null);
     }
-    
-
 
     public void refresh() throws InterruptedException{
         model.callObservers();
