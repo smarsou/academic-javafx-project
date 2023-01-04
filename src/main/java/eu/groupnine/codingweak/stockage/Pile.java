@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Pile {
     public String nom;
     private String description;
-    ArrayList<Carte> cartes;
+    public ArrayList<Carte> cartes;
     Stats stats;
 
     public void setNom(String nom){
