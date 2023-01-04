@@ -48,25 +48,22 @@ public class VueAccueilController implements Observer{
     }
 
     public void Play(){
-        
+        model.sc.afficherParent(null);
     }
 
     public void Seetings(){
-
+        model.sc.afficherParent(null);
     }
 
-    public void delete(){
-
-    }
 
     public void addPile(){
-        
+        model.sc.afficherParent(null);
     }
     
 
 
     public void refresh(){
-        
+        model.callObservers();
     }
 
 }
