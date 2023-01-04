@@ -18,16 +18,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 
 import eu.groupnine.codingweak.stockage.Pile;
-import eu.groupnine.codingweak.stockage.Student;
 
 
 
 public class Stockage {
-<<<<<<< HEAD
     public HashMap<String,Pile> EnsembleDesPiles;
-=======
-    public static HashMap<String,Pile> EnsembleDesPiles;
->>>>>>> a85c0db14b65f4c7b74713734520145b22733afd
     
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();
