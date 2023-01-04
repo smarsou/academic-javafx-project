@@ -1,5 +1,7 @@
 package eu.groupnine.codingweak;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import eu.groupnine.codingweak.stockage.Carte;
@@ -8,7 +10,13 @@ import eu.groupnine.codingweak.stockage.Stockage;
 
 public class Model extends Observateur{
     SceneController sc;
-    Stockage stockFromDisk = new Stockage();
+    Stockage stockFromDisk;
+
+    public Model() throws FileNotFoundException, IOException{
+        stockFromDisk = new Stockage();
+        stockFromDisk.load();
+    }
+    
 
     public void exemple(){
         Pile pile1 = new Pile();

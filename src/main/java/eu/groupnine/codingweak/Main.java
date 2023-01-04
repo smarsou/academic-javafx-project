@@ -45,7 +45,7 @@ public class Main extends Application {
 
         // stockage.load();
 
-        // // stockage.init();
+        // stockage.init();
 
         // stockage.save();
         

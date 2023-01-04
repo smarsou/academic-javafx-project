@@ -33,7 +33,13 @@ public class VueAccueilController implements Observer{
 
     public void chargePile(){
         //Obtenir l'ensemble des clés du dictionnaire
-        Set<String> pileNames = (Set<String>) model.stockFromDisk.EnsembleDesPiles;
+        Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
+        // for (Map.Entry<String, Pile> pileSet : model.stockFromDisk.EnsembleDesPiles.entrySet()) {
+        //     String NameDescription;
+        //     String Name= model.stockFromDisk.EnsembleDesPiles.get(pileSet.getKey()).getNom();
+        //     String Description= model.stockFromDisk.EnsembleDesPiles.get(pileSet.getValue()).getDescription();
+        //     NameDescription = Name + "   :  " + Description;
+        //     PileSpace.getItems().add(NameDescription);
         if (pileNames == null){
             return;
         }
@@ -48,11 +54,11 @@ public class VueAccueilController implements Observer{
     }
 
     public void Play(){
-        model.sc.afficherParent("Jeu");
+        model.sc.afficherParent(null);
     }
 
     public void Seetings(){
-        model.sc.afficherParent("Reglage");
+        model.sc.afficherParent(null);
     }
 
 
