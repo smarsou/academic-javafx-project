@@ -1,0 +1,322 @@
+[33mcommit a85c0db14b65f4c7b74713734520145b22733afd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 11:58:53 2023 +0100
+
+    cleaning
+
+[33mcommit cace23a807bc105b17be82f55906524fc9dc610e[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 11:48:10 2023 +0100
+
+    data save json en mieux
+
+[33mcommit 305e77b809d545788847eade170b12106e748941[m
+Merge: b26d90b 4984e94
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 11:21:17 2023 +0100
+
+    Merge
+
+[33mcommit b26d90b14a355915b40446635c93f04725e99851[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 11:13:52 2023 +0100
+
+    stockage json
+
+[33mcommit 4984e94fac982efd92fc12db511dab17530332bd[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:58:01 2023 +0100
+
+    clean repo
+
+[33mcommit e64e6df8253593bf9d77d3212e681799a00cd8f6[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:55:31 2023 +0100
+
+    gitignore
+
+[33mcommit 9931c7e03fc2c98beb51a6c124161c3e688f9035[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:52:54 2023 +0100
+
+    GIT REP CLEANED
+
+[33mcommit 430103649709a1296a92aeca2ba00831515e58fa[m
+Merge: f2426f9 32f0d0c
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:46:19 2023 +0100
+
+    Merge et BackUp...
+
+[33mcommit f2426f9fd198a3842a907553b78647b6bb17477b[m[33m ([m[1;31morigin/soulaiman[m[33m)[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:35:57 2023 +0100
+
+    BackUp du commit ff7acb4
+
+[33mcommit 32f0d0c28c5e245b9781d441e9d2cc21d3cfbe79[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 10:27:48 2023 +0100
+
+    Revert "Vue question reponse terminé"
+    
+    This reverts commit ff7acb4
+
+[33mcommit bc9c65f2acaf7642de410ff8ff339aee6be3c991[m
+Merge: df5b973 70f13c5
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 10:06:26 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit df5b9735c6d576a31c625b36a743e37a93f2d051[m
+Merge: ef1d366 ff7acb4
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 10:05:40 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit ef1d366c9a70777a4a01cb6670999be85542bfd6[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Wed Jan 4 10:00:43 2023 +0100
+
+    fonction save
+
+[33mcommit 70f13c5fdf74672b95c1f3cfa9ffecb2758f0bcd[m
+Merge: 2de77b3 ff7acb4
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Wed Jan 4 09:59:53 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 2de77b3098a60af971466df779f70f7085c48c03[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Wed Jan 4 09:41:33 2023 +0100
+
+    gitignore
+
+[33mcommit ff7acb4eeafe6f51461e12d00de1a84370a98b19[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 09:38:33 2023 +0100
+
+    Vue question reponse terminé
+
+[33mcommit 37a6be8f54ca676e42aaa1ec68224ad2cbbfcd34[m
+Merge: cc49c86 568c3af
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Wed Jan 4 09:24:24 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit cc49c8683ab21687480ac4f35cc36992bcafdfda[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Wed Jan 4 09:23:42 2023 +0100
+
+    page accueil
+
+[33mcommit 568c3afef86beefc868b13c9cf9aeeaedf733817[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 09:14:04 2023 +0100
+
+    Mise à jour du gitignore
+
+[33mcommit fe8688d72e852391d15f4663c97dd4ddb873959c[m
+Merge: c79f8f3 6dc0288
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 09:13:31 2023 +0100
+
+    je sais pas ce que je fait
+
+[33mcommit c79f8f36eb3e3f3d600e54688a84b5cacaa8082b[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Wed Jan 4 09:09:45 2023 +0100
+
+    Changement du gitignore
+
+[33mcommit 6dc0288a14583e5905e2364f7de734d5b280b779[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Wed Jan 4 09:03:46 2023 +0100
+
+    menubar
+
+[33mcommit 7f134be5c4afce9fe03af9a502701866c53182e2[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Tue Jan 3 19:22:03 2023 +0100
+
+    mise en place json+
+
+[33mcommit 8ce2c12b3d0964a9a555e70a6bbfabb9b4a96065[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Tue Jan 3 19:20:56 2023 +0100
+
+    mise en place json
+
+[33mcommit dacb9244086969e51fe3acdd6eaefdf67cd18896[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Tue Jan 3 19:06:55 2023 +0100
+
+    json dependencies configurées
+
+[33mcommit 1eba226d0a3ca59da599589268f8a269a415c1ac[m
+Merge: 162f12c 4bf151f
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 18:26:39 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 162f12cda128b196719fc6c3e27a824d90655721[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 18:26:32 2023 +0100
+
+    Mise à jour du README
+
+[33mcommit 4bf151f370c97280256f49620350e34119cd0edb[m
+Merge: e8def6d 4eca00c
+Author: Yohou Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 18:13:52 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit e8def6d813ae1a410a6e8527587a31e22495a341[m
+Author: Yohou Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 18:13:13 2023 +0100
+
+    VueReglage
+
+[33mcommit 4eca00ce15c33962c6cf0769a339f519faaa67da[m[33m ([m[1;33mtag: RELEASE_DAY_1[m[33m)[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 18:07:30 2023 +0100
+
+    Day 1 Finish
+
+[33mcommit aa55965f05776e4798d9bffe53a1b943f2be84e9[m
+Merge: 59e097f 80354ff
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 18:01:29 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 59e097fcc690db7a2fa24ee1c305035ed0b745be[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 18:00:20 2023 +0100
+
+    vue accueil
+
+[33mcommit 80354ff0e503ca2e140094fea0364720dd5f0376[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 17:53:00 2023 +0100
+
+    Ajout des fichiers + Mise à jour du diagrammde de classe
+
+[33mcommit 54d0b06e03c4609e5d55d56cce1e467a97ba9e5f[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 17:28:15 2023 +0100
+
+    Mise à jour Diagramme
+
+[33mcommit a78315aee8bc4994dd196a45456efddd5db74967[m
+Merge: c466ab5 68c2963
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 16:32:36 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit c466ab550cb54001652ea14b25a5aa286ed8a74c[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 16:27:56 2023 +0100
+
+    Diagramme de classe
+
+[33mcommit 68c2963d6219a2d20207fa597b73cea729c9694b[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Tue Jan 3 16:03:50 2023 +0100
+
+    readme
+
+[33mcommit e52ebf84fc4edc6b7638ca5074b361a5383c5eef[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Tue Jan 3 15:56:12 2023 +0100
+
+    gestion projet + readme
+
+[33mcommit 97d566e7cce4c8dba81f4f88bf8a5dce2dd8ad6a[m[33m ([m[1;31morigin/louis[m[33m)[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 15:34:20 2023 +0100
+
+    Add gitignore
+
+[33mcommit 2fb8114e057340c037404a9f05569ffbb4e3d151[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 15:32:37 2023 +0100
+
+    INIT V°2
+
+[33mcommit 22329065f4b4fdbbd0a00f601cf33e6281c76f6a[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 14:22:38 2023 +0100
+
+    Rénitialisation
+
+[33mcommit 11aa4b04d36c92c4cc1ea7b73cdd9d116611d972[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 14:15:25 2023 +0100
+
+    INIT PROJECT
+
+[33mcommit 31fd8201ca410abb8174c93d46330bae02480ecc[m
+Merge: 6fd09d5 a230c2c
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 13:38:01 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 6fd09d5588a176245e6675c4a8f9532d948918a3[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Tue Jan 3 13:37:05 2023 +0100
+
+    Rénitialisation
+
+[33mcommit a230c2cd675fe28f811491e383625734e9713656[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 13:37:01 2023 +0100
+
+    restore
+
+[33mcommit 73fa8e002c5addb7e322b399e10f47ef3e3fc32c[m
+Merge: 690227e 443ee19
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 13:30:02 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 690227e92deaf58673152310ab68019991340faf[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 13:28:59 2023 +0100
+
+    Revert "initialisation"
+    
+    This reverts commit 5f7c41f92faee665952f62ea67bc3326b246cb5c.
+
+[33mcommit 443ee192a3db878e0974f9cdab61fd8cfcab9b37[m
+Author: Yohou Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Tue Jan 3 13:26:46 2023 +0100
+
+    Restore
+
+[33mcommit 497284c0811437712d131f8fe57c5dbf4764bb55[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 11:49:07 2023 +0100
+
+    dernier commit supprimer
+
+[33mcommit 61b983f72740792f4c3ea3598192a71501a1aa2f[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 09:47:57 2023 +0100
+
+    initialisation
+
+[33mcommit 5f7c41f92faee665952f62ea67bc3326b246cb5c[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Tue Jan 3 09:30:01 2023 +0100
+
+    initialisation
