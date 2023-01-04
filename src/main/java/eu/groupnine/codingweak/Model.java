@@ -10,14 +10,17 @@ import eu.groupnine.codingweak.stockage.Stockage;
 
 public class Model extends Observateur{
     SceneController sc;
-    Stockage stockFromDisk;
+    Stockage stockFromDisk = new Stockage();
     ArrayList<Carte> PileCartes;
     public long time;
+
+
 
 
     
 
     public void setCard(){
+        this.PileCartes = new ArrayList<>();
         
         Carte carte1 = new Carte(1,"question1","reponse1");
         Carte carte2 = new Carte(2,"question1","reponse1");
