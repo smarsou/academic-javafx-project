@@ -22,7 +22,7 @@
             </children>
         </VBox>
         <Label layoutX="54.0" layoutY="257.0" prefHeight="27.0" prefWidth="170.0" text="Modification des cartes" />
-        <Button layoutX="760.0" layoutY="133.0" mnemonicParsing="false" onAction="#Register" text="Register" />
+        <Button layoutX="760.0" layoutY="133.0" mnemonicParsing="false"  text="Register" />
         <TableView fx:id="Table" layoutX="546.0" layoutY="293.0" prefHeight="245.0" prefWidth="338.0">
             <columns>
                 <TableColumn fx:id="idCartes" prefWidth="115.0" text="IdCartes" />
@@ -40,8 +40,8 @@
         </VBox>
         <Label layoutX="54.0" layoutY="293.0" prefHeight="21.0" prefWidth="65.0" text="IdCartes" />
         <TextField disable="true" layoutX="54.0" layoutY="322.0" prefHeight="40.0" prefWidth="187.0" />
-        <Button layoutX="54.0" layoutY="612.0" mnemonicParsing="false" onAction="#Modifier" text="Modifier" />
-        <Button layoutX="209.0" layoutY="612.0" mnemonicParsing="false" onAction="#Creer" prefHeight="31.0" prefWidth="89.0" text="Creer" />
+        <Button layoutX="54.0" layoutY="612.0" mnemonicParsing="false" text="Modifier" />
+        <Button layoutX="209.0" layoutY="612.0" mnemonicParsing="false"  prefHeight="31.0" prefWidth="89.0" text="Creer" />
         <Label fx:id="nbCartes" layoutX="754.0" layoutY="612.0" prefHeight="31.0" prefWidth="89.0" />
     </children>
 </AnchorPane>
