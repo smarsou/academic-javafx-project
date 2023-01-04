@@ -7,6 +7,10 @@ public class Pile {
     private String description;
     public ArrayList<Carte> cartes;
     Stats stats;
+    public Pile() {
+        cartes = new ArrayList<>();
+
+    }
 
     public void setNom(String nom){
         this.nom = nom;
@@ -23,6 +27,5 @@ public class Pile {
     public String getDescription(){
         return this.description;
     }
-
 
 }

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <GridPane layoutX="2.0" layoutY="26.0" prefHeight="378.0" prefWidth="600.0">
             <columnConstraints>
@@ -23,20 +23,9 @@
                 <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
             </rowConstraints>
          <children>
-            <Label text="Question ?" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Label text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label fx:id="Question" prefHeight="33.0" prefWidth="155.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label fx:id="Reponse" prefHeight="25.0" prefWidth="175.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Line endX="100.0" startX="-100.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <Button mnemonicParsing="false" text="Réponse" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button disable="true" mnemonicParsing="false" text="Trouvé" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="50.0" />
-               </GridPane.margin>
-            </Button>
-            <Button disable="true" mnemonicParsing="false" text="Pas trouvé" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets right="50.0" />
-               </GridPane.margin>
-            </Button>
             <GridPane prefHeight="79.0" prefWidth="600.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -69,5 +58,8 @@
          </children>
         </GridPane>
       <fx:include source="menu-view.fxml" />
+      <Button fx:id="trouve" mnemonicParsing="false" onAction="#Found" text="Trouvé" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="pastrouve" mnemonicParsing="false" onAction="#NotFound" text="Pas trouvé" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <Button fx:id="brep" mnemonicParsing="false" onAction="#ShowAnswer" text="Réponse" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="275.0" />
     </children>
 </AnchorPane>
