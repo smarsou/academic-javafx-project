@@ -49,8 +49,8 @@ public class VueAccueilController implements Observer{
     }
 
     public void Play(){
-        model.sc.afficherParent("Jeu");
-        model.sc.callFunctFromController("startQuestion");
+        model.sc.afficherParent("Jouer");
+        // model.sc.callFunctFromController("startQuestion");
     }
 
     public void Seetings(){
