@@ -31,6 +31,8 @@ public class VueAccueilController implements Observer, Initializable{
 
     @FXML
     Button AddButton;
+
+    
     
     
     public VueAccueilController(Model model){
@@ -81,9 +83,11 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
     public void ActivateButton(){
-        PlayButton.setDisable(false);
-        DeleteButton.setDisable(false);
-        SeetingsButton.setDisable(false);
+        if(PileSpace.getSelectionModel().getSelectedIndex() >= 0){
+            PlayButton.setDisable(false);
+            DeleteButton.setDisable(false);
+            SeetingsButton.setDisable(false);
+        }
     }
     
 
