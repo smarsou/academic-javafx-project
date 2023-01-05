@@ -42,6 +42,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        PileSpace.getItems().clear();
         PlayButton.setDisable(true);
         DeleteButton.setDisable(true);
         SeetingsButton.setDisable(true);
@@ -102,11 +103,17 @@ public class VueAccueilController implements Observer, Initializable{
                 i++;
             }
     }
+
+    public void DeletePile() throws InterruptedException{
+        model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
+        initialize(null, null);
+    }
     
 
 
-    public void refresh(){
-        
+    public void refresh() throws InterruptedException{
+        model.callObservers();
+        initialize(null, null);
     }
 
 
