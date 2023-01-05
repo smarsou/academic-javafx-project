@@ -104,7 +104,11 @@ public class VueAccueilController implements Observer, Initializable{
             }
     }
 
-
+    public void DeletePile() throws InterruptedException{
+        model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
+        initialize(null, null);
+        model.callObservers();
+    }
 
     public void refresh() throws InterruptedException{
         initialize(null, null);
