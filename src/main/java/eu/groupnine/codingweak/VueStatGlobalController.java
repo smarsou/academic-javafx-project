@@ -30,7 +30,7 @@ public class VueStatGlobalController implements Observer, Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         AreaOfPiles.getItems().clear();
-        // chargeOfPiles();
+        chargeOfPiles();
     }
     
     public void chargeOfPiles(){
