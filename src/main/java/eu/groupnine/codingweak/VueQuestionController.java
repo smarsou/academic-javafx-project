@@ -116,8 +116,7 @@ public class VueQuestionController implements Observer {
 
 
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
-            VueQuestionController.indexCourant++;
+        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
@@ -138,8 +137,7 @@ public class VueQuestionController implements Observer {
         this.model.currentStats.cartesNonTrouvees++;
         
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
-            VueQuestionController.indexCourant++;
+        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
