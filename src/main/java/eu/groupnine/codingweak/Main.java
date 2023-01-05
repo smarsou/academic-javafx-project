@@ -47,13 +47,13 @@ public class Main extends Application {
 
 
         /* essais stockage louis */
-        // Stockage stockage = new Stockage();
+        Stockage stockage = new Stockage();
 
-        // stockage.load();
+        stockage.load();
 
-        // stockage.init();
+        stockage.init();
 
-        // stockage.save();
+        stockage.save();
         
     }
 }
