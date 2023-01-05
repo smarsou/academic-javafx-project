@@ -105,8 +105,8 @@ public class VueAccueilController implements Observer, Initializable{
     
 
 
-    public void refresh() throws InterruptedException{
-        model.callObservers();
+    public void refresh(){
+        
     }
 
 
