@@ -1,4 +1,4 @@
-Notre projet de Coding Week
+# Notre projet de Coding Week
 
 ## Installation
 
