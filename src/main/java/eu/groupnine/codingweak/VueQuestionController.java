@@ -48,6 +48,7 @@ public class VueQuestionController implements Observer {
     private static int indexCourant = 0;
 
     public void start()  {
+        this.model.setCard();
         System.out.println("Game started");
         this.refresh();
         Answer();
@@ -64,7 +65,7 @@ public class VueQuestionController implements Observer {
 
     public VueQuestionController(Model model){
         this.model = model;
-        this.model.setCard();
+        // this.model.setCard();
         
     }
 

@@ -17,7 +17,7 @@ public class Model extends Observateur{
     String keyClicked;
     public long time = 5;
 
-    public int tempsPile;
+    public long tempsPile;
     public Boolean ordrePile; /* true = ordre direct, false = ordre aléatoire  */
     public int frequencePile;
     public Boolean smartModePile; /* true = activé, false = desactivé  */
@@ -30,24 +30,35 @@ public class Model extends Observateur{
         super();
         stockFromDisk = new Stockage();
         stockFromDisk.load();
+
     }
+
+    public Pile getCurrentPile(){
+        return Stockage.EnsembleDesPiles.get(keyClicked);
+    }
+
+
 
     public void setStast(){
         currentStats.cartesTrouvees= 15;
         currentStats.cartesNonTrouvees=8;
     }
-    public void setCard(){
-        this.PileCartes = new ArrayList<>();
+    // public void setCard(){
+    //     this.PileCartes = new ArrayList<>();
         
-        Carte carte1 = new Carte(1,"question1","reponse1");
-        Carte carte2 = new Carte(2,"question2","reponse2");
-        Carte carte3 = new Carte(3,"question3","reponse3");
+    //     Carte carte1 = new Carte(1,"question1","reponse1");
+    //     Carte carte2 = new Carte(2,"question2","reponse2");
+    //     Carte carte3 = new Carte(3,"question3","reponse3");
 
         
-        this.PileCartes.add(carte1);
-        this.PileCartes.add(carte2);
-        this.PileCartes.add(carte3);
+    //     this.PileCartes.add(carte1);
+    //     this.PileCartes.add(carte2);
+    //     this.PileCartes.add(carte3);
         
+    // }
+    public void setCard(){
+        
+        this.PileCartes = getCurrentPile().cartes;
     }
     
 }
