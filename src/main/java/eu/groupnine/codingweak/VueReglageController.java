@@ -1,6 +1,7 @@
 package eu.groupnine.codingweak;
 
 import java.net.URL;
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -88,6 +89,10 @@ public class VueReglageController implements Observer {
         }
         this.NomPile.setText(null);
         this.Description.setText(null);
+        this.idCarte.setText(null);
+        this.question.setText(null);
+            
+        this.reponse.setText(null);
 
     }
 
@@ -125,21 +130,22 @@ public class VueReglageController implements Observer {
             this.model.PileCartes.add(new Carte(lastId+1, q, rep));
     
             this.model.callObservers();
+            this.idCarte.setText(null);
     
             this.question.setText(null);
     
             this.reponse.setText(null);
 
         }
-        
-
-        
-
-
     }
 
 
 
+    @FXML
+    public void Supp() {
+        
+    }
+    
     public void refresh(){
         this.NomPile.setText(null);
         this.Description.setText(null);
@@ -153,6 +159,7 @@ public class VueReglageController implements Observer {
         this.Table.getItems().clear();
         
         ArrayList<Carte> CurrentCartes = this.model.getCurrentPile().cartes;
+        System.out.println(CurrentCartes.size());
         
         for (int i = 0;i<CurrentCartes.size();i++) {
             this.Table.getItems().add(new Carte(i,CurrentCartes.get(i).getQuestion(),CurrentCartes.get(i).getReponse()));
