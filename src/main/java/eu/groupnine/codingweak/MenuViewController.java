@@ -45,8 +45,10 @@ public class MenuViewController implements Observer{
     }
 
     public void refresh(){
-        if (model.sc.strMain == "Page"){
+        if (model.sc.strMain != "Page"){
             menuEdit.setVisible(false);
+        }else{
+            menuEdit.setVisible(true);
         }
     }
 

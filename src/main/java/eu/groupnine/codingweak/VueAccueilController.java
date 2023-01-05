@@ -72,16 +72,18 @@ public class VueAccueilController implements Observer, Initializable{
     public void Play(){
         model.sc.afficherParent("Jouer");
         // model.sc.callFunctFromController("startQuestion");
+        model.callObservers();
     }
 
     public void Seetings(){
         model.sc.afficherParent("Reglage");
         model.sc.callFunctFromController("InitializeReglage");
+        model.callObservers();
     }
-
 
     public void addPile(){
         model.sc.afficherParent(null);
+        model.callObservers();
     }
 
     public void ActivateButton(){
