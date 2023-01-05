@@ -10,15 +10,32 @@
       },
       {
         "id": 2,
-        "question": "question2",
+        "question": "question1",
         "reponse": "reponse1"
       },
       {
         "id": 3,
-        "question": "question3",
+        "question": "question1",
         "reponse": "reponse1"
       }
-    ]
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          2.0
+        ]
+      }
+    }
   },
   "pile2": {
     "nom": "pile2",
@@ -31,14 +48,31 @@
       },
       {
         "id": 2,
-        "question": "question2",
+        "question": "question1",
         "reponse": "reponse1"
       },
       {
         "id": 3,
-        "question": "question3",
+        "question": "question1",
         "reponse": "reponse1"
       }
-    ]
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          4.0
+        ]
+      }
+    }
   }
 }

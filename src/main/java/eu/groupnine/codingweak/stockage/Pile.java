@@ -9,6 +9,12 @@ public class Pile {
     Stats stats;
     public Pile() {
         cartes = new ArrayList<>();
+        this.stats = new Stats();
+        this.stats.taux = new Couple();
+        this.stats.taux.nombrePartieJouer = new ArrayList<String>();
+        this.stats.taux.nombrePartieJouer.add("0");
+        this.stats.taux.tauxDeReussite = new ArrayList<Float>();
+        this.stats.taux.tauxDeReussite.add((float) 0);
 
     }
 
@@ -32,12 +38,14 @@ public class Pile {
         return this.stats;
     }
     
-    public void addStats(int cnt, int ct,int cj, float cpm, int tp){
+    public void addStats(int cnt, int ct,int cj, float cpm, int tp, String cnp, Float cta){
         stats.cartesNonTrouvees+= cnt;
         stats.cartesTrouvees+=ct;
         stats.cartesJouees+=cj;
         stats.cartesParMinutes+=cpm;
         stats.tempsPasse+=tp;
+        stats.taux.nombrePartieJouer.add(cnp);
+        stats.taux.tauxDeReussite.add(cta);
     }
 
 }

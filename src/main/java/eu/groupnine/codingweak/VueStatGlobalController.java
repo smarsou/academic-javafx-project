@@ -51,6 +51,7 @@ public class VueStatGlobalController implements Observer, Initializable{
             String tempsPasse;
             String affichage;
             Stats stats = model.stockFromDisk.EnsembleDesPiles.get(pileName).geStats();
+            System.out.println("stat est " + stats);
             Name = model.stockFromDisk.EnsembleDesPiles.get(pileName).getNom();
             Description= model.stockFromDisk.EnsembleDesPiles.get(pileName).getDescription();
             cartesJouees = "" + stats.cartesJouees;
@@ -64,13 +65,15 @@ public class VueStatGlobalController implements Observer, Initializable{
             affichage = affichage + "nombre cartes non jouees : " + cartesNonTrouvees + "\n"; 
             affichage = affichage + "nombre de carte trouvees : " + cartesTrouvees + "\n"; 
             affichage = affichage + "nombre de carte non trouvees : " + cartesNonTrouvees + "\n";
-            affichage = affichage + "temps par carte " + cartesParMinutes + "\n";
-            affichage = affichage + "temps total " + tempsPasse + "\n";              
+            affichage = affichage + "temps par carte : " + cartesParMinutes + "\n";
+            affichage = affichage + "temps total : " + tempsPasse + "\n";              
             AreaOfPiles.getItems().add(affichage);
         }
     }
 
     public void setGraph(){
+        
+        savePileClicked();
         
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Partie jouée");
@@ -80,20 +83,37 @@ public class VueStatGlobalController implements Observer, Initializable{
 
         new BarChart<String, Number>(xAxis, yAxis);
 
+        barChart.getData().clear();
+
         XYChart.Series<String, Number> dataSeries1 = new XYChart.Series<String, Number>();
         dataSeries1.setName(model.keyClicked);
 
+        Stats stats = model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).geStats();
 
-        dataSeries1.getData().add(new XYChart.Data<String, Number>("Serge", 9));
+        for(int i = 0 ; i < stats.taux.nombrePartieJouer.size(); i++){
+            dataSeries1.getData().add(new XYChart.Data<String, Number>(stats.taux.nombrePartieJouer.get(i), stats.taux.tauxDeReussite.get(i)));
+        }
+        /*dataSeries1.getData().add(new XYChart.Data<String, Number>("Serge", 9));
         dataSeries1.getData().add(new XYChart.Data<String, Number>("Soulaiman", 2));
-        dataSeries1.getData().add(new XYChart.Data<String, Number>("Louis", 1));
+        dataSeries1.getData().add(new XYChart.Data<String, Number>("Louis", 1));*/
 
         barChart.getData().add(dataSeries1);
         barChart.setTitle("Stats de la pile " + model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).getNom());
     }
 
+    //Cette méthode sauvegarde la clé de la pile cliquée
+    public void savePileClicked(){
+        Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
+            int i = 0;
+            for (String pileName : pileNames) {
+                if (i == AreaOfPiles.getSelectionModel().getSelectedIndex()){
+                    model.keyClicked = pileName;
+                }
+                i++;
+            }
+    }
+
     public void refresh(){
-        model.callObservers();
         initialize(null, null);
     }
 
