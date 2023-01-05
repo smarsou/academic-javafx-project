@@ -52,7 +52,7 @@
                <children>
                   <Button fx:id="PlayButton" layoutX="39.0" layoutY="26.0" mnemonicParsing="false" onAction="#Play" text="jouer" />
                   <Button fx:id="SeetingsButton" layoutX="170.0" layoutY="26.0" mnemonicParsing="false" onAction="#Seetings" text="réglages" />
-                  <Button fx:id="DeleteButton" layoutX="322.0" layoutY="26.0" mnemonicParsing="false" onAction="#refresh" text="supprimer" />
+                  <Button fx:id="DeleteButton" layoutX="322.0" layoutY="26.0" mnemonicParsing="false" onAction="#DeletePile" text="supprimer" />
                   <Button fx:id="AddButton" layoutX="473.0" layoutY="26.0" mnemonicParsing="false" onAction="#addPile" text="ajouter" />
                </children>
             </AnchorPane>

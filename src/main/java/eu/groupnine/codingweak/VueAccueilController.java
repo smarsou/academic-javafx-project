@@ -42,6 +42,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        PileSpace.getItems().clear();
         PlayButton.setDisable(true);
         DeleteButton.setDisable(true);
         SeetingsButton.setDisable(true);
@@ -104,8 +105,9 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
 
-    public void refresh(){
-        
+
+    public void refresh() throws InterruptedException{
+        initialize(null, null);
     }
 
 
