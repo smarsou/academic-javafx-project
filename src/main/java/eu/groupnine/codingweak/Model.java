@@ -3,6 +3,8 @@ package eu.groupnine.codingweak;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Collections;
 
 import eu.groupnine.codingweak.stockage.Stats;
 import org.controlsfx.control.PropertySheet.Mode;
@@ -11,13 +13,14 @@ import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
 
+
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
     String keyClicked;
-    public long time = 5;
+    // public long time = 5;
 
-    public long tempsPile;
+    public long time;
     public Boolean ordrePile; /* true = ordre direct, false = ordre aléatoire  */
     public int frequencePile;
     public Boolean smartModePile; /* true = activé, false = desactivé  */
@@ -25,6 +28,8 @@ public class Model extends Observateur{
     Stockage stockFromDisk;
 
     Stats currentStats = new Stats();
+    // Carte currentCarte;
+    int indexCurrentCarte = 0;
 
     public Model() throws FileNotFoundException, IOException{
         super();
@@ -33,16 +38,32 @@ public class Model extends Observateur{
 
     }
 
-    public Pile getCurrentPile(){
-        return Stockage.EnsembleDesPiles.get(keyClicked);
+
+    public Carte nexCarte(){
+        
+        return PileCartes.get(indexCurrentCarte);
+    }
+
+    public void mettreOrdreCartesAleat(){
+        if (ordrePile==false){
+            Collections.shuffle(PileCartes); /* attention shuffle bizaree, pas ce qui est attentu, le reste marche */
+        }
     }
 
 
+
+    public Pile getCurrentPile(){
+        return Stockage.EnsembleDesPiles.get(keyClicked);
+    }
 
     public void setStast(){
         currentStats.cartesTrouvees= 15;
         currentStats.cartesNonTrouvees=8;
     }
+
+
+
+
     // public void setCard(){
     //     this.PileCartes = new ArrayList<>();
         

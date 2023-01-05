@@ -120,6 +120,7 @@ public class VueQuestionController implements Observer {
         //Passer à carte suivante
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
+            model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
             //this.timeline.stop();
@@ -139,6 +140,7 @@ public class VueQuestionController implements Observer {
         //Passer à carte suivante
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
+            model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
             //this.timeline.stop();
@@ -154,7 +156,8 @@ public class VueQuestionController implements Observer {
         //choisir question et reponses dans pile
         this.Reponse.setText(null);
         int id = VueQuestionController.indexCourant;
-        Carte card = this.model.PileCartes.get(id);
+        // Carte card = this.model.PileCartes.get(id);
+        Carte card = this.model.nexCarte();
         this.Question.setText(card.getQuestion());
         this.brep.setVisible(true);
         this.brep.setDisable(false);
