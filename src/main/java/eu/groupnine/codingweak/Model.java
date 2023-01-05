@@ -29,7 +29,7 @@ public class Model extends Observateur{
 
     Stats currentStats = new Stats();
     // Carte currentCarte;
-    int indexCurrentCarte = 0;
+    public int indexCurrentCarte = 0;
 
     public Model() throws FileNotFoundException, IOException{
         super();
@@ -44,11 +44,23 @@ public class Model extends Observateur{
 
     public void mettreOrdreCartesAleat(){
         if (ordrePile==false){
-            Collections.shuffle(PileCartes); /* attention shuffle bizaree, pas ce qui est attentu, le reste marche */
+            Collections.shuffle(PileCartes); 
         }
     }
 
+    public void gestionFrequence(){
+        ArrayList<Carte> PileCartesBis = new ArrayList<Carte>() ;
+        for (int i = 0; i< frequencePile;i++){
+            PileCartesBis.addAll(PileCartes);
+        }
+        PileCartes = PileCartesBis;
+    }
 
+    public void ajouterCarteSmart(){
+        if (smartModePile){
+            PileCartes.add(PileCartes.get(indexCurrentCarte));
+        }
+    }
 
     public Pile getCurrentPile(){
         return Stockage.EnsembleDesPiles.get(keyClicked);
@@ -89,4 +101,8 @@ public class Model extends Observateur{
         this.PileCartes.get(id).setReponse(rep);
     }
     
+    public void reinit(){
+        this.indexCurrentCarte =0;
+        currentStats = new Stats();
+    }
 }

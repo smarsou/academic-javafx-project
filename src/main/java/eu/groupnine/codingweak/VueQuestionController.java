@@ -48,6 +48,7 @@ public class VueQuestionController implements Observer {
     private static int indexCourant = 0;
 
     public void start()  {
+
         this.model.setCard();
         System.out.println("Game started");
         this.refresh();
@@ -56,12 +57,11 @@ public class VueQuestionController implements Observer {
         
     }
     
-
     public VueQuestionController(Model model){
         this.model = model;
         this.model.observers.add(this);
         // this.model.setCard();
-        
+
     }
 
     @FXML
@@ -112,20 +112,21 @@ public class VueQuestionController implements Observer {
     @FXML
     public void Found()  {
         //mettre à jour les stats
-        this.model.currentStats.cartesTrouvees = 0;
-        this.model.currentStats.cartesJouees = 0;
         this.model.currentStats.cartesJouees++;
-        this.model.currentStats.cartesTrouvees++;
+        this.model.currentStats.cartesNonTrouvees++;
 
 
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
-            VueQuestionController.indexCourant++;
+        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
+            // VueQuestionController.indexCourant++;
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
             //this.timeline.stop();
 
+        }else{
+            model.sc.afficherParent("StatPartie");
+            model.callObservers();
         }
 
     }
@@ -133,28 +134,27 @@ public class VueQuestionController implements Observer {
     @FXML
     public void NotFound()  {
         //mettre à jour les stats
-        this.model.currentStats.cartesTrouvees = 0;
-        this.model.currentStats.cartesJouees = 0;
+        
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesNonTrouvees++;
-
+        this.model.ajouterCarteSmart();
         //Passer à carte suivante
-        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
-            VueQuestionController.indexCourant++;
+        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
+            // VueQuestionController.indexCourant++;
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
             //this.timeline.stop();
 
+        }else{
+            model.sc.afficherParent("StatPartie");
+            model.callObservers();
         }
-        
-        
-
     }
 
 
     public void refresh()  {
-        //choisir question et reponses dans pile
+        // //choisir question et reponses dans pile
         this.Reponse.setText(null);
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
@@ -167,6 +167,7 @@ public class VueQuestionController implements Observer {
         this.pastrouve.setVisible(false);
         this.trouve.setVisible(false);
         
+        System.out.println(model.PileCartes.size());
         
         
         

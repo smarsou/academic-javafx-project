@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 
 import com.google.gson.Gson;
@@ -27,6 +28,7 @@ public class Main extends Application {
         // primaryStage.show();
         Model model = new Model();
         MenuViewController.setModel(model);
+        MenuViewController.stage = primaryStage;
         SceneController sc = new SceneController();
         model.sc = sc;
         Parent root = sc.addScene("Page", "accueil-view.fxml", new VueAccueilController(model));
@@ -34,8 +36,7 @@ public class Main extends Application {
         sc.addScene("Reglage", "VueReglage.fxml", new VueReglageController(model));
         sc.addScene("Jouer", "VueJouer.fxml", new VueJouerController(model));
         sc.addScene("StatPartie", "VueStatPartie.fxml", new VueStatPartieController(model));
-
-        
+        sc.addScene("StatGlobal", "VueStatGlobal.fxml", new VueStatGlobalController(model));
 
         Scene scene = new Scene(root);
         sc.setMain(scene, "Page");

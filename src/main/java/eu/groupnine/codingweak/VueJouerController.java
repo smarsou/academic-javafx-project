@@ -36,7 +36,14 @@ public class VueJouerController implements Observer{
     }
 
     public void choixTemps() throws Exception{
-        model.time = Long.parseLong(valeurTemps.getText());
+        
+        if (Long.parseLong(valeurTemps.getText())>0) {
+            model.time = Long.parseLong(valeurTemps.getText());
+            }
+        else {
+            model.time = 3;
+            empecherJouer();
+        }
     }
 
     public void choixOrdre(){
@@ -48,7 +55,13 @@ public class VueJouerController implements Observer{
     }
 
     public void choixFrequence(){
+        if (Integer.parseInt(valeurFrequence.getText())>0) {
         model.frequencePile = Integer.parseInt(valeurFrequence.getText());
+        }
+        else {
+            model.frequencePile = 1;
+            empecherJouer();
+        }
     }
 
     public void choixSmartMode(){
@@ -63,10 +76,19 @@ public class VueJouerController implements Observer{
         this.choixOrdre();
         this.choixFrequence();
         this.choixSmartMode();
+        model.reinit();
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
-        model.mettreOrdreCartesAleat();
+        this.model.gestionFrequence();
+        this.model.mettreOrdreCartesAleat();
+
     }
+
+    @FXML
+    public void empecherJouer(){
+        this.boutonJouer.setDisable(true);
+    }
+
 
     public void refresh(){
         

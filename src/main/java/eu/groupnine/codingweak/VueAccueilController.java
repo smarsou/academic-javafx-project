@@ -96,7 +96,6 @@ public class VueAccueilController implements Observer, Initializable{
 
         int x = 1;
         while (x==1){
-            System.out.println("aaaaaaaaaa");
             for (String pileName : pileNames) {
                 nouvelleCle = "nouvelle pile n° " + indexPile;
                 if (pileName.equals(nouvelleCle)){
