@@ -139,11 +139,7 @@ public class VueAccueilController implements Observer, Initializable{
         model.callObservers();
     }
 
-<<<<<<< HEAD
-    public void refresh(){
-=======
     public void refresh() {
->>>>>>> 1d4e6c0f6d821b25b7dcc3aa417ef2f666f2b0a5
         System.out.println("Refresh accueil");
         initialize(null, null);
     }
