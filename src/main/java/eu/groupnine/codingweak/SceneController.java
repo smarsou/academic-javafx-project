@@ -11,6 +11,7 @@ public class SceneController {
     private HashMap<String, Parent> sceneMap = new HashMap<>();
     public HashMap<String, Observer> controllerMap = new HashMap<>();
     private Scene main;
+    public String strMain;
 
     public SceneController(){}
 
@@ -18,8 +19,9 @@ public class SceneController {
         return controllerMap.get(name);
     }
 
-    public void setMain(Scene main) throws Exception{
+    public void setMain(Scene main, String name) throws Exception{
         this.main = main;
+        this.strMain = name;
     }
     
 
@@ -38,7 +40,8 @@ public class SceneController {
     }
 
     protected void afficherParent(String name){
-        main.setRoot(sceneMap.get(name) );
+        main.setRoot(sceneMap.get(name));
+        strMain = name;
     }
 
     public void callFunctFromController(String name) throws InterruptedException{

@@ -9,20 +9,43 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ProgressBar;
 
-public class MenuviewController {
-    private Model model;
+public class MenuViewController implements Observer{
 
-    public MenuviewController(Model model){this.model = model;}
+    private static Model model;
 
-    public void menu(){
+    @FXML private Menu menuEdit;
+
+    public MenuViewController(){
+    }
+
+    public static void setModel(Model m){
+        model = m;
+    }
+
+    public void accueil(){
         model.sc.afficherParent("Page");
     }
 
     public void fermer(){
         Platform.exit();
+    }
+
+    public void openStats(){
+        // model.sc.afficherParent("StatGlobal");
+    }
+
+    public void importPile(){
+
+    }
+
+    public void refresh(){
+        if (model.sc.strMain == "Page"){
+            menuEdit.setVisible(false);
+        }
     }
 
 
