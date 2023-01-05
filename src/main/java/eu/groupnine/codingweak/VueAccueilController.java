@@ -75,12 +75,12 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
     public void Seetings(){
-        model.sc.afficherParent(null);
+        model.sc.afficherParent("Reglage");
     }
 
 
     public void addPile(){
-        model.sc.afficherParent("Reglage");
+        model.sc.afficherParent(null);
     }
 
     public void ActivateButton(){
@@ -109,8 +109,6 @@ public class VueAccueilController implements Observer, Initializable{
         initialize(null, null);
         model.callObservers();
     }
-    
-
 
     public void refresh() throws InterruptedException{
         initialize(null, null);

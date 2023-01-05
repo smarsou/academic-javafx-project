@@ -31,5 +31,13 @@ public class Pile {
     public Stats geStats(){
         return this.stats;
     }
+    
+    public void addStats(int cnt, int ct,int cj, float cpm, int tp){
+        stats.cartesNonTrouvees+= cnt;
+        stats.cartesTrouvees+=ct;
+        stats.cartesJouees+=cj;
+        stats.cartesParMinutes+=cpm;
+        stats.tempsPasse+=tp;
+    }
 
 }
