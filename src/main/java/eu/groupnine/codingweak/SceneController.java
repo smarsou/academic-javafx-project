@@ -44,6 +44,7 @@ public class SceneController {
     protected void afficherParent(String name){
         main.setRoot(sceneMap.get(name));
         strMain = name;
+        
     }
 
     public void callFunctFromController(String name){
