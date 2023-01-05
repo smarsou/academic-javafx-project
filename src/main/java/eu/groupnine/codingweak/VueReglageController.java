@@ -143,7 +143,30 @@ public class VueReglageController implements Observer {
 
     @FXML
     public void Supp() {
+        String id = this.idCarte.getText();
+        String answer = this.reponse.getText();
+        String quest = this.question.getText();
+        ArrayList<Carte> copy = new ArrayList<>();
+        for (Carte c : this.model.getCurrentPile().cartes) {
+            copy.add(c);
+            if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
+                System.out.println(quest);
+                break;
+            }
+        }
+        this.model.getCurrentPile().cartes.clear();
+        this.model.getCurrentPile().cartes.addAll(copy);
         
+        this.model.callObservers();
+        this.idCarte.setText(null);
+    
+            
+        this.question.setText(null);
+    
+            
+        this.reponse.setText(null);
+
+
     }
     
     public void refresh(){
@@ -159,7 +182,7 @@ public class VueReglageController implements Observer {
         this.Table.getItems().clear();
         
         ArrayList<Carte> CurrentCartes = this.model.getCurrentPile().cartes;
-        System.out.println(CurrentCartes.size());
+        
         
         for (int i = 0;i<CurrentCartes.size();i++) {
             this.Table.getItems().add(new Carte(i,CurrentCartes.get(i).getQuestion(),CurrentCartes.get(i).getReponse()));
