@@ -11,8 +11,6 @@ Il se peut que vous rencontriez des problèmes. Voici quelques solutions :
 
 Cette configuration peut également être importer dans IntelliJ pour créer un projet fonctionnelle à partir de celle-ci. Pour cela, lors de la création de votre projet IntelliJ, il faut sélectionner le fichier `build.gradle` et non pas uniquement le répertoire du projet.
 
-
-
 # Planning
 
 ## Jour 1

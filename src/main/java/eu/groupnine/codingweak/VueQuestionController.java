@@ -56,12 +56,11 @@ public class VueQuestionController implements Observer {
         
     }
     
-
     public VueQuestionController(Model model){
         this.model = model;
         this.model.observers.add(this);
         // this.model.setCard();
-        
+
     }
 
     @FXML
@@ -112,10 +111,8 @@ public class VueQuestionController implements Observer {
     @FXML
     public void Found()  {
         //mettre à jour les stats
-        this.model.currentStats.cartesTrouvees = 0;
-        this.model.currentStats.cartesJouees = 0;
         this.model.currentStats.cartesJouees++;
-        this.model.currentStats.cartesTrouvees++;
+        this.model.currentStats.cartesNonTrouvees++;
 
 
         //Passer à carte suivante
@@ -126,6 +123,9 @@ public class VueQuestionController implements Observer {
             this.Answer();
             //this.timeline.stop();
 
+        }else{
+            model.sc.afficherParent("StatPartie");
+            model.callObservers();
         }
 
     }
@@ -133,8 +133,7 @@ public class VueQuestionController implements Observer {
     @FXML
     public void NotFound()  {
         //mettre à jour les stats
-        this.model.currentStats.cartesTrouvees = 0;
-        this.model.currentStats.cartesJouees = 0;
+        
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesNonTrouvees++;
 
@@ -146,10 +145,10 @@ public class VueQuestionController implements Observer {
             this.Answer();
             //this.timeline.stop();
 
+        }else{
+            model.sc.afficherParent("StatPartie");
+            model.callObservers();
         }
-        
-        
-
     }
 
 
