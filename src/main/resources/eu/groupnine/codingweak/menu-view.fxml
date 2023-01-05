@@ -6,20 +6,20 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane fx:controller="eu.groupnine.codingweak.MenuViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="600.0">
         <menus>
-          <Menu mnemonicParsing="false" text="options">
+          <Menu mnemonicParsing="false" text="Open">
             <items>
-              <MenuItem fx:id="itemAccueil"  mnemonicParsing="false" text="accueil" />
-                  <MenuItem fx:id="itemQuitter"  mnemonicParsing="false" text="quitter" />
+              <MenuItem fx:id="itemAccueil"  mnemonicParsing="false" text="Accueil" onAction="#accueil" />
+                  <MenuItem fx:id="itemStat" mnemonicParsing="false" text="Statistiques" onAction="#openStats"/>
+                    <MenuItem fx:id="itemQuitter"  mnemonicParsing="false" text="Fermer" onAction="#fermer"/>
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem fx:id="itemImporter" mnemonicParsing="false" text="importer" />
-                  <MenuItem fx:id="itemStat" mnemonicParsing="false" text="stat" />
+              <MenuItem fx:id="itemImporter" mnemonicParsing="false" text="Importer..." onAction="#importPile"/>
             </items>
           </Menu>
         </menus>

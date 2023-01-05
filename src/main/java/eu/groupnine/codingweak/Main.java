@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import com.google.gson.Gson;
 
 import eu.groupnine.codingweak.stockage.*;
+import eu.groupnine.codingweak.MenuViewController;;
 
 public class Main extends Application {
     public static void main(String[] args)
@@ -25,7 +26,7 @@ public class Main extends Application {
         // primaryStage.setScene(scene);
         // primaryStage.show();
         Model model = new Model();
-
+        MenuViewController.setModel(model);
         SceneController sc = new SceneController();
         model.sc = sc;
         Parent root = sc.addScene("Page", "accueil-view.fxml", new VueAccueilController(model));
@@ -34,8 +35,10 @@ public class Main extends Application {
         sc.addScene("Jouer", "VueJouer.fxml", new VueJouerController(model));
         sc.addScene("StatPartie", "VueStatPartie.fxml", new VueStatPartieController(model));
 
+        
+
         Scene scene = new Scene(root);
-        sc.setMain(scene);
+        sc.setMain(scene, "Page");
 
         primaryStage.setTitle("CodingWeak");
         primaryStage.setScene(scene);

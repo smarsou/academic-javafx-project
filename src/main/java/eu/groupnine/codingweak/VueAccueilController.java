@@ -78,6 +78,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void Seetings(){
         model.sc.afficherParent("Reglage");
+        model.sc.callFunctFromController("InitializeReglage");
     }
 
 
@@ -128,7 +129,7 @@ public class VueAccueilController implements Observer, Initializable{
             }
     }
 
-    public void DeletePile() throws InterruptedException{
+    public void DeletePile() {
         model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
         model.callObservers();
     }
@@ -137,6 +138,5 @@ public class VueAccueilController implements Observer, Initializable{
         System.out.println("Refresh accueil");
         initialize(null, null);
     }
-
 
 }

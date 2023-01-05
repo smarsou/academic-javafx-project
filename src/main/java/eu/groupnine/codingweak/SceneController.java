@@ -11,15 +11,19 @@ public class SceneController {
     private HashMap<String, Parent> sceneMap = new HashMap<>();
     public HashMap<String, Observer> controllerMap = new HashMap<>();
     private Scene main;
+    public String strMain;
 
-    public SceneController(){}
+    public SceneController(){
+        
+    }
 
     public Observer getController(String name){
         return controllerMap.get(name);
     }
 
-    public void setMain(Scene main) throws Exception{
+    public void setMain(Scene main, String name) throws Exception{
         this.main = main;
+        this.strMain = name;
     }
     
 
@@ -38,14 +42,21 @@ public class SceneController {
     }
 
     protected void afficherParent(String name){
-        main.setRoot(sceneMap.get(name) );
+        main.setRoot(sceneMap.get(name));
+        strMain = name;
     }
 
-    public void callFunctFromController(String name) throws InterruptedException{
+    public void callFunctFromController(String name){
         if (name == "startQuestion"){
             if (this.getController("Jeu").getClass().getName() == "eu.groupnine.codingweak.VueQuestionController"){
                 VueQuestionController ctrl = (VueQuestionController) this.getController("Jeu");
                 ctrl.start();
+            };
+        }
+        if (name == "InitializeRegalge"){
+            if (this.getController("Reglage").getClass().getName() == "eu.groupnine.codingweak.VueReglageController"){
+                VueReglageController ctrl = (VueReglageController) this.getController("Reglage");
+                ctrl.refresh();
             };
         }
         

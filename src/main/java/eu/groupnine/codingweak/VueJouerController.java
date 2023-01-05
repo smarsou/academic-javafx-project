@@ -36,13 +36,14 @@ public class VueJouerController implements Observer{
     }
 
     public void choixTemps() throws Exception{
-        model.tempsPile = Long.parseLong(valeurTemps.getText());
+        model.time = Long.parseLong(valeurTemps.getText());
     }
 
     public void choixOrdre(){
         model.ordrePile = true;
         if (valeurOrdre.getSelectionModel().getSelectedItem().equalsIgnoreCase("aléatoire")){
             model.ordrePile = false;
+
         }
     }
 
@@ -64,6 +65,7 @@ public class VueJouerController implements Observer{
         this.choixSmartMode();
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
+        model.mettreOrdreCartesAleat();
     }
 
     public void refresh(){
