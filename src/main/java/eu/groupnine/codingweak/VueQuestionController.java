@@ -52,16 +52,10 @@ public class VueQuestionController implements Observer {
         System.out.println("Game started");
         this.refresh();
         Answer();
-        //this.timeline.stop();
+        
         
     }
-    /* 
-    public void initialize(URL location,ResourceBundle resouces) {
-        int id = VueQuestionController.indexCourant;
-        Carte c = this.model.PileCartes.get(id);
-        this.Question.setText(c.getQuestion());
-        
-    }*/
+    
 
     public VueQuestionController(Model model){
         this.model = model;
@@ -76,7 +70,7 @@ public class VueQuestionController implements Observer {
         int id = VueQuestionController.indexCourant;
         
         Carte c = this.model.PileCartes.get(id);
-        //System.out.println(c.getReponse());
+        
         this.Reponse.setText(c.getReponse());
         this.pastrouve.setVisible(true);
         this.trouve.setVisible(true);
@@ -117,6 +111,11 @@ public class VueQuestionController implements Observer {
     @FXML
     public void Found()  {
         //mettre à jour les stats
+        this.model.currentStats.cartesTrouvees = 0;
+        this.model.currentStats.cartesJouees = 0;
+        this.model.currentStats.cartesJouees++;
+        this.model.currentStats.cartesTrouvees++;
+
 
         //Passer à carte suivante
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
@@ -132,6 +131,11 @@ public class VueQuestionController implements Observer {
     @FXML
     public void NotFound()  {
         //mettre à jour les stats
+        this.model.currentStats.cartesTrouvees = 0;
+        this.model.currentStats.cartesJouees = 0;
+        this.model.currentStats.cartesJouees++;
+        this.model.currentStats.cartesNonTrouvees++;
+
         //Passer à carte suivante
         if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
             VueQuestionController.indexCourant++;
