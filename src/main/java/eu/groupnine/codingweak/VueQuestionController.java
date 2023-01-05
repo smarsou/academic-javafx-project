@@ -59,6 +59,7 @@ public class VueQuestionController implements Observer {
 
     public VueQuestionController(Model model){
         this.model = model;
+        this.model.observers.add(this);
         // this.model.setCard();
         
     }
