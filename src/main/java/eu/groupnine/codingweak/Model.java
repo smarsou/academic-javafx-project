@@ -16,6 +16,10 @@ public class Model extends Observateur{
     String keyClicked;
     public long time = 5;
 
+    public int tempsPile;
+    public Boolean ordrePile; /* true = ordre direct, false = ordre aléatoire  */
+    public int frequencePile;
+    public Boolean smartModePile; /* true = activé, false = desactivé  */
 
     Stockage stockFromDisk;
 
