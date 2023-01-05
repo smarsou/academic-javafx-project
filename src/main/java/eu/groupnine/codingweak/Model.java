@@ -104,5 +104,7 @@ public class Model extends Observateur{
     public void reinit(){
         this.indexCurrentCarte =0;
         currentStats = new Stats();
+        PileCartes = getCurrentPile().cartes;
+
     }
 }
