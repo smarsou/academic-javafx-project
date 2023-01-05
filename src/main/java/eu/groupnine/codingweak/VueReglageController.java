@@ -53,6 +53,7 @@ public class VueReglageController implements Observer,Initializable {
 
     public VueReglageController(Model model){
         this.model = model;
+        this.model.setCard();
     }
 
     @Override
