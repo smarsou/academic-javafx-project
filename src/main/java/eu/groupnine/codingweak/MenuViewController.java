@@ -20,6 +20,7 @@ public class MenuViewController implements Observer{
     @FXML private Menu menuEdit;
 
     public MenuViewController(){
+        model.observers.add(this);
     }
 
     public static void setModel(Model m){
@@ -28,6 +29,7 @@ public class MenuViewController implements Observer{
 
     public void accueil(){
         model.sc.afficherParent("Page");
+        model.callObservers();
     }
 
     public void fermer(){

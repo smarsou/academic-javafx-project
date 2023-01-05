@@ -13,7 +13,9 @@ public class SceneController {
     private Scene main;
     public String strMain;
 
-    public SceneController(){}
+    public SceneController(){
+        
+    }
 
     public Observer getController(String name){
         return controllerMap.get(name);
@@ -44,11 +46,17 @@ public class SceneController {
         strMain = name;
     }
 
-    public void callFunctFromController(String name) throws InterruptedException{
+    public void callFunctFromController(String name){
         if (name == "startQuestion"){
             if (this.getController("Jeu").getClass().getName() == "eu.groupnine.codingweak.VueQuestionController"){
                 VueQuestionController ctrl = (VueQuestionController) this.getController("Jeu");
                 ctrl.start();
+            };
+        }
+        if (name == "InitializeRegalge"){
+            if (this.getController("Reglage").getClass().getName() == "eu.groupnine.codingweak.VueReglageController"){
+                VueReglageController ctrl = (VueReglageController) this.getController("Reglage");
+                ctrl.refresh();
             };
         }
         

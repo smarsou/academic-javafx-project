@@ -14,7 +14,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class VueReglageController implements Observer,Initializable {
+public class VueReglageController implements Observer {
     Model model;
     @FXML
     private TextField  NomPile;
@@ -53,23 +53,9 @@ public class VueReglageController implements Observer,Initializable {
 
     public VueReglageController(Model model){
         this.model = model;
-        this.model.setCard();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("IdCartes"));
-        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Questions"));
-        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponses"));
-        this.Table.getItems().clear();
-        ArrayList<Carte> CurrentCartes = this.model.PileCartes;
-        for (int i = 0;i<CurrentCartes.size();i++) {
-            this.Table.getItems().add(CurrentCartes.get(i));
-        }
-        this.nbCartes.setText(this.model.PileCartes.size() + " " +"Cartes");
-
-        
-    }
+    
 
 
 
@@ -128,7 +114,7 @@ public class VueReglageController implements Observer,Initializable {
         this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Questions"));
         this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponses"));
         this.Table.getItems().clear();
-        ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+        ArrayList<Carte> CurrentCartes = this.model.getCurrentPile().cartes;
         for (int i = 0;i<CurrentCartes.size();i++) {
             this.Table.getItems().add(CurrentCartes.get(i));
         }

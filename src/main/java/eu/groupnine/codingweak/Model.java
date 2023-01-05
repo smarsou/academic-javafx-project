@@ -78,7 +78,6 @@ public class Model extends Observateur{
         
     // }
     public void setCard(){
-        
         this.PileCartes = getCurrentPile().cartes;
     }
 

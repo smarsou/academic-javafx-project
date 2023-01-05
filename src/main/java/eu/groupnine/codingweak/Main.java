@@ -26,7 +26,7 @@ public class Main extends Application {
         // primaryStage.setScene(scene);
         // primaryStage.show();
         Model model = new Model();
-
+        MenuViewController.setModel(model);
         SceneController sc = new SceneController();
         model.sc = sc;
         Parent root = sc.addScene("Page", "accueil-view.fxml", new VueAccueilController(model));
@@ -35,7 +35,7 @@ public class Main extends Application {
         sc.addScene("Jouer", "VueJouer.fxml", new VueJouerController(model));
         sc.addScene("StatPartie", "VueStatPartie.fxml", new VueStatPartieController(model));
 
-        MenuViewController.setModel(model);
+        
 
         Scene scene = new Scene(root);
         sc.setMain(scene, "Page");

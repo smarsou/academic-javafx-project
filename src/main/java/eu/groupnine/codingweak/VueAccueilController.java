@@ -76,6 +76,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void Seetings(){
         model.sc.afficherParent("Reglage");
+        model.sc.callFunctFromController("InitializeReglage");
     }
 
 
