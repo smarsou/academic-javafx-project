@@ -37,6 +37,7 @@ public class VueJouerController implements Observer{
         
     }
     public void choixJouer() throws InterruptedException{
+        
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
     }
