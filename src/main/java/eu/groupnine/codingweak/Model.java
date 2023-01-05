@@ -28,10 +28,6 @@ public class Model extends Observateur{
         stockFromDisk.load();
     }
 
-    public void setStast(){
-        currentStats.cartesTrouvees= 15;
-        currentStats.cartesNonTrouvees=8;
-    }
     public void setCard(){
         this.PileCartes = new ArrayList<>();
         
