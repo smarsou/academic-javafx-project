@@ -90,8 +90,6 @@ public class VueAccueilController implements Observer, Initializable{
             SeetingsButton.setDisable(false);
         }
     }
-<<<<<<< HEAD
-=======
 
     //Cette méthode sauvegarde la clé de la pile cliquée
     public void savePileClicked(){
@@ -105,7 +103,6 @@ public class VueAccueilController implements Observer, Initializable{
             }
     }
     
->>>>>>> 43391c1c91a13610e6c1150647b4d03970f690cb
 
 
     public void refresh(){
