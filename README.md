@@ -41,6 +41,7 @@ Finir les fonctionnalités Apprentissage et Création si besoin.
 ## Diagramme de classe
 
 Le diagramme de classe correspond à l'application que l'on espère obtenir.
+
 ![Diagramme de classe](./gp/classDiagram.png)
 
 
