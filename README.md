@@ -13,7 +13,7 @@ Cette configuration peut également être importer dans IntelliJ pour créer un 
 
 # Conception DAY 1
 
-Aujourd'hui, nous avons fait une conception globale de l'application pour savoir vers quoi on se dirigera. Nous avons dessiné les croquis de toutes les vues que l'on aimerais avoir, ainsi qu'un diagramme de classe. Nous nous sommes partagés le travail à faire pour la journée.
+Aujourd'hui, nous avons fait une conception globale de l'application pour savoir vers quoi on se dirigera, c'est notre RoadMap. Nous avons dessiné les croquis de toutes les vues que l'on aimerais avoir, ainsi qu'un diagramme de classe. Nous nous sommes partagés le travail à faire pour la journée.
 
 ## Diagramme de classe
 

@@ -36,7 +36,7 @@ public class VueJouerController implements Observer{
     }
 
     public void choixTemps() throws Exception{
-        model.tempsPile = Integer.parseInt(valeurTemps.getText());
+        model.tempsPile = Long.parseLong(valeurTemps.getText());
     }
 
     public void choixOrdre(){
