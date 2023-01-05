@@ -75,12 +75,12 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
     public void Seetings(){
-        model.sc.afficherParent(null);
+        model.sc.afficherParent("Reglage");
     }
 
 
     public void addPile(){
-        model.sc.afficherParent("Reglage");
+        model.sc.afficherParent(null);
     }
 
     public void ActivateButton(){
@@ -104,15 +104,14 @@ public class VueAccueilController implements Observer, Initializable{
             }
     }
 
-    public void DeletePile() throws InterruptedException{
+    public void DeletePile() {
         model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
         initialize(null, null);
         model.callObservers();
     }
-    
 
-
-    public void refresh() throws InterruptedException{
+    public void refresh() {
+        model.callObservers();
         initialize(null, null);
     }
 
