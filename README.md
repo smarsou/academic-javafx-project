@@ -84,3 +84,9 @@ freeze lorsqu'on essai d'ajouter pile depuis accueil si aucune pile dans la list
 menu jouer: nombre decimal, string... non accepté
 -> smartmode: desactiver saisi frequence et 1 par defaut
 laisser plus de place pour question reponses/ adapter scene builder
+12 cartes restantes
+reglages nouvelle pile 
+erreur clear serge
+
+l'histoire du refresh dans vueQuestionController qui Carte card = this.model.nexCarte();
+
