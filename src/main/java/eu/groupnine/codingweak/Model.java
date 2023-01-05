@@ -14,10 +14,12 @@ import eu.groupnine.codingweak.stockage.Stockage;
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
+    String keyClicked;
+    public long time = 5;
 
     Stats currentStats = new Stats();
 
-    public long time = 5;
+
     Stockage stockFromDisk;
 
     public Model() throws FileNotFoundException, IOException{

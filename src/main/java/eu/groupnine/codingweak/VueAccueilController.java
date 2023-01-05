@@ -84,11 +84,28 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void ActivateButton(){
         if(PileSpace.getSelectionModel().getSelectedIndex() >= 0){
+            savePileClicked();
             PlayButton.setDisable(false);
             DeleteButton.setDisable(false);
             SeetingsButton.setDisable(false);
         }
     }
+<<<<<<< HEAD
+=======
+
+    //Cette méthode sauvegarde la clé de la pile cliquée
+    public void savePileClicked(){
+        Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
+            int i = 0;
+            for (String pileName : pileNames) {
+                if (i == PileSpace.getSelectionModel().getSelectedIndex()){
+                    model.keyClicked = pileName;
+                }
+                i++;
+            }
+    }
+    
+>>>>>>> 43391c1c91a13610e6c1150647b4d03970f690cb
 
 
     public void refresh(){
