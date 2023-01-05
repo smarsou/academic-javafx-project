@@ -17,10 +17,14 @@ public class Model extends Observateur{
     String keyClicked;
     public long time = 5;
 
-    Stats currentStats = new Stats();
-
+    public int tempsPile;
+    public Boolean ordrePile; /* true = ordre direct, false = ordre aléatoire  */
+    public int frequencePile;
+    public Boolean smartModePile; /* true = activé, false = desactivé  */
 
     Stockage stockFromDisk;
+
+    Stats currentStats = new Stats();
 
     public Model() throws FileNotFoundException, IOException{
         super();
