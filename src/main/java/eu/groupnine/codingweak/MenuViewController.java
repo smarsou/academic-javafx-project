@@ -37,7 +37,8 @@ public class MenuViewController implements Observer{
     }
 
     public void openStats(){
-        // model.sc.afficherParent("StatGlobal");
+        model.sc.afficherParent("StatGlobal");
+        model.callObservers();
     }
 
     public void importPile(){
