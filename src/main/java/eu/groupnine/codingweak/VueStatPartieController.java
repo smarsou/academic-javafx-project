@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 
@@ -12,6 +13,8 @@ public class VueStatPartieController implements Observer{
     Model model;
     Stats stats = new Stats();
 
+    @FXML private Label cpm;
+    @FXML private Label temps;
 
     @FXML
     private PieChart resultat = new PieChart();
@@ -20,10 +23,12 @@ public class VueStatPartieController implements Observer{
         this.model = model;
         model.observers.add(this);
         this.stats = model.currentStats;
+
     }
 
     public void home(){
         model.sc.afficherParent("Page");
+        model.callObservers();
     }
 
     public ObservableList<PieChart.Data> initializeData(){
@@ -38,7 +43,12 @@ public class VueStatPartieController implements Observer{
     }
 
     public void refresh(){
+        this.stats = model.currentStats;
         System.out.println("Refresh stats");
+        System.out.println(stats.cartesJouees + " " + stats.tempsPasse);
+        float cpmValue = 60*stats.cartesJouees/stats.tempsPasse;
+        cpm.setText(Float.toString(cpmValue));
+        temps.setText(Float.toString(stats.tempsPasse));
         resultat.setData(initializeData());
         resultat.setLabelsVisible(true);
     }

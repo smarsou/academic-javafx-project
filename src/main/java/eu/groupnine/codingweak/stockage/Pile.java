@@ -9,6 +9,7 @@ public class Pile {
     Stats stats;
     public Pile() {
         cartes = new ArrayList<>();
+<<<<<<< HEAD
         this.stats = new Stats();
         this.stats.taux = new Couple();
         this.stats.taux.nombrePartieJouer = new ArrayList<String>();
@@ -16,6 +17,9 @@ public class Pile {
         this.stats.taux.tauxDeReussite = new ArrayList<Float>();
         this.stats.taux.tauxDeReussite.add((float) 0);
 
+=======
+        stats = new Stats();
+>>>>>>> 6684aed6d88bd4f8c44c966aeed16836e3b5c655
     }
 
     public void setNom(String nom){
@@ -38,7 +42,11 @@ public class Pile {
         return this.stats;
     }
     
+<<<<<<< HEAD
     public void addStats(int cnt, int ct,int cj, float cpm, int tp, String cnp, Float cta){
+=======
+    public void addStats(int cnt, int ct,int cj, float cpm, float tp){
+>>>>>>> 6684aed6d88bd4f8c44c966aeed16836e3b5c655
         stats.cartesNonTrouvees+= cnt;
         stats.cartesTrouvees+=ct;
         stats.cartesJouees+=cj;
