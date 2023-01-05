@@ -1,6 +1,5 @@
 package eu.groupnine.codingweak;
 
-import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.application.Platform;
