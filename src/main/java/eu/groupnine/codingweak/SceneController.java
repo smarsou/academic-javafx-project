@@ -41,7 +41,7 @@ public class SceneController {
         main.setRoot(sceneMap.get(name) );
     }
 
-    public void callFunctFromController(String name) throws InterruptedException{
+    public void callFunctFromController(String name) {
         if (name == "startQuestion"){
             if (this.getController("Jeu").getClass().getName() == "eu.groupnine.codingweak.VueQuestionController"){
                 VueQuestionController ctrl = (VueQuestionController) this.getController("Jeu");
