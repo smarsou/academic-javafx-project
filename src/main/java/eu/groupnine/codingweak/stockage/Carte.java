@@ -26,4 +26,15 @@ public class Carte {
 
     }
 
+    public void setQuestion(String q) {
+        this.question = q;
+
+
+    }
+
+    public void setReponse(String rep) {
+        this.reponse = rep;
+
+    }
+
 }

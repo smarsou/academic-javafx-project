@@ -28,6 +28,10 @@ public class Pile {
         return this.description;
     }
 
+    public Stats geStats(){
+        return this.stats;
+    }
+    
     public void addStats(int cnt, int ct,int cj, float cpm, int tp){
         stats.cartesNonTrouvees+= cnt;
         stats.cartesTrouvees+=ct;

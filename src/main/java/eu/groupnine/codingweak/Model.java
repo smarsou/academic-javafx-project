@@ -54,5 +54,15 @@ public class Model extends Observateur{
         
         this.PileCartes = getCurrentPile().cartes;
     }
+
+    
+
+    public void ModifyQuestionCarte(int id, String q) {
+        this.PileCartes.get(id).setQuestion(q);
+    }
+
+    public void ModifyReponseCarte(int id, String rep) {
+        this.PileCartes.get(id).setReponse(rep);
+    }
     
 }

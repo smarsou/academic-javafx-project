@@ -9,7 +9,7 @@ public abstract class Observateur {
         observers = new ArrayList<>();
     }
 
-    public void callObservers() throws InterruptedException{
+    public void callObservers()  {
         for (Observer ob : observers){
             ob.refresh();
         }
