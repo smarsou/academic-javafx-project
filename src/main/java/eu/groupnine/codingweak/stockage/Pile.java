@@ -28,4 +28,8 @@ public class Pile {
         return this.description;
     }
 
+    public Stats geStats(){
+        return this.stats;
+    }
+
 }
