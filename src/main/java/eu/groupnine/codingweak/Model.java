@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import eu.groupnine.codingweak.stockage.Stats;
 import org.controlsfx.control.PropertySheet.Mode;
 
 import eu.groupnine.codingweak.stockage.Carte;
@@ -13,20 +14,22 @@ import eu.groupnine.codingweak.stockage.Stockage;
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
+
+    Stats currentStats = new Stats();
+
     public long time = 5;
-
-
     Stockage stockFromDisk;
 
     public Model() throws FileNotFoundException, IOException{
+        super();
         stockFromDisk = new Stockage();
         stockFromDisk.load();
     }
-    
 
-
-    
-
+    public void setStast(){
+        currentStats.cartesTrouvees= 15;
+        currentStats.cartesNonTrouvees=8;
+    }
     public void setCard(){
         this.PileCartes = new ArrayList<>();
         

@@ -89,7 +89,6 @@ public class VueAccueilController implements Observer, Initializable{
             SeetingsButton.setDisable(false);
         }
     }
-    
 
 
     public void refresh(){
