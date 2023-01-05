@@ -74,12 +74,17 @@ public class VueAccueilController implements Observer, Initializable{
     public void Play(){
         model.sc.afficherParent("Jouer");
         // model.sc.callFunctFromController("startQuestion");
+        model.PileCartes = model.getCurrentPile().cartes;
+        model.callObservers();
     }
 
     public void Seetings(){
         model.sc.afficherParent("Reglage");
         //model.sc.callFunctFromController("InitializeReglage");
+        System.out.println(model.keyClicked);
+        model.PileCartes = model.getCurrentPile().cartes;
         this.model.callObservers();
+        
     }
 
 
@@ -91,7 +96,6 @@ public class VueAccueilController implements Observer, Initializable{
 
         int x = 1;
         while (x==1){
-            System.out.println("aaaaaaaaaa");
             for (String pileName : pileNames) {
                 nouvelleCle = "nouvelle pile n° " + indexPile;
                 if (pileName.equals(nouvelleCle)){

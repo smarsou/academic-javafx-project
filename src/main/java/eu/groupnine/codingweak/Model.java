@@ -38,10 +38,7 @@ public class Model extends Observateur{
 
     }
 
-
     public Carte nexCarte(){
-        System.out.println("next cart");
-
         return PileCartes.get(indexCurrentCarte);
     }
 
