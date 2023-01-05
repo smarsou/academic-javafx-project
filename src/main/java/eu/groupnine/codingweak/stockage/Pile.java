@@ -9,7 +9,7 @@ public class Pile {
     Stats stats;
     public Pile() {
         cartes = new ArrayList<>();
-
+        stats = new Stats();
     }
 
     public void setNom(String nom){
@@ -32,7 +32,7 @@ public class Pile {
         return this.stats;
     }
     
-    public void addStats(int cnt, int ct,int cj, float cpm, int tp){
+    public void addStats(int cnt, int ct,int cj, float cpm, float tp){
         stats.cartesNonTrouvees+= cnt;
         stats.cartesTrouvees+=ct;
         stats.cartesJouees+=cj;

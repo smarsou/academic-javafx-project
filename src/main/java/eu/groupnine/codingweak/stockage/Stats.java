@@ -1,9 +1,9 @@
 package eu.groupnine.codingweak.stockage;
 
 public class Stats {
-    public int cartesJouees = -1;
-    public int cartesTrouvees = -1;
-    public int cartesNonTrouvees = -1;
-    public float cartesParMinutes = -1;
-    public int tempsPasse = -1;
+    public int cartesJouees = 0;
+    public int cartesTrouvees = 0;
+    public int cartesNonTrouvees = 0;
+    public float cartesParMinutes = 0;
+    public float tempsPasse = 0;
 }

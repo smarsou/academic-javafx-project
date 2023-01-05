@@ -48,7 +48,6 @@ public class VueQuestionController implements Observer {
     private static int indexCourant = 0;
 
     public void start()  {
-
         this.model.setCard();
         System.out.println("Game started");
         this.refresh();
@@ -113,12 +112,12 @@ public class VueQuestionController implements Observer {
     public void Found()  {
         //mettre à jour les stats
         this.model.currentStats.cartesJouees++;
-        this.model.currentStats.cartesNonTrouvees++;
+        this.model.currentStats.cartesTrouvees++;
 
 
         //Passer à carte suivante
-        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
-            // VueQuestionController.indexCourant++;
+        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
+            VueQuestionController.indexCourant++;
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
@@ -137,10 +136,10 @@ public class VueQuestionController implements Observer {
         
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesNonTrouvees++;
-        this.model.ajouterCarteSmart();
+        
         //Passer à carte suivante
-        if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
-            // VueQuestionController.indexCourant++;
+        if (VueQuestionController.indexCourant < this.model.PileCartes.size()-1) {
+            VueQuestionController.indexCourant++;
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
@@ -154,7 +153,7 @@ public class VueQuestionController implements Observer {
 
 
     public void refresh()  {
-        // //choisir question et reponses dans pile
+        //choisir question et reponses dans pile
         this.Reponse.setText(null);
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
@@ -167,7 +166,6 @@ public class VueQuestionController implements Observer {
         this.pastrouve.setVisible(false);
         this.trouve.setVisible(false);
         
-        System.out.println(model.PileCartes.size());
         
         
         

@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
 import java.lang.reflect.Type;
+import java.util.Set;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -70,18 +71,58 @@ public class Stockage {
         try (Reader reader = Files.newBufferedReader(path);) {
 
             Gson gson = new Gson();
-            Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();  
-            HashMap<String,Pile> EnsembleDesPiles2 = gson.fromJson(reader, fooType);
-            this.EnsembleDesPiles = EnsembleDesPiles2;
+            Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
+            EnsembleDesPiles = gson.fromJson(reader, fooType);
+
+            // System.out.println(EnsembleDesPiles2.get("pile1").nom);
+        }
+    }
+
+    public void loadFrom(String filePath) throws FileNotFoundException, IOException {
+        Path path = Paths.get(filePath);
+
+        try (Reader reader = Files.newBufferedReader(path);) {
+
+            Gson gson = new Gson();
+            Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
+            HashMap<String,Pile> EnsembleToAdd = gson.fromJson(reader, fooType);
+
+            // Set<String> pileNamesToAdd = EnsembleToAdd.keySet();
+            // for (String pileNameToAdd : pileNamesToAdd){
+            //     if (EnsembleDesPiles.containsKey(pileNameToAdd)){
+            //         System.err.println("Import Warning: Import Pile with an existing name failed");
+            //         EnsembleToAdd.remove(pileNameToAdd);
+            //     }
+            // }
+            
+            Set<String> pileNamesToAddUpdate = EnsembleToAdd.keySet();
+            for (String pileNameToAdd : pileNamesToAddUpdate){
+                System.out.println(pileNameToAdd + " " + EnsembleToAdd.get(pileNameToAdd).getNom());
+                    EnsembleDesPiles.put(pileNameToAdd, EnsembleToAdd.get(pileNameToAdd));
+                }
+            }
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
         }
 
-    }
     //Permet de mettre à jour les données stockées en dur par rapport à EnsembleDesPiles
     public void save() throws FileNotFoundException, IOException {
-
+        
         String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
         Path path = Paths.get(fileName);
+
+        try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            gson.toJson(EnsembleDesPiles, writer);
+
+        }
+
+    }
+
+    public void saveAt(String pathStr)throws IOException{
+
+        Path path = Paths.get(pathStr);
 
         try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
 
