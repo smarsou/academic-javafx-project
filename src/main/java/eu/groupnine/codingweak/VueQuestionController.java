@@ -132,7 +132,7 @@ public class VueQuestionController implements Observer {
 
     @FXML
     public void NotFound()  {
-        //mettre à jour les stats
+        // pour mettre à jour les stats
         
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesNonTrouvees++;
