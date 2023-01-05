@@ -37,6 +37,7 @@ public class VueAccueilController implements Observer, Initializable{
     
     public VueAccueilController(Model model){
         this.model = model;
+        model.observers.add(this);
     }
 
 
@@ -67,6 +68,7 @@ public class VueAccueilController implements Observer, Initializable{
             NameDescription = Name + " : " + Description;
             PileSpace.getItems().add(NameDescription);
         }
+
     }
 
     public void Play(){
@@ -81,8 +83,30 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
 
-    public void addPile(){
-        model.sc.afficherParent(null);
+    public void addPile() throws InterruptedException{
+        Pile nouvellePile = new Pile();
+        String nouvelleCle = "";
+        Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
+        int indexPile = model.stockFromDisk.EnsembleDesPiles.size();
+
+        int x = 1;
+        while (x==1){
+            System.out.println("aaaaaaaaaa");
+            for (String pileName : pileNames) {
+                nouvelleCle = "nouvelle pile n° " + indexPile;
+                if (pileName.equals(nouvelleCle)){
+                    x = 1;
+                }
+                else{
+                    x = 0;
+                    
+                }
+            }
+        }
+        nouvellePile.setNom(nouvelleCle);
+        nouvellePile.setDescription("no description");
+        model.stockFromDisk.EnsembleDesPiles.put(nouvelleCle, nouvellePile);
+        model.callObservers();
     }
 
     public void ActivateButton(){
@@ -108,12 +132,11 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void DeletePile() {
         model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
-        initialize(null, null);
         model.callObservers();
     }
 
-    public void refresh() {
-        model.callObservers();
+    public void refresh() throws InterruptedException{
+        System.out.println("Refresh accueil");
         initialize(null, null);
     }
 
