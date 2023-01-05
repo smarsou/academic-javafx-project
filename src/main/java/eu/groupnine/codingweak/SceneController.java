@@ -53,7 +53,7 @@ public class SceneController {
                 ctrl.start();
             };
         }
-        if (name == "InitializeRegalge"){
+        if (name == "InitializeReglage"){
             if (this.getController("Reglage").getClass().getName() == "eu.groupnine.codingweak.VueReglageController"){
                 VueReglageController ctrl = (VueReglageController) this.getController("Reglage");
                 ctrl.refresh();
