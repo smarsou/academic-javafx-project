@@ -74,11 +74,17 @@ public class VueAccueilController implements Observer, Initializable{
     public void Play(){
         model.sc.afficherParent("Jouer");
         // model.sc.callFunctFromController("startQuestion");
+        model.PileCartes = model.getCurrentPile().cartes;
+        model.callObservers();
     }
 
     public void Seetings(){
         model.sc.afficherParent("Reglage");
-        model.sc.callFunctFromController("InitializeReglage");
+        //model.sc.callFunctFromController("InitializeReglage");
+        System.out.println(model.keyClicked);
+        model.PileCartes = model.getCurrentPile().cartes;
+        this.model.callObservers();
+        
     }
 
 
@@ -133,7 +139,11 @@ public class VueAccueilController implements Observer, Initializable{
         model.callObservers();
     }
 
+<<<<<<< HEAD
     public void refresh(){
+=======
+    public void refresh() {
+>>>>>>> 1d4e6c0f6d821b25b7dcc3aa417ef2f666f2b0a5
         System.out.println("Refresh accueil");
         initialize(null, null);
     }

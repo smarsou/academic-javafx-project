@@ -53,6 +53,7 @@ public class VueReglageController implements Observer {
 
     public VueReglageController(Model model){
         this.model = model;
+        this.model.observers.add(this);
     }
 
     
@@ -114,11 +115,13 @@ public class VueReglageController implements Observer {
         this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Questions"));
         this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponses"));
         this.Table.getItems().clear();
+        
         ArrayList<Carte> CurrentCartes = this.model.getCurrentPile().cartes;
+        System.out.println(CurrentCartes.get(0));
         for (int i = 0;i<CurrentCartes.size();i++) {
             this.Table.getItems().add(CurrentCartes.get(i));
         }
-        this.nbCartes.setText(this.model.PileCartes.size() + " " +"Cartes");
+        this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
 
         
     }

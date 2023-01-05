@@ -44,6 +44,7 @@ public class SceneController {
     protected void afficherParent(String name){
         main.setRoot(sceneMap.get(name));
         strMain = name;
+        
     }
 
     public void callFunctFromController(String name){
@@ -53,7 +54,7 @@ public class SceneController {
                 ctrl.start();
             };
         }
-        if (name == "InitializeRegalge"){
+        if (name == "InitializeReglage"){
             if (this.getController("Reglage").getClass().getName() == "eu.groupnine.codingweak.VueReglageController"){
                 VueReglageController ctrl = (VueReglageController) this.getController("Reglage");
                 ctrl.refresh();

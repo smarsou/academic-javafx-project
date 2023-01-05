@@ -38,6 +38,10 @@ public class MenuViewController implements Observer{
 
     public void openStats(){
         model.sc.afficherParent("StatGlobal");
+<<<<<<< HEAD
+=======
+        model.callObservers();
+>>>>>>> 1d4e6c0f6d821b25b7dcc3aa417ef2f666f2b0a5
     }
 
     public void importPile(){
@@ -45,8 +49,10 @@ public class MenuViewController implements Observer{
     }
 
     public void refresh(){
-        if (model.sc.strMain == "Page"){
+        if (model.sc.strMain != "Page"){
             menuEdit.setVisible(false);
+        }else{
+            menuEdit.setVisible(true);
         }
     }
 

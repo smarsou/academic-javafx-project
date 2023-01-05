@@ -31,11 +31,8 @@ public class VueStatGlobalController implements Observer, Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         AreaOfPiles.getItems().clear();
         chargeOfPiles();
-        
     }
     
-
-
     public void chargeOfPiles(){
         //Obtenir l'ensemble des clés du dictionnaire
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();

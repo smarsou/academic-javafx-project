@@ -38,9 +38,7 @@ public class Model extends Observateur{
 
     }
 
-
     public Carte nexCarte(){
-        
         return PileCartes.get(indexCurrentCarte);
     }
 

@@ -34,8 +34,7 @@ public class Main extends Application {
         sc.addScene("Reglage", "VueReglage.fxml", new VueReglageController(model));
         sc.addScene("Jouer", "VueJouer.fxml", new VueJouerController(model));
         sc.addScene("StatPartie", "VueStatPartie.fxml", new VueStatPartieController(model));
-
-        
+        sc.addScene("StatGlobal", "VueStatGlobal.fxml", new VueStatGlobalController(model));
 
         Scene scene = new Scene(root);
         sc.setMain(scene, "Page");
