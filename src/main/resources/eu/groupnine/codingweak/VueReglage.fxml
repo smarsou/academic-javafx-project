@@ -41,7 +41,8 @@
         <Label layoutX="54.0" layoutY="293.0" prefHeight="21.0" prefWidth="65.0" text="IdCartes" />
         <TextField fx:id="idCarte" disable="true" layoutX="54.0" layoutY="322.0" prefHeight="40.0" prefWidth="187.0" />
         <Button layoutX="54.0" layoutY="612.0" mnemonicParsing="false" onAction="#Modify" text="Modifier" />
-        <Button layoutX="209.0" layoutY="612.0" mnemonicParsing="false" onAction="#Create" prefHeight="24.0" prefWidth="89.0" text="Creer" />
+        <Button layoutX="159.0" layoutY="612.0" mnemonicParsing="false" onAction="#Create" prefHeight="24.0" prefWidth="89.0" text="Creer" />
         <Label fx:id="nbCartes" layoutX="754.0" layoutY="612.0" prefHeight="31.0" prefWidth="89.0" />
+      <Button layoutX="290.0" layoutY="612.0" mnemonicParsing="false" onAction="#Supp" text="Clear" />
     </children>
 </AnchorPane>
