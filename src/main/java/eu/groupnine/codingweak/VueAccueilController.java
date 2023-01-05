@@ -114,5 +114,4 @@ public class VueAccueilController implements Observer, Initializable{
         initialize(null, null);
     }
 
-
 }
