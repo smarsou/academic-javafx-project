@@ -104,7 +104,7 @@ public class Stockage {
         }
     }
 
-    public void loadFrom(String filePath) throws FileNotFoundException, IOException, JsonSyntaxException {
+    public Boolean loadFrom(String filePath) throws FileNotFoundException, IOException, JsonSyntaxException {
         Path path = Paths.get(filePath);
 
         try (Reader reader = Files.newBufferedReader(path);) {
@@ -116,7 +116,7 @@ public class Stockage {
             EnsembleToAdd = gson.fromJson(reader, fooType);
             }catch(JsonSyntaxException e){
                 System.err.println("Error import weird json");
-                return;
+                return false;
             }
             // Set<String> pileNamesToAdd = EnsembleToAdd.keySet();
             // for (String pileNameToAdd : pileNamesToAdd){
@@ -130,6 +130,7 @@ public class Stockage {
                     EnsembleDesPiles.put(pileNameToAdd, EnsembleToAdd.get(pileNameToAdd));
                 }
             }
+        return true;
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
         }
 

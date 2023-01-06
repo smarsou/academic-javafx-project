@@ -13,10 +13,22 @@ import org.controlsfx.control.PropertySheet.Mode;
 import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
+import javafx.stage.Stage;
 
 
 public class Model extends Observateur{
+        /* label pour page d'erreur */
+    @FXML
+    public Label texteErreur;
+    private String messageErreur = new String();
+
     SceneController sc;
     ArrayList<Carte> PileCartes;
     String keyClicked;
@@ -74,7 +86,7 @@ public class Model extends Observateur{
 
     public void mettreOrdreCartesAleat(){
         if (ordrePile==false){
-            Collections.shuffle(PileCartes); 
+            Collections.shuffle(PileCartes, new Random()); 
         }
     }
 
@@ -104,20 +116,6 @@ public class Model extends Observateur{
 
 
 
-
-    // public void setCard(){
-    //     this.PileCartes = new ArrayList<>();
-        
-    //     Carte carte1 = new Carte(1,"question1","reponse1");
-    //     Carte carte2 = new Carte(2,"question2","reponse2");
-    //     Carte carte3 = new Carte(3,"question3","reponse3");
-
-        
-    //     this.PileCartes.add(carte1);
-    //     this.PileCartes.add(carte2);
-    //     this.PileCartes.add(carte3);
-        
-    // }
     public void setCard(){
         this.PileCartes = getCurrentPile().cartes;
     }
@@ -150,6 +148,27 @@ public class Model extends Observateur{
             }
         }
         return null;
+    }
+
+    @FXML
+    public void afficherErreur() throws Exception{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("VueErreur.fxml"));
+        loader.setControllerFactory(iC->this);
+        Parent rootPage = loader.load();
+
+        // afficher les données de la page
+        this.texteErreur.setText(messageErreur);
+
+        Scene scene = new Scene(rootPage);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+
+    public void setErrorMessage(String error){
+        this.messageErreur = error;
     }
 
     public boolean findQuestionInPile(String quest) {

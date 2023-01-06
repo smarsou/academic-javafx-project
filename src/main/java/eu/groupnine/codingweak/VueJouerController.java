@@ -51,47 +51,19 @@ public class VueJouerController implements Observer, Initializable{
     @FXML
     ChoiceBox<String> valeurOrdre;
 
-    /* label pour page d'erreur */
     @FXML
-    Label texteErreur;
+    Label UNtitrePile;
 
-    public VueJouerController(Model model){
+    public VueJouerController(Model model) {
         this.model = model;
+        this.model.observers.add(this);
 
-        // EventHandler<KeyEvent> eventHandlerTextField = new EventHandler<KeyEvent>() { 
-        //     @Override 
-        //     public void handle(KeyEvent event) { 
-        //         System.out.println("ouiiiiii");
-        //     }           
-        // };
-
-        // //Handling the mouse clicked event(on box) 
-        // EventHandler<MouseEvent> eventHandlerBox = new EventHandler<javafx.scene.input.MouseEvent>() {
-        //     @Override 
-        //     public void handle(javafx.scene.input.MouseEvent e) { 
-        //         System.out.println("ouiiiiii"); 
-        //     } 
-
-
-        // };
-
-        // if (valeurTemps != null){
-
-        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
-        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
-
-        // }
-        // else { 
-        //     valeurTemps = new TextField("5");
-
-        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
-        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
-        // }
     }
+
 
     public void choixTemps() throws Exception{
         
-        if (Long.parseLong(valeurTemps.getText())>0 ) {
+        if (Long.parseLong(valeurTemps.getText())>0 || verifierEntier(valeurTemps)) {
             model.time = Long.parseLong(valeurTemps.getText());
             }
         else {
@@ -100,15 +72,6 @@ public class VueJouerController implements Observer, Initializable{
     }
 
 
-
-
-    // public void actionTemps(){
-
-    //     if (valeurTemps.getText().isEmpty()){
-    //     }
-    //     if (Long.parseLong(valeurTemps.getText()) <0 || Long.parseLong(valeurTemps.getText()) >30){
-    //     }
-    // }
 
     public void choixOrdre(){
         model.ordrePile = true;
@@ -119,7 +82,7 @@ public class VueJouerController implements Observer, Initializable{
     }
 
     public void choixFrequence(){
-        if (Integer.parseInt(valeurFrequence.getText())>0) {
+        if (Integer.parseInt(valeurFrequence.getText())>0 || verifierEntier(valeurFrequence)) {
         model.frequencePile = Integer.parseInt(valeurFrequence.getText());
         }
         else {
@@ -135,48 +98,68 @@ public class VueJouerController implements Observer, Initializable{
     }
     
     public void choixJouer() throws Exception{
-        this.choixTemps();
-        this.choixOrdre();
-        this.choixFrequence();
-        this.choixSmartMode();
-        model.reinit();
-        if (!model.checkPile()){
-            System.err.println("Error with the Pile: Can't Play");
-            return;
+
+        if (!empecherJouer()){
+            this.choixTemps();
+            this.choixOrdre();
+            this.choixFrequence();
+            this.choixSmartMode();
+
+            model.reinit();
+            this.model.mettreOrdreCartesAleat();
+            if (!model.checkPile()){
+                model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
+                model.afficherErreur();
+                return;
+            }
+            
+    
+            model.sc.afficherParent("Jeu");
+            model.sc.callFunctFromController("startQuestion");
+            this.model.gestionFrequence();
+
+            model.callObservers();
+        };
+
+
+
+        
+
+    }
+
+    public boolean empecherJouer() throws Exception{
+        if (!verifierEntier(valeurFrequence) || !verifierEntier(valeurTemps)){
+            model.setErrorMessage("Attention, veuillez entrer des valeurs entières");
+            model.afficherErreur();
+            return true;
         }
-        model.sc.afficherParent("Jeu");
-        model.sc.callFunctFromController("startQuestion");
-        this.model.gestionFrequence();
-        this.model.mettreOrdreCartesAleat();
-        model.callObservers();
+        if ((Long.parseLong(valeurTemps.getText())<1) || Integer.parseInt(valeurFrequence.getText())<1 ){
+            model.setErrorMessage("Attention, le temps et la fréquence choisis doiventt être des entiers positifs.");
+            model.afficherErreur();
+            return true;
+        }
+        if ((Long.parseLong(valeurTemps.getText())>30) || Integer.parseInt(valeurFrequence.getText())>30 ){
+            model.setErrorMessage("Attention, le jeu n'est pas intéressant pour un temps ou une fréquence trop élevés, veuillez choisir des valeurs raisonnables");
+            model.afficherErreur();
+            return true;
+        }
 
-        empecherJouer("Attention, le temps et la fréquence choisis doiventt être des entiers positifs.");
 
+    return false;        
     }
 
-    @FXML
-    public void empecherJouer(String textVoulu) throws IOException{
-        
-        
-        this.boutonJouer.setDisable(true);
-        
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("VueErreur.fxml"));
-        loader.setControllerFactory(iC->this);
-        Parent rootPage = loader.load();
-
-        // afficher les données de la page
-        texteErreur.setText(textVoulu);
-
-        Scene scene = new Scene(rootPage);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+    private boolean verifierEntier(TextField f) 
+    { 
+        try {
+            Integer.parseInt(f.getText());
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
-
 
     public void refresh(){
-        
+        this.UNtitrePile.setText(model.getCurrentPile().getNom());
     }
 
     @Override
