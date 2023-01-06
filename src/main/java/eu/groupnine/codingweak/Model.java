@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Set;
 import java.util.Collections;
+import java.util.HashMap;
 
 import eu.groupnine.codingweak.stockage.Stats;
 import org.controlsfx.control.PropertySheet.Mode;
@@ -86,7 +87,7 @@ public class Model extends Observateur{
 
     public void mettreOrdreCartesAleat(){
         if (ordrePile==false){
-            Collections.shuffle(PileCartes, new Random()); 
+            Collections.shuffle(PileCartes); 
         }
     }
 
@@ -104,15 +105,41 @@ public class Model extends Observateur{
         }
     }
 
+    public boolean findNomInPiles(String nom) {
+        
+        for (Pile p : this.stockFromDisk.EnsembleDesPiles.values()) {
+            if (p.getNom().equals(nom)) {
+                return true;
+
+            }
+
+        }
+        return false;
+
+
+    }
+
+    public boolean findDescInPiles(String desc) {
+        
+        for (Pile p : this.stockFromDisk.EnsembleDesPiles.values()) {
+            if (p.getDescription().equals(desc)) {
+                return true;
+            }
+            
+        }
+        return false;
+
+    }
+
     public Pile getCurrentPile(){
-        return Stockage.EnsembleDesPiles.get(keyClicked);
+        // System.out.println("pile choisie");
+        return this.stockFromDisk.EnsembleDesPiles.get(keyClicked);
     }
 
     public void setStast(){
         currentStats.cartesTrouvees= 15;
         currentStats.cartesNonTrouvees=8;
     }
-
 
 
     public void setCard(){
@@ -130,10 +157,9 @@ public class Model extends Observateur{
     }
     
     public void reinit(){
-        this.indexCurrentCarte =0;
+        this.indexCurrentCarte = 0;
         currentStats = new Stats();
         PileCartes = getCurrentPile().cartes;
-
     }
 
     public void suppCarte(int parseInt) {

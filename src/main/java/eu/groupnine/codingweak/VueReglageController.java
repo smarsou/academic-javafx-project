@@ -96,19 +96,46 @@ public class VueReglageController implements Observer, Initializable {
     }
 
     @FXML
-    public void Register() throws FileNotFoundException, IOException {
+    public void Register() throws Exception {
         
         
         String n = this.NomPile.getText();
         String d = this.Description.getText();
         if ((n != null)&&(d != null)) {
-            this.model.getCurrentPile().setNom(n);
-            this.model.getCurrentPile().setDescription(d);
-            model.stockFromDisk.save();
+            boolean resN = this.model.findNomInPiles(n);
+            boolean resD = this.model.findDescInPiles(d);
+            if (resN == false) {
+                this.model.getCurrentPile().setNom(n);
+
+            }
+            if (resD == false) {
+                this.model.getCurrentPile().setDescription(d);
+
+            }
+            if (resN == true) {
+                model.setErrorMessage("Erreur avec le choix de pile: le nom de la pile existe déjà !");
+                    
+                model.afficherErreur();
+
+            }
+            if (resD == true) {
+                model.setErrorMessage("Erreur avec le choix de pile: la description de la pile existe déjà !");
+                    
+                model.afficherErreur();
+
+            }
+            
+            
             this.model.callObservers();
 
         }
 
+        else {
+            model.setErrorMessage("Choisir un nom et une description !");
+                    
+            model.afficherErreur();
+        }
+        //System.out.println("ok");
         this.NomPile.setText(null);
         this.Description.setText(null);
         this.idCarte.setText(null);
@@ -229,7 +256,7 @@ public class VueReglageController implements Observer, Initializable {
                 }
             
                 else {
-                    model.setErrorMessage("Erreur avec le choix de pile: elle existe déjà !");
+                    model.setErrorMessage("Erreur avec le choix de carte: elle existe déjà !");
                     model.afficherErreur();
                     
             

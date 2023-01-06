@@ -62,6 +62,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void chargePile(){
         //Obtenir l'ensemble des clés du dictionnaire
+
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
         
         if (pileNames == null){
@@ -79,8 +80,9 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
     public void Play(){
-        this.model.callObservers();
+
         model.sc.afficherParent("Jouer");
+        this.model.callObservers();
         //model.sc.callFunctFromController("startQuestion");
         //model.PileCartes = model.getCurrentPile().cartes;
         // model.callObservers();

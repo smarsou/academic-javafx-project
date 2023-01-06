@@ -10,24 +10,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <fx:include source="menu-view.fxml" />
-      <Label fx:id="UNtitrePile" alignment="CENTER" layoutX="117.0" layoutY="44.0" prefHeight="56.0" prefWidth="391.0" text="titre de la pile" textAlignment="CENTER">
+      <Label fx:id="UNtitrePile" layoutX="57.0" layoutY="46.0" prefHeight="149.0" prefWidth="431.0" text="titre de la pile" wrapText="true">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="43.0" layoutY="144.0" prefHeight="32.0" prefWidth="172.0" text="TEMPS MAX (/ carte) :" />
-      <Label layoutX="43.0" layoutY="200.0" prefHeight="32.0" prefWidth="103.0" text="ORDRE " />
-      <Label layoutX="43.0" layoutY="271.0" prefHeight="25.0" prefWidth="301.0" text="FREQUENCE (d'apparition de chaque carte) :" />
-      <Label layoutX="43.0" layoutY="332.0" prefHeight="16.0" prefWidth="123.0" text="SMART MODE" />
-      <Button fx:id="boutonJouer" layoutX="445.0" layoutY="292.0" mnemonicParsing="false" onAction="#choixJouer" prefHeight="81.0" prefWidth="96.0" text="Jouer" />
-      <Label layoutX="255.0" layoutY="153.0" prefHeight="16.0" prefWidth="58.0" text="sec." />
-      <TextField fx:id="valeurTemps" layoutX="191.0" layoutY="149.0" prefHeight="24.0" prefWidth="52.0" text="5" />
-      <TextField fx:id="valeurFrequence" layoutX="350.0" layoutY="272.0" prefHeight="24.0" prefWidth="52.0" text="1" />
-      <CheckBox fx:id="valeurSmartMode" layoutX="157.0" layoutY="331.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" />
-      <ChoiceBox fx:id="valeurOrdre" layoutX="140.0" layoutY="204.0" prefWidth="150.0" value="direct">
+      <Label layoutX="57.0" layoutY="222.0" prefHeight="32.0" prefWidth="252.0" text="TEMPS MAX (/ carte) :">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="57.0" layoutY="310.0" prefHeight="32.0" prefWidth="103.0" text="ORDRE :">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="57.0" layoutY="398.0" prefHeight="42.0" prefWidth="570.0" text="FREQUENCE (d'apparition de chaque carte) :" wrapText="true">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="57.0" layoutY="487.0" prefHeight="29.0" prefWidth="160.0" text="SMART MODE">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Button fx:id="boutonJouer" layoutX="784.0" layoutY="528.0" mnemonicParsing="false" onAction="#choixJouer" prefHeight="81.0" prefWidth="96.0" text="Jouer" />
+      <Label layoutX="397.0" layoutY="224.0" prefHeight="16.0" prefWidth="58.0" text="sec.">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <TextField fx:id="valeurTemps" layoutX="328.0" layoutY="227.0" prefHeight="24.0" prefWidth="52.0" text="5" />
+      <TextField fx:id="valeurFrequence" layoutX="601.0" layoutY="407.0" prefHeight="24.0" prefWidth="52.0" text="1" />
+      <CheckBox fx:id="valeurSmartMode" layoutX="272.0" layoutY="493.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" />
+      <ChoiceBox fx:id="valeurOrdre" layoutX="169.0" layoutY="314.0" prefWidth="150.0" value="direct">
          <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="direct" />
