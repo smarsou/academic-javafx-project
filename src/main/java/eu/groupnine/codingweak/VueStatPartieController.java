@@ -60,5 +60,4 @@ public class VueStatPartieController implements Observer{
         Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
         return taux;
     }
-    
 }

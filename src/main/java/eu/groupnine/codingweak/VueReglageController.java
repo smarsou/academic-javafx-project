@@ -9,14 +9,18 @@ import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-public class VueReglageController implements Observer {
+public class VueReglageController implements Observer, Initializable {
     Model model;
     @FXML
     private TextField  NomPile;
@@ -47,6 +51,18 @@ public class VueReglageController implements Observer {
 
     @FXML
     private Label nbCartes;
+
+    @FXML
+    private Button RegisterButton;
+
+    @FXML
+    private Button CreateButton;
+
+    @FXML
+    private Button ModifyButton;
+
+    @FXML
+    private Button ClearButton;
 
 
 
@@ -186,9 +202,9 @@ public class VueReglageController implements Observer {
         this.NomPile.setText(p.getNom());
         this.Description.setText(p.getDescription());
         
-        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("idcard"));
-        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("infoquestion"));
-        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("inforeponse"));
+        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("Id"));
+        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Question"));
+        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponse"));
         this.Table.getItems().clear();
         
         ArrayList<Carte> CurrentCartes = this.model.PileCartes;
@@ -200,6 +216,44 @@ public class VueReglageController implements Observer {
     }catch(NullPointerException exception){
         
     }
+        
+    }
+
+    public void setIcone(){
+        Image image1 = new Image(getClass().getResource("/icone/register.png").toExternalForm()); 
+        ImageView icon1 = new ImageView(image1);
+        icon1.setFitWidth(30);
+        icon1.setFitHeight(30); 
+        RegisterButton.setGraphic(icon1);
+        RegisterButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image2 = new Image(getClass().getResource("/icone/creer.png").toExternalForm()); 
+        ImageView icon2 = new ImageView(image2);
+        icon2.setFitWidth(30);
+        icon2.setFitHeight(30); 
+        CreateButton.setGraphic(icon2);
+        CreateButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image3 = new Image(getClass().getResource("/icone/modifier.png").toExternalForm()); 
+        ImageView icon3 = new ImageView(image3);
+        icon3.setFitWidth(30);
+        icon3.setFitHeight(30); 
+        ModifyButton.setGraphic(icon3);
+        ModifyButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image4 = new Image(getClass().getResource("/icone/nettoyer.png").toExternalForm()); 
+        ImageView icon4 = new ImageView(image4);
+        icon4.setFitWidth(30);
+        icon4.setFitHeight(30); 
+        ClearButton.setGraphic(icon4);
+        ClearButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        
+    }
+
+
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setIcone();
         
     }
 
