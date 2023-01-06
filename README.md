@@ -1,6 +1,15 @@
 # Coding Week G9
 
-# Installation
+# Lancement à partir du .jar
+
+Pour lancer l'application, il vous faudra installer javafx.
+Il suffira ensuite de vérifier que la variable d'environnement JAVAFX_HOME soit bien initialisée, et d'exécuter la commande suivante :
+    
+    java --module-path ${JAVAFX_HOME}/lib --add-modules=javafx.controls,javafx.fxml -jar codingweek-09.jar
+
+Profitez bien !
+
+# Lancement via le projet Gradle
 
 Ce projet est auto-suffisant dans le sans où il propose d'utiliser l'outil Gradle (https://gradle.org/) pour construire l'application fournie.
 Un simple `./gradlew run` dans un terminal devrait vous télécharger l'outil gradle, télécharger les dépendances nécessaires (JavaFX entre autre), lancer la compilation et exécuter le programme. 
@@ -10,6 +19,8 @@ Il se peut que vous rencontriez des problèmes. Voici quelques solutions :
 - Gradle ne supportant pas encore Java 19, il faut utiliser une version 17 ou 18 du Java Development Kit (JDK) (utiliser la commande `java --version` ou un `./gradlew --version` pour vérifier votre version actuelle du JDK.)
 
 Cette configuration peut également être importée dans IntelliJ pour créer un projet fonctionnelle à partir de celle-ci. Pour cela, lors de la création de votre projet IntelliJ, il faut sélectionner le fichier `build.gradle` et non pas uniquement le répertoire du projet.
+
+//!\\ Si l'environnement Gradle n'est pas mis en place après le git clone, veuillez ouvrir le projet sur IntelliJ pour générer les fichiers manquants.
 
 # Planning
 
@@ -81,6 +92,6 @@ Nous sommes parvenus à mettre en place notre application, il nous reste encore 
 Aujourd'hui, nous devons finir les détails de notre application: il reste des fonctionnalitées à améliorer, quelques bugs à corriger... Nous nous réservons l'après-midi pour la tester le plus complétement possible, et mettre en place nos messages d'erreurs et d'alertes.
 
 ### Resultat jour 4
-Après un sprint final, nous sommes parvenus à livrer l'application fonctionnelle, testée, dans les temps.
+Après un sprint final, nous sommes parvenus à livrer l'application fonctionnelle (un peu en retard), testée, dans les temps.
 
 

@@ -1,0 +1,1163 @@
+[33mcommit d42e52b843efc05bf1e423f32842a8f8119da642[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: RELEASE_FINAL[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 18:28:12 2023 +0100
+
+    Fin
+
+[33mcommit b3d5dc6190d848e36fbe2d166f18f31916a6185d[m
+Merge: d431528 13cb6e8
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 18:22:55 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit d431528ec1905c1da62de476888fa517e39b792f[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 18:22:50 2023 +0100
+
+    Fin
+
+[33mcommit 13cb6e83e924beff14020cb945013693cf33e34b[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 18:05:20 2023 +0100
+
+    Appplication stats
+
+[33mcommit 80b3e47f309dd0a2c84bf0ddab247f9c661e5e33[m
+Merge: 51014cd d723791
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:41:37 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 51014cda2b800b6473a48d6b67a0619c8b136a3d[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:41:32 2023 +0100
+
+    Fix bug
+
+[33mcommit d72379122f10a6c5528dc7caa44bb2f3cb30baf3[m
+Merge: edc928e 91318ea
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 17:34:13 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 91318ea2f849d7b17f926c1d0a859b2cdd2b7c28[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:33:59 2023 +0100
+
+    Vide BUg fiksé
+
+[33mcommit edc928e967cd2fe47cf38c54b4fc74ec2b68a07f[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 17:32:04 2023 +0100
+
+    corect readme
+
+[33mcommit 63f08fc87f50c0aefa14d8a5fb56b273411fb2d0[m
+Merge: 419ab9f d73f034
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:30:24 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 419ab9f862ce808d3211fdeef5e5dc169fb2de0c[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:30:08 2023 +0100
+
+    Rangement du répertoire
+
+[33mcommit d73f03446f4c90b9fb890482832dbf5b40a5685c[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:27:10 2023 +0100
+
+    Fix Warning
+
+[33mcommit db6db6d16cdeac1a369ac3ccaa20e1a13d341aaa[m
+Merge: ef0c11f dd04337
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:25:22 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit ef0c11f0f149e4dff54622b6d43ba5f5d76f3e5e[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:25:16 2023 +0100
+
+    Deplacement
+
+[33mcommit dd043371fb9b05c4d6043490134a8c408110b8e2[m
+Merge: f947d9c c9992b7
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 17:24:27 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit f947d9c04d540dbda3dba9c23c07ddbe2b36f288[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 17:23:32 2023 +0100
+
+    corrections - last
+
+[33mcommit c9992b70973b8e8167f6e9b6060a2930258814cc[m
+Merge: 5dd5dad 2230aa7
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:21:24 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 5dd5dad1d8372c6b31f31aaacf29944eedfe65bd[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 17:17:13 2023 +0100
+
+    Vue Reglages pile finish
+
+[33mcommit 2230aa73fa00c2c370487abe5e10aea251398b5d[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:16:12 2023 +0100
+
+    fix merge
+
+[33mcommit a359ee1275b4806468274591f668b849a8e3744a[m
+Merge: e93c876 b61924d
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:15:01 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit e93c876b72d05d953574fadf4a933ee71500b021[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 17:14:05 2023 +0100
+
+    add fin
+
+[33mcommit b61924dfef29be97ac6a41ae351d5ea0945a2d90[m
+Merge: 264d058 53291b8
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:59:48 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 264d0580108ddbb7ff6892213644ceb39fc6a182[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:59:33 2023 +0100
+
+    +readme
+
+[33mcommit 3c158fd4d40aff420b2da1b7a9b4ac7b1b5aebad[m
+Merge: 498ada3 53291b8
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 16:54:33 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 2c11961ff822d371c16425755df50cac2a80e9ec[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:53:47 2023 +0100
+
+    derniere mise au propre
+
+[33mcommit 498ada3bc7b1dbb1db7d6bf74261fb825dfcfd29[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 16:52:58 2023 +0100
+
+    Mise à jour des vues + fix bugs
+
+[33mcommit 53291b8110a77685926484754560de0b3f11a42e[m
+Merge: 051e1e4 ba2416b
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 16:42:51 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 051e1e4a4cc3e03ed77c7a6c858853f580812704[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 16:42:46 2023 +0100
+
+    gestion erreur 3
+
+[33mcommit ba2416bc5a8ca46043ea7e0545b81faa15b1ac5c[m
+Merge: 7f14276 e39de29
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 16:27:08 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit e39de2942408f63d9ac7ab1b456ffdd276baa1b4[m
+Merge: 7e87aee 094a2a5
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 16:26:04 2023 +0100
+
+    Okay
+
+[33mcommit 7e87aee66792e151521e69e7570fe6712be0d115[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 16:24:46 2023 +0100
+
+    Okay
+
+[33mcommit 7f142766fc204d319176d0c5503daaec583ca931[m
+Merge: 5391bdb 094a2a5
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 16:21:42 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 094a2a586eefd24796791bbca5833ca0fa7a6014[m
+Merge: 160af41 e382de9
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:19:57 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 160af41f2fcc58857a19f1c740a9c5e6cfa9cbca[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:17:57 2023 +0100
+
+    mode aleatoire réparé
+
+[33mcommit 5391bdbe213fe04503c0f7bca10f94501b552a13[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 16:16:48 2023 +0100
+
+     test
+
+[33mcommit e382de9d2ccc76a2e1c7fa625ccf8f2cc83c529f[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 16:12:32 2023 +0100
+
+    Handle import erreur
+
+[33mcommit a74586a00a410283617e19aa50b9a7103cae220a[m
+Merge: 2a36de6 0b291b0
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 16:00:51 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 0b291b07a8755f60563f69cb6e63135dd4935cf0[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:59:21 2023 +0100
+
+    Fix bug
+
+[33mcommit 46cc8c26d92379aca61c8264fe82ff3a7033449f[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:57:28 2023 +0100
+
+    Fix bug
+
+[33mcommit 51b76aac9f658d16db1eeb087a04e0488eeafb01[m
+Merge: 197bdb8 4bdd3b8
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:54:11 2023 +0100
+
+    Reglage du bug
+
+[33mcommit 2a36de67dcb3e3123d4d1667e17f97476af4bc5a[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 15:52:53 2023 +0100
+
+    correction titre piles
+
+[33mcommit 197bdb8f9534cdedec290d06ee50854cfe92e062[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:51:25 2023 +0100
+
+    Bug à réglé
+
+[33mcommit 4bdd3b8ba65b29a0220b1edcd6a9d6d00977122c[m
+Merge: 9032089 e590401
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:50:40 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 90320897c575e15d98e3cb905685053b0e3ae144[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:44:00 2023 +0100
+
+    Fix
+
+[33mcommit e590401cae42f0bc858cfea3472124d60cb2127d[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 15:33:51 2023 +0100
+
+    mise en place pop up vue reglage
+
+[33mcommit c8d40860c63a446206d6ba3c14ac21301b5dae61[m
+Merge: 632e173 245eccb
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 15:27:52 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 632e173cc810df4f70f1102d4a3f2e0a9a27fce7[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 15:24:55 2023 +0100
+
+    pop up
+
+[33mcommit 245eccbc6220868be58f59a0dfae0ff7afc591b9[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:19:15 2023 +0100
+
+    arretez de le merge ce fichieeeeeeer
+
+[33mcommit 98babab9b7ec49ce33161ef3f1a662ff44cfc271[m
+Merge: 8c45db0 7dbf7ef
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:14:14 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 8c45db01134a15fd78b9e52986491f865cf4b952[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 15:09:08 2023 +0100
+
+    Fix bug
+
+[33mcommit 7dbf7efd3cc93a575ab15e9007fb14b78f3617fa[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:08:42 2023 +0100
+
+    VueStatPartie
+
+[33mcommit b903428a9e8093c9468c886b31c6cd3746466517[m
+Merge: d667728 a460ec4
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:08:10 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit d667728635fa526d1ac2b499e266c120592390fb[m
+Merge: 78cf6aa f0a984f
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:07:15 2023 +0100
+
+    Stats
+
+[33mcommit a460ec4380cfabe85dafaf755b8a65d023310450[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 15:04:35 2023 +0100
+
+     style element
+
+[33mcommit 78cf6aaf2de57e6803a47099c0dac092221f86be[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 15:04:01 2023 +0100
+
+    Statistiques réglés
+
+[33mcommit f0a984ff77dff0bf361e37609e1ac2fda4fabf60[m
+Merge: 75c5f59 105fb16
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 14:51:36 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 105fb16d95d69a09ee8903e21b68ff8947a8b34f[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:48:44 2023 +0100
+
+    Gestion des erreurs 2
+
+[33mcommit 75c5f59fe1bf470635a46a57dcb40447bf9ebe4f[m
+Merge: 0ec2a1f 7a88404
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 14:45:02 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 7a8840423bed3eb81bda86a255ca1a2abd8996a3[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:42:51 2023 +0100
+
+    Gestion des erreurs
+
+[33mcommit fba27ab5e0757df07e3e560a1c412d55a3060e2b[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:39:43 2023 +0100
+
+    Gestion des erreurs
+
+[33mcommit 0ec2a1f0d1b4e95f8a8871fd6917bb5466e8bab2[m
+Merge: 3f38991 a504935
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 14:38:52 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 3f38991480e6a5c4b22db8fa0ff4d3ada4307dba[m
+Merge: 3b830b7 e2e7a99
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 14:38:16 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit a504935018422fe781fd25675489a4eb904e2d57[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:38:15 2023 +0100
+
+    Gestion des erreurs
+
+[33mcommit 3b830b77dc896a508f419ce9371840b860815577[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 14:34:37 2023 +0100
+
+     style element
+
+[33mcommit e2e7a9901079ab2bc877f35cf8bd51521c10bcc8[m
+Merge: 0556c58 f63dfe7
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:18:50 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 0556c581449e2b988e718ad662bf4d1c4b82412f[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 14:18:45 2023 +0100
+
+    VueReglages warning
+
+[33mcommit f63dfe73fd1f9fe3265cf79d9e762983edcb8943[m
+Merge: 64a247c 0577e5b
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 12:18:04 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 64a247ccb1f18d7a7a563e1c6cce81cecf214378[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 12:17:57 2023 +0100
+
+    messages alerte
+
+[33mcommit 0577e5bb5b508d2468f45bf7f6d71e17349bd456[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 12:11:39 2023 +0100
+
+    Icones dans ReglageController modifié
+
+[33mcommit eaf90ba69ffcafaa5ef7fb8f4c39cd062384dd71[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 12:09:45 2023 +0100
+
+    Vues
+
+[33mcommit bf577d7406fdcd3cffe6bdcd003067cb048f26c3[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 12:02:54 2023 +0100
+
+            modified:   src/main/java/eu/groupnine/codingweak/VueJouerController.java
+
+[33mcommit a51b94bf4690bab0a18026905b29d41075b0628a[m
+Merge: 6d242d2 c524a94
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 11:59:11 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit c524a945688dc4bc0499f901a255d01d83b0e3ca[m
+Merge: 38738e5 a745b13
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 11:56:23 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 38738e50d62a90456af72fa185f21fd2efaef98b[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 11:52:58 2023 +0100
+
+    messages erreur + vue jouer
+
+[33mcommit 6d242d2910dfc7a031be8dbf4ffd9eeaf517c8f6[m
+Merge: 47f0d95 a745b13
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 11:30:08 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 47f0d953e5192ff9fd74701142b253e31182ce7e[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 11:27:57 2023 +0100
+
+    Statistiques fin de partie
+
+[33mcommit a745b133528604843d4be2708398505c29300265[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 11:21:22 2023 +0100
+
+    VueReglage enfin terminé
+
+[33mcommit 150b71b38fa62556c2cff5831c94e99b99193102[m
+Merge: 2d2fcd6 0afca72
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 11:11:27 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 0afca720e613efefdb63310846ca6787e5f2e189[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 11:06:02 2023 +0100
+
+    VueReglage enfin terminé
+
+[33mcommit 2d2fcd6b058fd927d9ff7b8727202b4ad864bc74[m
+Merge: 9c7b100 61b392b
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 11:04:30 2023 +0100
+
+    ajout style et icone
+
+[33mcommit 9c7b10036e4f13f2d8e589da35ebc0566bdc378b[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 10:59:23 2023 +0100
+
+    ajout style et icone
+
+[33mcommit 61b392b2b66c00563250e8376b7f352306563daf[m
+Merge: ee25faf c5f6b31
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 10:33:14 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit c5f6b3198d39ec6c84c580ae745103d381cd1535[m
+Merge: 053f9ec fc73e1d
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 10:31:38 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 053f9ec89cd9ccde607d351184d68a3615456a8c[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 10:31:32 2023 +0100
+
+    save version qui marche
+
+[33mcommit fc73e1df4577f83a8fd261a8338d08a4e9e6d9f9[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 10:31:20 2023 +0100
+
+    JSON réglé
+
+[33mcommit ee25faf08f8fc9f9996c4544dad58c48804f290e[m
+Merge: eaa1d74 9951da6
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 10:30:39 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit eaa1d745668149293fe9bb641531dce939f9699d[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 10:30:34 2023 +0100
+
+    bug
+
+[33mcommit 9951da6957febbf4306e47f47b7a604c8d57e193[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 10:23:00 2023 +0100
+
+    json t'es chiant
+            modified:   src/main/java/eu/groupnine/codingweak/stockage/Stockage.java
+            deleted:    src/main/java/eu/groupnine/codingweak/stockage/data.json
+
+[33mcommit b627bc01e04dc41a8bb50f6dc18786837b9c54c8[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 10:21:19 2023 +0100
+
+    Réglage de ce **** de json
+
+[33mcommit efa63d510289e6c13b84df7a4b463f6ca69f4dc1[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 10:15:46 2023 +0100
+
+            modified:   src/main/java/eu/groupnine/codingweak/VueReglageController.java
+
+[33mcommit a6d5bcc5a2a5fcd5175573a8cb6a946a9b225b12[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 10:09:49 2023 +0100
+
+    restore json
+
+[33mcommit 90717010190198e7e68188df3376656fa48f90e8[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 10:06:46 2023 +0100
+
+    reinit json
+
+[33mcommit b29eed4c05826e7736db30207e83927c64ac69b3[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 10:05:50 2023 +0100
+
+    reinit json
+
+[33mcommit 3366152c4523e755b30a39719b13ec6a2ce8a199[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 09:58:07 2023 +0100
+
+    VueReglages almost finish
+
+[33mcommit d9d4f0c4426d021c846a5bf5af8e07c7b1b6bfeb[m
+Merge: 1097d46 292c1f1
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 09:52:35 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 1097d46acb3de71e7ec5ea6b6ccae585dc732557[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 09:52:27 2023 +0100
+
+    Vue Reglages clear fonctionne
+
+[33mcommit 292c1f1bfc8f8cd800976757875b4cc90fab9b7c[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 09:37:30 2023 +0100
+
+    Json
+
+[33mcommit 6deb4afae3c1576f76e8c83b513320bd8e158dac[m
+Merge: ca90464 19ff5fc
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 09:34:36 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 19ff5fc06cc74ba55e93c9fcfd62fb918c68be69[m
+Merge: a355aa2 7bd31ae
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 09:33:59 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit a355aa2e4053d1080ba2f00e8ecf045c403cd5a4[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Fri Jan 6 09:33:54 2023 +0100
+
+    Supprimer vuereglages
+
+[33mcommit ca904645651d4d98f6e51bcebf2f78e16428f844[m
+Merge: d6f200c 7bd31ae
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 09:32:13 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 7bd31aee4ab72d378742bf6370c796dac1f8319c[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 09:31:54 2023 +0100
+
+    Import Export
+
+[33mcommit d6f200cd7df199e06003def40514cd807d78afd7[m
+Merge: 7b2c2e8 90cb39c
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 09:27:30 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 7b2c2e89c537983dc90ec29d99dd716d67e94360[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Fri Jan 6 09:24:29 2023 +0100
+
+    correction refresh
+
+[33mcommit 90cb39c1be3005df07d621d7cf550155295df13f[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 08:57:39 2023 +0100
+
+    Handle Pile Vide
+
+[33mcommit 2893d8fde015de6a089a5171c568cb989e54cab9[m
+Merge: a115e04 9f84385
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 08:47:00 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit a115e0480d8827f7d1bdbf63cb27366c04b62377[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 08:46:55 2023 +0100
+
+    Try Catch error null
+
+[33mcommit 9f84385e3ca645707972b454014024de5643eb7a[m
+Merge: a35dfec 9601ea1
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 08:39:10 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit a35dfecbfb7a8bd0f4b74cd93d5bebc19940c687[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Fri Jan 6 08:36:58 2023 +0100
+
+    correction beug ecran accueil
+
+[33mcommit 9601ea1fa112a305bc5db324d5c68e47ff5249f7[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 08:31:38 2023 +0100
+
+    Json
+
+[33mcommit 1fb2506888b33852363fa98b5ee29bf85d2d493a[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Fri Jan 6 08:29:46 2023 +0100
+
+    PilesCartes != null
+
+[33mcommit 77fe7cdad391e6fb6426c28a3220e87976411f1e[m
+Merge: b5fc8f7 2109d73
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 19:25:35 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit b5fc8f7117aa76007a2b4be4645e0f1d9d935506[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 19:25:14 2023 +0100
+
+    last modif
+
+[33mcommit 18248c3d18377acae7a6da440efd673a673c2193[m[33m ([m[1;33mtag: RELEASE_DAY_3[m[33m)[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 19:20:40 2023 +0100
+
+    correction cartes + mode aleat remis
+
+[33mcommit 2109d737e363ed7134d34b817c469ae28586f8b1[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 19:05:06 2023 +0100
+
+    Json
+
+[33mcommit d711676292d4d582d3600f7ca796f99af914fc55[m
+Merge: 97fee7c 3c272cc
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:51:53 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit 3c272cc80437ddde79d2e52945f4224f1321f400[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 18:50:07 2023 +0100
+
+    essai correction
+
+[33mcommit 97fee7c811ab98a4a2966ab39e34b4d9497e5fab[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:46:20 2023 +0100
+
+    graphique et taux
+
+[33mcommit 5bbddada4df1baf7b8254a44903133fde1b6e0e8[m
+Merge: dcff55f bc221ad
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:43:28 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit dcff55f89a805b8a53c654d2f0bf8fd276f8529f[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:34:57 2023 +0100
+
+    graphique et taux
+
+[33mcommit bc221ad509be2ae934d77567a28295387cd9a046[m
+Merge: ac85415 1056490
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 18:34:24 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit ac85415bf75b662024082bc8691873d9386bbffa[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 18:34:20 2023 +0100
+
+    supp ne marche pas i don't understand why
+
+[33mcommit 1056490d24d2e7e66571bf9f6f4a79c9467d65d9[m
+Merge: c34381c 1e6b481
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 18:32:52 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit c34381ca7835c2adb9cdf68cbe19c4b93d3d7bc4[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 18:32:43 2023 +0100
+
+    reste à corriger
+
+[33mcommit 1e6b48170486456233e2f23a7325fb0f349ae1f6[m
+Merge: 12e4976 6684aed
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 18:32:12 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 12e4976c7315e78f4036afdbb955ef2b5f6c8d32[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 18:32:08 2023 +0100
+
+    json
+
+[33mcommit 7d226c8f1404b94db54c84ad02fabcc17199eddb[m
+Merge: 6877bcf 6684aed
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:19:16 2023 +0100
+
+    graphique et taux
+
+[33mcommit 6877bcf7883a0f7a4ecabeb4c24c28f2786ab429[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 18:16:25 2023 +0100
+
+    graphique et taux
+
+[33mcommit 6684aed6d88bd4f8c44c966aeed16836e3b5c655[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 18:13:37 2023 +0100
+
+    init supp
+
+[33mcommit cd7070a37023fc5efed4f20e5aa6fd21ced17e1b[m
+Merge: 5a0f8e5 59c1381
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 18:04:39 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 5a0f8e511b2b26e25700b5779da71af981ff7684[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 18:04:36 2023 +0100
+
+    Import export
+
+[33mcommit ba9d6c1c6eed7e9ee13fdb8a23b19ccb526a42c5[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 18:04:21 2023 +0100
+
+    Import Export
+
+[33mcommit 59c13811a357bd8483ff3e4c4ba8d8b4737f37bc[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 18:04:07 2023 +0100
+
+    commit j3
+
+[33mcommit 140cbe7c4537d07f717908a78e11e61e5ee39667[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 17:53:29 2023 +0100
+
+    enfin le diagramme de classe
+
+[33mcommit 4aeffe0082b9f7d6ab71017696f9a54887967cc6[m
+Merge: aa9f309 50d29db
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 17:19:29 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit aa9f30986c7905afd2077b481e691810f55318c0[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 17:19:19 2023 +0100
+
+    plant uml pour dag classe
+
+[33mcommit 50d29db412341d081e364c663d4c06c08264deba[m
+Merge: f972148 fccff90
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 16:41:51 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit f97214894279019eaf463e95dd0359270514a2e2[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 16:37:44 2023 +0100
+
+    Fin 1 Mode Creation
+
+[33mcommit fccff90696041c429756d87e95c7f9682bb5edfe[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 16:35:40 2023 +0100
+
+     ajout ajd
+
+[33mcommit 46f6618b522e0819b5bd3360b0b289e29e3059d5[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 16:14:54 2023 +0100
+
+    petit truc
+
+[33mcommit 66e835bf190b38a324ef97477228bc6601048862[m
+Merge: 1d80d13 8f21812
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 16:08:48 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 1d80d137b29c2a3564606b42661fe5f96e1f9e52[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 16:07:48 2023 +0100
+
+    vue jouer finito
+
+[33mcommit 8f21812b48caad62371ec10f45a47e42800a9306[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 16:07:46 2023 +0100
+
+    Commit
+
+[33mcommit 4ef4bf50b91716aa8a9cbbed67d9834991594f6f[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 15:45:12 2023 +0100
+
+    README
+
+[33mcommit 67ddb2eb21b502ede7b2c3c147e2234cf43251ba[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 15:29:36 2023 +0100
+
+    README
+
+[33mcommit b53408464ef8edfd3874e84b50814d02f414faa5[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 15:28:52 2023 +0100
+
+    Marche
+
+[33mcommit 5e184d0d0edfd12f8b318844ccd52b6c086a6220[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 15:01:13 2023 +0100
+
+    Restore
+
+[33mcommit 81b7f18bdd0dfd39011ebe159d241ad6d8ee2ace[m
+Merge: 86de513 1d4e6c0
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 14:40:36 2023 +0100
+
+    debut graphique
+
+[33mcommit 86de513afef8769655bea494cd7e4abbb1d52bdc[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 14:35:49 2023 +0100
+
+    debut graphique
+
+[33mcommit 1d4e6c0f6d821b25b7dcc3aa417ef2f666f2b0a5[m
+Merge: 7e9d576 89a1769
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 14:34:33 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 7e9d5764f33597b97351f4a6872a246e2337af26[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 14:34:28 2023 +0100
+
+    Add Menu Stats
+
+[33mcommit 89a176913b2998a40240548a980d063c3e275aed[m
+Merge: 02a9bdf 3505f7c
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 14:29:13 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 02a9bdf2d01554cd5954d22b68aca313af0b74a9[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 14:28:05 2023 +0100
+
+    Reglage bug
+
+[33mcommit 3505f7c0c39e1390479015078e0d1331a69effb7[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 14:24:37 2023 +0100
+
+    Bug PilesCartes null réglé
+
+[33mcommit d63cf58e8c7fa5cdbd409232a37e5a2a379b19bd[m
+Merge: 3e57b60 43030da
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 14:09:08 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 3e57b60f04b69b394d8b1d6881e9817a07b253f8[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 14:07:07 2023 +0100
+
+    Menu mis à jour
+
+[33mcommit 43030dacfea23895561557dc895452766955196a[m
+Merge: 2e6c98e 26e1706
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 14:00:16 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 2e6c98e85d81faac5b97320bd62a4ec4ccc642cd[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 14:00:08 2023 +0100
+
+    Bug
+
+[33mcommit 26e17061a0adb3d2a1d8292748584f9d6cee5f3f[m
+Merge: c7b88cf e501791
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 14:00:03 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit c7b88cf2806415e2927c31e2e74a83284494a420[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 13:59:50 2023 +0100
+
+    modif
+
+[33mcommit e50179123c784351905b6c121a1769958b3828ce[m
+Merge: 0dd7aec 3d61d95
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 13:59:32 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 0dd7aec54c71e82decf0b56d141ff38dd34d43ec[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 13:59:27 2023 +0100
+
+    Bug
+
+[33mcommit 3d61d954995781bb6d60bde4de4a4a60f7e3b48b[m
+Merge: 9880044 37a6332
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 13:54:10 2023 +0100
+
+    ajout pile dans liste
+
+[33mcommit 9880044d16f657273e5e283a4bd322e9d76aff91[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 13:48:08 2023 +0100
+
+    ajout pile dans liste
+
+[33mcommit 37a6332228deaebfe5a90865fefdcaf624f2f15f[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 12:04:57 2023 +0100
+
+    Ca marche
+
+[33mcommit 815068a42213be0f6aeff0da912fc1419719d7f9[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 11:35:20 2023 +0100
+
+    Petit bug
+
+[33mcommit 6facc66554c3cfe625b7146d93320e0f31d570f2[m
+Merge: bbd0768 2342b7e
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 11:30:15 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit bbd0768edc8cb2826a0a60e71e618ffbf021546f[m
+Merge: 22bb692 46127e8
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 11:30:04 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 2342b7e2fb39d0f9771ab0de8b6edec0dbfcd3d6[m
+Merge: 3cf47aa 46127e8
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 11:29:16 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 22bb6924768f0305c27868ee7e8d289f1b1a0bbd[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 11:28:52 2023 +0100
+
+    temps qui marche + model
+
+[33mcommit 3cf47aa7ab7ad3dfa79f95d8541b958b1673eee2[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 11:28:27 2023 +0100
+
+    Mise à jour du Menu
+
+[33mcommit 46127e877f59984c4f8e683c0b33497aa0b2ec24[m
+Merge: 4c003cd a8a00cb
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 11:28:01 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 4c003cdaabca43e1edb779cd730f76b457a18949[m
+Author: Serge Tehe <yohou.tehe@telecomnancy.eu>
+Date:   Thu Jan 5 11:25:35 2023 +0100
+
+    VueReglageController
+
+[33mcommit a8a00cba6f97358b578ec118cfb4a7f586860385[m
+Merge: 4ab5b07 191039a
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 11:00:48 2023 +0100
+
+    affichage des piles et leurs stats
+
+[33mcommit 4ab5b075d124a6b182cba2a5f550c1c8702ec427[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 10:52:52 2023 +0100
+
+    affichage des piles et leurs stats
+
+[33mcommit 191039a1d60127dd47135ba7456fddb8fb79f358[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 10:50:33 2023 +0100
+
+    Restauration d'un méthode supprimé par un merge
+
+[33mcommit be291d735ea5b0e7b713060a06b0865b4c462721[m
+Merge: 807d65b af6212d
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 10:48:17 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 807d65b253c555a640ee72b636dbf21581cb7e49[m
+Author: MARSOU Soulaïman <soulaiman.marsou@telecomnancy.eu>
+Date:   Thu Jan 5 10:31:54 2023 +0100
+
+    StatsController
+
+[33mcommit af6212dbf73fb28902e2326fb31536321e32f8ba[m
+Merge: 210562b 0d1862c
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 10:29:54 2023 +0100
+
+    Merge branch 'master' of gitlab.telecomnancy.univ-lorraine.fr:pcd2k23/codingweek-09
+
+[33mcommit 210562bc3d7a0c7039a90d370099103b476d5dff[m
+Author: LAFOND Louis <louis.lafond@telecomnancy.eu>
+Date:   Thu Jan 5 10:29:34 2023 +0100
+
+    model avec set cards
+
+[33mcommit 0d1862cc8c9dc668c46f3136654cc343dd7876ce[m
+Merge: f93c141 43aa43b
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 09:51:22 2023 +0100
+
+    Merge branch 'master' of https://gitlab.telecomnancy.univ-lorraine.fr/pcd2k23/codingweek-09
+
+[33mcommit f93c1417e54d7b8e1cc2dd3594eb0d03ff662c90[m
+Author: Mady <mady.wague@telecomnancy.eu>
+Date:   Thu Jan 5 09:50:40 2023 +0100
+
+    petit changement erreur
