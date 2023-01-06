@@ -91,7 +91,7 @@ public class Stockage {
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
     public void load() throws FileNotFoundException, IOException {
-        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
+        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data2.json";
         Path path = Paths.get(fileName);
 
         try (Reader reader = Files.newBufferedReader(path);) {
