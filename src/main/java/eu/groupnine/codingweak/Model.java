@@ -186,7 +186,7 @@ public class Model extends Observateur{
 
     public boolean findReponseInPile(String rep) {
         for (Carte c : this.PileCartes) {
-            if (c.getQuestion().equals(rep)) {
+            if (c.getReponse().equals(rep)) {
                 return true;
 
             }
