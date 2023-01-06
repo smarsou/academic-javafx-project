@@ -26,7 +26,7 @@ import eu.groupnine.codingweak.stockage.Pile;
 
 
 public class Stockage {
-    public static HashMap<String,Pile> EnsembleDesPiles;
+    public  HashMap<String,Pile> EnsembleDesPiles;
     
     public Stockage() throws FileNotFoundException, IOException{
         // this.load();
