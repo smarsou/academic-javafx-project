@@ -40,7 +40,7 @@ public class VueStatPartieController implements Observer{
     }
 
     public void saveStats() throws IOException {
-        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(this.stats.cartesNonTrouvees,this.stats.cartesTrouvees, this.stats.cartesJouees, this.stats.cartesParMinutes, this.stats.tempsPasse, "" + this.stats.taux.nombrePartieJouer.size(), CalculTaux(model.getCurrentPile()));
+        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(this.stats.cartesNonTrouvees,this.stats.cartesTrouvees, this.stats.cartesJouees, this.stats.cartesParMinutes, this.stats.tempsPasse, "" + this.stats.taux.nombrePartieJouer.size(), CalculTaux());
         model.stockFromDisk.save();
     }
 
