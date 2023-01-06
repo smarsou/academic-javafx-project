@@ -112,6 +112,9 @@ public class VueReglageController implements Observer, Initializable {
                 this.model.getCurrentPile().setDescription(d);
 
             }
+            
+            
+            this.model.callObservers();
             if (resN == true) {
                 model.setErrorMessage("Erreur avec le choix de pile: le nom de la pile existe déjà !");
                     
@@ -124,9 +127,6 @@ public class VueReglageController implements Observer, Initializable {
                 model.afficherErreur();
 
             }
-            
-            
-            this.model.callObservers();
 
         }
 
@@ -157,41 +157,34 @@ public class VueReglageController implements Observer, Initializable {
             Carte c = this.model.getCard(id);
             if (c != null) {
                 if ((q != null)&&(rep != null)) {
-                    boolean resq = this.model.findQuestionInPile(q);
-                
-                    boolean resrep = this.model.findReponseInPile(rep);
-                
-                    if (resq == false) {
-                        this.model.ModifyQuestionCarte(this.model.PileCartes.indexOf(c),q);
-                
-                    }
-                    if (resrep == false) {
                     
-                        this.model.ModifyReponseCarte(this.model.PileCartes.indexOf(c),rep);
                 
-                    }
-
-                
-                    if (resq == true) {
-                        model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
-                        model.afficherErreur();
+                    
                         
+                    
+                    this.model.ModifyQuestionCarte(this.model.PileCartes.indexOf(c),q);
                 
-                    }
-
-                
-                    if (resrep == true) {
-                        model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
-                        model.afficherErreur();
+                    
+                    
                         
-
+                    
+                    this.model.ModifyReponseCarte(this.model.PileCartes.indexOf(c),rep);
                 
-                    }
+                    
+
 
                     model.stockFromDisk.save();
                     this.model.callObservers();
+                    
 
                 
+                }
+                else {
+                    model.setErrorMessage("Veuillez rentrer les champs descriptifs d'une carte !");
+                    
+                
+                    model.afficherErreur();
+
                 }
                 
 

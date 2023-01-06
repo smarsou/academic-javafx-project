@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.groupnine.codingweak.VueJouerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.groupnine.codingweak.VueJouerController">
    <children>
       <Label alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="92.0" prefWidth="365.0" text="Attention !" textFill="#e10707">
          <font>
             <Font size="39.0" />
          </font>
       </Label>
-      <Label fx:id="texteErreur" alignment="TOP_CENTER" layoutX="18.0" layoutY="108.0" prefHeight="128.0" prefWidth="365.0" text="texte erreur" />
+      <Label fx:id="texteErreur" alignment="TOP_CENTER" layoutX="18.0" layoutY="108.0" prefHeight="128.0" prefWidth="365.0" text="texte erreur" wrapText="true" />
    </children>
 </AnchorPane>
