@@ -20,8 +20,14 @@ public class VueStatGlobalController implements Observer, Initializable{
     ListView<String> AreaOfPiles;
 
     @FXML
-    BarChart<String, Number> barChart;
-    
+    CategoryAxis xAxis;
+    @FXML
+    NumberAxis yAxis;
+
+    @FXML
+    BarChart<String, Float> barChart;
+
+
 
     public VueStatGlobalController(Model model){
         this.model = model;
@@ -33,11 +39,11 @@ public class VueStatGlobalController implements Observer, Initializable{
         AreaOfPiles.getItems().clear();
         chargeOfPiles();
     }
-    
+
     public void chargeOfPiles(){
         //Obtenir l'ensemble des clés du dictionnaire
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
-        
+
         if (pileNames == null){
             return;
         }
@@ -52,6 +58,7 @@ public class VueStatGlobalController implements Observer, Initializable{
             String tempsPasse;
             String affichage;
             Stats stats = model.stockFromDisk.EnsembleDesPiles.get(pileName).geStats();
+            // System.out.println("stat est " + stats);
             Name = model.stockFromDisk.EnsembleDesPiles.get(pileName).getNom();
             Description= model.stockFromDisk.EnsembleDesPiles.get(pileName).getDescription();
             cartesJouees = "" + stats.cartesJouees;
@@ -62,55 +69,51 @@ public class VueStatGlobalController implements Observer, Initializable{
             affichage = "                         " + Name + "            \n";
             affichage = affichage + "Description : " + Description + "\n";
             affichage = affichage + " nombre de carte jouees : " + cartesJouees + "\n";
-            affichage = affichage + "nombre cartes non jouees : " + cartesNonTrouvees + "\n"; 
-            affichage = affichage + "nombre de carte trouvees : " + cartesTrouvees + "\n";         
+            affichage = affichage + "nombre de carte trouvees : " + cartesTrouvees + "\n";
             AreaOfPiles.getItems().add(affichage);
         }
     }
 
     public void setGraph(){
-        
+
         savePileClicked();
 
         barChart.getData().clear();
-        
-        CategoryAxis xAxis = new CategoryAxis();
+
         xAxis.setLabel("Partie jouée");
-        
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Taux de réussite");
 
-        new BarChart<String, Number>(xAxis, yAxis);
+        yAxis.setLabel("Taux réussite");
 
-        XYChart.Series<String, Number> dataSeries1 = new XYChart.Series<String, Number>();
+        XYChart.Series<String, Float> dataSeries1 = new XYChart.Series<String, Float>();
         dataSeries1.setName(model.keyClicked);
 
         Stats stats = model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).geStats();
 
         for(int i = 0 ; i < stats.taux.nombrePartieJouer.size(); i++){
-            dataSeries1.getData().add(new XYChart.Data<String, Number>(stats.taux.nombrePartieJouer.get(i), stats.taux.tauxDeReussite.get(i)));
-            System.out.println(stats.cartesJouees);
+            dataSeries1.getData().add(new XYChart.Data<String, Float>(stats.taux.nombrePartieJouer.get(i), stats.taux.tauxDeReussite.get(i)));
         }
-        System.out.println(dataSeries1);
-
 
         barChart.getData().add(dataSeries1);
         barChart.setTitle("Stats de la pile " + model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).getNom());
 
-        
+
+
+
+
     }
+
+
 
     //Cette méthode sauvegarde la clé de la pile cliquée
     public void savePileClicked(){
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
-            int i = 0;
-            for (String pileName : pileNames) {
-                if (i == AreaOfPiles.getSelectionModel().getSelectedIndex()){
-                    model.keyClicked = pileName;
-                }
-                i++;
+        int i = 0;
+        for (String pileName : pileNames) {
+            if (i == AreaOfPiles.getSelectionModel().getSelectedIndex()){
+                model.keyClicked = pileName;
             }
-            System.out.println("bbbbbbbb   " + model.keyClicked);
+            i++;
+        }
     }
 
     public void refresh(){
