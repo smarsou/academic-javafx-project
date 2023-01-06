@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import com.google.gson.Gson;
 
 import eu.groupnine.codingweak.stockage.*;
-import eu.groupnine.codingweak.MenuViewController;;
+import eu.groupnine.codingweak.MenuViewController;
 
 public class Main extends Application {
     public static void main(String[] args)
