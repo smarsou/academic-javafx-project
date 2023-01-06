@@ -143,6 +143,7 @@ public class VueAccueilController implements Observer, Initializable{
                 }
                 i++;
             }
+            System.out.println("bbbbbbbb   " + model.keyClicked);
     }
 
     public void DeletePile() {

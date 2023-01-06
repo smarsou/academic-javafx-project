@@ -20,9 +20,9 @@
       }
     ],
     "stats": {
-      "cartesJouees": 12,
-      "cartesTrouvees": 7,
-      "cartesNonTrouvees": 5,
+      "cartesJouees": 15,
+      "cartesTrouvees": 8,
+      "cartesNonTrouvees": 7,
       "cartesParMinutes": 0.0,
       "tempsPasse": 0,
       "taux": {
@@ -30,13 +30,15 @@
           "0",
           "1",
           "2",
-          "3"
+          "3",
+          "4"
         ],
         "tauxDeReussite": [
           66.0,
           33.0,
           66.0,
-          66.0
+          66.0,
+          33.0
         ]
       }
     }
