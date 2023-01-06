@@ -51,7 +51,6 @@ public class VueQuestionController implements Observer {
     public void start()  {
         this.model.setCard();
         System.out.println("Game started");
-        currentCarte = this.model.nexCarte();
 
         this.refresh();
         Answer();
@@ -62,7 +61,7 @@ public class VueQuestionController implements Observer {
     public VueQuestionController(Model model){
         this.model = model;
         this.model.observers.add(this);
-        
+        currentCarte = this.model.nexCarte();
         // this.model.setCard();
 
     }
