@@ -8,10 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <fx:include source="menu-view.fxml" />
-      <BarChart fx:id="barChart" layoutX="27.0" layoutY="110.0" prefHeight="150.0" prefWidth="257.0">
+      <AnchorPane layoutX="300.0" layoutY="47.0" prefHeight="317.0" prefWidth="281.0" />
+      <ListView fx:id="AreaOfPiles" layoutX="509.0" layoutY="106.0" onMouseClicked="#setGraph" prefHeight="426.0" prefWidth="372.0" stylesheets="@listview.css" />
+      <BarChart fx:id="barChart" layoutX="44.0" layoutY="214.0" prefHeight="228.0" prefWidth="364.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -19,15 +21,10 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <Label layoutX="33.0" layoutY="65.0" prefHeight="29.0" prefWidth="257.0" text="Statistiques globales">
+      <Label layoutX="91.0" layoutY="154.0" prefHeight="29.0" prefWidth="257.0" text="Statistiques globales">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="300.0" layoutY="47.0" prefHeight="317.0" prefWidth="281.0">
-         <children>
-            <ListView fx:id="AreaOfPiles" onMouseClicked="#setGraph" prefHeight="317.0" prefWidth="281.0" stylesheets="@listview.css" />
-         </children>
-      </AnchorPane>
     </children>
 </AnchorPane>
