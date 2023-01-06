@@ -43,7 +43,7 @@ public class VueQuestionController implements Observer {
     private Button brep;
 
     private Timeline timeline;
-
+    private Carte currentCarte;
     
 
     private static int indexCourant = 0;
@@ -51,6 +51,7 @@ public class VueQuestionController implements Observer {
     public void start()  {
         this.model.setCard();
         System.out.println("Game started");
+
         this.refresh();
         Answer();
         
@@ -60,6 +61,7 @@ public class VueQuestionController implements Observer {
     public VueQuestionController(Model model){
         this.model = model;
         this.model.observers.add(this);
+        currentCarte = this.model.nexCarte();
         // this.model.setCard();
 
     }
@@ -121,6 +123,8 @@ public class VueQuestionController implements Observer {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
+            currentCarte = this.model.nexCarte();
+
             //this.timeline.stop();
 
         }else{
@@ -142,6 +146,8 @@ public class VueQuestionController implements Observer {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
+            currentCarte = this.model.nexCarte();
+
             //this.timeline.stop();
 
         }else{
@@ -156,8 +162,9 @@ public class VueQuestionController implements Observer {
         this.Reponse.setText(null);
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
-        Carte card = this.model.nexCarte();
-        this.Question.setText(card.getQuestion());
+        // Carte card = this.model.nexCarte();
+        
+        this.Question.setText(currentCarte.getQuestion());
         this.brep.setVisible(true);
         this.brep.setDisable(false);
         this.pastrouve.setDisable(true);
@@ -165,8 +172,6 @@ public class VueQuestionController implements Observer {
         this.pastrouve.setVisible(false);
         this.trouve.setVisible(false);
         this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
-        
-        
         
     }
 }

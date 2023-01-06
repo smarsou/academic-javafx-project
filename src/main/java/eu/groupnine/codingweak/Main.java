@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import com.google.gson.Gson;
 
 import eu.groupnine.codingweak.stockage.*;
-import eu.groupnine.codingweak.MenuViewController;;
+import eu.groupnine.codingweak.MenuViewController;
 
 public class Main extends Application {
     public static void main(String[] args)
@@ -45,6 +45,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+<<<<<<< HEAD
 
         /* essais stockage louis */
         //Stockage stockage = new Stockage();
@@ -54,6 +55,8 @@ public class Main extends Application {
         //stockage.init();
 
         //stockage.save();
+=======
+>>>>>>> 61b392b2b66c00563250e8376b7f352306563daf
         
     }
 }

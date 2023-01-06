@@ -18,6 +18,7 @@ import java.util.Set;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import eu.groupnine.codingweak.stockage.Pile;
@@ -90,7 +91,7 @@ public class Stockage {
 
     //Permet de mettre à jour EnsembleDesPiles par rapport aux données stockées en dur
     public void load() throws FileNotFoundException, IOException {
-        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
+        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data2.json";
         Path path = Paths.get(fileName);
 
         try (Reader reader = Files.newBufferedReader(path);) {
@@ -103,15 +104,20 @@ public class Stockage {
         }
     }
 
-    public void loadFrom(String filePath) throws FileNotFoundException, IOException {
+    public void loadFrom(String filePath) throws FileNotFoundException, IOException, JsonSyntaxException {
         Path path = Paths.get(filePath);
 
         try (Reader reader = Files.newBufferedReader(path);) {
 
             Gson gson = new Gson();
             Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
-            HashMap<String,Pile> EnsembleToAdd = gson.fromJson(reader, fooType);
-
+            HashMap<String,Pile> EnsembleToAdd;
+            try{
+            EnsembleToAdd = gson.fromJson(reader, fooType);
+            }catch(JsonSyntaxException e){
+                System.err.println("Error import weird json");
+                return;
+            }
             // Set<String> pileNamesToAdd = EnsembleToAdd.keySet();
             // for (String pileNameToAdd : pileNamesToAdd){
             //     if (EnsembleDesPiles.containsKey(pileNameToAdd)){
@@ -119,10 +125,8 @@ public class Stockage {
             //         EnsembleToAdd.remove(pileNameToAdd);
             //     }
             // }
-            
             Set<String> pileNamesToAddUpdate = EnsembleToAdd.keySet();
             for (String pileNameToAdd : pileNamesToAddUpdate){
-                System.out.println(pileNameToAdd + " " + EnsembleToAdd.get(pileNameToAdd).getNom());
                     EnsembleDesPiles.put(pileNameToAdd, EnsembleToAdd.get(pileNameToAdd));
                 }
             }
@@ -132,7 +136,7 @@ public class Stockage {
     //Permet de mettre à jour les données stockées en dur par rapport à EnsembleDesPiles
     public void save() throws FileNotFoundException, IOException {
         
-        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data.json";
+        String fileName = "src/main/java/eu/groupnine/codingweak/stockage/data2.json";
         Path path = Paths.get(fileName);
 
         try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {

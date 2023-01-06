@@ -43,6 +43,8 @@ public class MenuViewController implements Observer, Initializable{
     @FXML private Menu menuOpen;
     @FXML private Label alert;
 
+    String alertMess;
+
     public MenuViewController(){
         model.observers.add(this);
     }
@@ -65,26 +67,28 @@ public class MenuViewController implements Observer, Initializable{
         model.callObservers();
     }
 
-    public void importPile() throws IOException {
+    public void importPile() throws IOException,NullPointerException {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open JSON file");
         fileChooser.getExtensionFilters().setAll(
      new FileChooser.ExtensionFilter("Text Files", "*.json")
 );
         File file = fileChooser.showOpenDialog(stage);
-
+        try{
         model.stockFromDisk.loadFrom(file.getAbsolutePath());
+        }catch(NullPointerException e){
+            System.err.println("Can't load File");
+        }
         model.callObservers();
         
     }
+
 
     public void exportPile() throws IOException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         File selectedDirectory = directoryChooser.showDialog(stage);
 
         if ( selectedDirectory == null){
-            alert.setText("ERROR: path not found");
-            alert.setVisible(true);
             System.err.println("ERROR: path not found");
         }else{
             model.stockFromDisk.saveAt(selectedDirectory.getAbsolutePath()+"/export.json");
@@ -98,7 +102,6 @@ public class MenuViewController implements Observer, Initializable{
         }else{
             menuEdit.setVisible(true);
         }
-        alert.setVisible(false);
     }
 
     public void setIcone(){

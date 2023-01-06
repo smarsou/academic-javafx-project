@@ -18,7 +18,24 @@
         "question": "Pourquoi êtes vous ici ?",
         "reponse": "Parce que j'ai envie de vous enlevez 10 points sur votre note."
       }
-    ]
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          2.0
+        ]
+      }
+    }
   },
   "pile2": {
     "nom": "Telecom Training",
@@ -42,6 +59,23 @@
       {"id": 4,
       "question": "Est-ce que le foot à TN c'est bien ?",
       "reponse": "Ouiiiiiiii, venez vous inscriiiiire !"}
-    ]
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          4.0
+        ]
+      }
+    }
   }
 }

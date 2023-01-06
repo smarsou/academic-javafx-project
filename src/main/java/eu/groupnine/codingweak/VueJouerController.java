@@ -43,7 +43,7 @@ public class VueJouerController implements Observer, Initializable{
 
     public void choixTemps() throws Exception{
         
-        if (Long.parseLong(valeurTemps.getText())>0) {
+        if (Long.parseLong(valeurTemps.getText())>0 || valeurTemps.getText()!="") {
             model.time = Long.parseLong(valeurTemps.getText());
             }
         else {
@@ -83,11 +83,15 @@ public class VueJouerController implements Observer, Initializable{
         this.choixFrequence();
         this.choixSmartMode();
         model.reinit();
+        if (!model.checkPile()){
+            System.err.println("Error with the Pile: Can't Play");
+            return;
+        }
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
         this.model.gestionFrequence();
         this.model.mettreOrdreCartesAleat();
-
+        model.callObservers();
     }
 
     @FXML
