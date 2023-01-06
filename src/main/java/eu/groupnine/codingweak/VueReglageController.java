@@ -1,5 +1,7 @@
 package eu.groupnine.codingweak;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.security.PublicKey;
 import java.util.ArrayList;
@@ -186,7 +188,7 @@ public class VueReglageController implements Observer, Initializable {
                 
                     }
 
-                
+                    model.stockFromDisk.save();
                     this.model.callObservers();
 
                 
@@ -226,7 +228,7 @@ public class VueReglageController implements Observer, Initializable {
         if ((id == null)&&(q != null)&&(rep != null)) {
             
             if (this.model.PileCartes.isEmpty()) {
-                System.out.println("ok");
+                
                 this.model.PileCartes.add(new Carte(1, q, rep));
                 this.model.callObservers();
                 
@@ -247,7 +249,7 @@ public class VueReglageController implements Observer, Initializable {
                     
                 
                     this.model.PileCartes.add(new Carte(lastId+1, q, rep));
-                
+                    model.stockFromDisk.save();
                     this.model.callObservers();
 
             
@@ -298,6 +300,7 @@ public class VueReglageController implements Observer, Initializable {
                 if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
                     
                     this.model.suppCarte(this.model.PileCartes.indexOf(c));
+                    model.stockFromDisk.save();
                     this.model.callObservers();
                     break;
                 }

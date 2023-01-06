@@ -74,16 +74,13 @@ Nous avons encore des problèmes liés au GitLab, mais de moins en moins. Nous a
 
 
 ### Resultat jour 3
+Nous sommes parvenus à mettre en place notre application, il nous reste encore quelques corrections à effectuer, mais le fonctionnement global est prêt. 
 
+## Jour 4
 
-### reste à corriger:
-reglages: on ne peut pas voir les cartes... 
-sauvegarder dans json lorsqu'on créé carte dans partie règlage / save en general dans gson: verifier qu'on est bien au bon endroit
-on peut renommer 1 pile avec 1 nom qui existe déjà -> pas bien
-menu jouer: nombre decimal, string... non accepté
--> smartmode: desactiver saisi frequence et 1 par defaut
-laisser plus de place pour question reponses/ adapter scene builder
-12 cartes restantesreglages nouvelle pile 
-erreur clear serge
-l'histoire du refresh dans vueQuestionController qui Carte card = this.model.nexCarte();
+Aujourd'hui, nous devons finir les détails de notre application: il reste des fonctionnalitées à améliorer, quelques bugs à corriger... Nous nous réservons l'après-midi pour la tester le plus complétement possible, et mettre en place nos messages d'erreurs et d'alertes.
+
+### Resultat jour 4
+Après un sprint final, nous sommes parvenus à livrer l'application fonctionnelle, testée, dans les temps.
+
 

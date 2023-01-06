@@ -130,6 +130,7 @@ public class VueQuestionController implements Observer {
         }else{
             model.sc.afficherParent("StatPartie");
             model.sc.callFunctFromController("saveStats");
+            model.stockFromDisk.save();
             model.callObservers();
         }
     }
@@ -154,6 +155,7 @@ public class VueQuestionController implements Observer {
         }else{
             model.sc.afficherParent("StatPartie");
             model.sc.callFunctFromController("saveStats");
+            model.stockFromDisk.save();
             model.callObservers();
         }
     }

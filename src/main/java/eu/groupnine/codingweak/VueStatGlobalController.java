@@ -52,7 +52,6 @@ public class VueStatGlobalController implements Observer, Initializable{
             String tempsPasse;
             String affichage;
             Stats stats = model.stockFromDisk.EnsembleDesPiles.get(pileName).geStats();
-            // System.out.println("stat est " + stats);
             Name = model.stockFromDisk.EnsembleDesPiles.get(pileName).getNom();
             Description= model.stockFromDisk.EnsembleDesPiles.get(pileName).getDescription();
             cartesJouees = "" + stats.cartesJouees;

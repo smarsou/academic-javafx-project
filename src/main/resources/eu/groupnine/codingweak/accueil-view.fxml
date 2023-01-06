@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <GridPane layoutX="2.0" layoutY="27.0" prefHeight="670.0" prefWidth="966.0">
             <columnConstraints>
@@ -23,7 +23,7 @@
             <children>
                 <Label text="TN Flash Cards" GridPane.halignment="CENTER">
                <font>
-                  <Font size="33.0" />
+                  <Font name="System Bold" size="33.0" />
                </font></Label>
             </children>
         </GridPane>
