@@ -21,6 +21,7 @@ public class VueStatGlobalController implements Observer, Initializable{
 
     @FXML
     BarChart<String, Number> barChart;
+    
 
     public VueStatGlobalController(Model model){
         this.model = model;
@@ -59,14 +60,11 @@ public class VueStatGlobalController implements Observer, Initializable{
             cartesNonTrouvees = "" + stats.cartesNonTrouvees;
             cartesParMinutes = "" + stats.cartesParMinutes;
             tempsPasse = "" + stats.tempsPasse;
-            affichage = "     " + Name + "    \n";
+            affichage = "                         " + Name + "            \n";
             affichage = affichage + "Description : " + Description + "\n";
             affichage = affichage + " nombre de carte jouees : " + cartesJouees + "\n";
             affichage = affichage + "nombre cartes non jouees : " + cartesNonTrouvees + "\n"; 
-            affichage = affichage + "nombre de carte trouvees : " + cartesTrouvees + "\n"; 
-            affichage = affichage + "nombre de carte non trouvees : " + cartesNonTrouvees + "\n";
-            affichage = affichage + "temps par carte : " + cartesParMinutes + "\n";
-            affichage = affichage + "temps total : " + tempsPasse + "\n";              
+            affichage = affichage + "nombre de carte trouvees : " + cartesTrouvees + "\n";         
             AreaOfPiles.getItems().add(affichage);
         }
     }
@@ -74,6 +72,8 @@ public class VueStatGlobalController implements Observer, Initializable{
     public void setGraph(){
         
         savePileClicked();
+
+        barChart.getData().clear();
         
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Partie jouée");
@@ -82,8 +82,6 @@ public class VueStatGlobalController implements Observer, Initializable{
         yAxis.setLabel("Taux de réussite");
 
         new BarChart<String, Number>(xAxis, yAxis);
-
-        barChart.getData().clear();
 
         XYChart.Series<String, Number> dataSeries1 = new XYChart.Series<String, Number>();
         dataSeries1.setName(model.keyClicked);
@@ -99,6 +97,8 @@ public class VueStatGlobalController implements Observer, Initializable{
 
         barChart.getData().add(dataSeries1);
         barChart.setTitle("Stats de la pile " + model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).getNom());
+
+        
     }
 
     //Cette méthode sauvegarde la clé de la pile cliquée
@@ -111,6 +111,7 @@ public class VueStatGlobalController implements Observer, Initializable{
                 }
                 i++;
             }
+            System.out.println("bbbbbbbb   " + model.keyClicked);
     }
 
     public void refresh(){

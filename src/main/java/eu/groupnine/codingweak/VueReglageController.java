@@ -120,7 +120,7 @@ public class VueReglageController implements Observer, Initializable {
     @FXML
     public void Modify() throws Exception  {
         String ind = this.idCarte.getText();
-        if (ind != null) {
+        if ((ind != null)&&(!ind.equals(""))) {
             int id = Integer.parseInt(ind);
             String q = this.question.getText();
             String rep = this.reponse.getText();
@@ -145,7 +145,7 @@ public class VueReglageController implements Observer, Initializable {
                     if (resq == true) {
                         model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
                         model.afficherErreur();
-                        return;
+                        
                 
                     }
 
@@ -153,7 +153,7 @@ public class VueReglageController implements Observer, Initializable {
                     if (resrep == true) {
                         model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
                         model.afficherErreur();
-                        return;
+                        
 
                 
                     }
@@ -166,10 +166,25 @@ public class VueReglageController implements Observer, Initializable {
                 
 
             }
+            else {
+                model.setErrorMessage("Veuillez rentrer une carte !");
+                    
+                model.afficherErreur();
+                    
+
+            }
             
             this.idCarte.setText(null);
             this.question.setText(null);
             this.reponse.setText(null);
+
+        }
+
+        else {
+            model.setErrorMessage("Veuillez rentrer une carte !");
+                    
+                
+            model.afficherErreur();
 
         }
         
@@ -201,6 +216,7 @@ public class VueReglageController implements Observer, Initializable {
 
             
                 if ((resq == false)&&(resrep == false)) {
+                    
                 
                     this.model.PileCartes.add(new Carte(lastId+1, q, rep));
                 
@@ -212,7 +228,7 @@ public class VueReglageController implements Observer, Initializable {
                 else {
                     model.setErrorMessage("Erreur avec le choix de pile: elle existe déjà !");
                     model.afficherErreur();
-                    return;
+                    
             
                 }
 
@@ -225,7 +241,7 @@ public class VueReglageController implements Observer, Initializable {
         else {
             model.setErrorMessage("Erreur : il faut remplir les deux champs !");
             model.afficherErreur();
-            return;
+            
         }
         this.idCarte.setText(null);
     
@@ -246,7 +262,7 @@ public class VueReglageController implements Observer, Initializable {
         if ((id == null)||(answer == null)||(quest == null)) {
             model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
             model.afficherErreur();
-            return;
+            
 
         }
         else {

@@ -104,8 +104,9 @@ public class VueJouerController implements Observer, Initializable{
             this.choixOrdre();
             this.choixFrequence();
             this.choixSmartMode();
-            
+
             model.reinit();
+            this.model.mettreOrdreCartesAleat();
             if (!model.checkPile()){
                 model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
                 model.afficherErreur();
@@ -116,7 +117,7 @@ public class VueJouerController implements Observer, Initializable{
             model.sc.afficherParent("Jeu");
             model.sc.callFunctFromController("startQuestion");
             this.model.gestionFrequence();
-            this.model.mettreOrdreCartesAleat();
+
             model.callObservers();
         };
 
