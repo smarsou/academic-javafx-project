@@ -78,15 +78,13 @@ Nous avons encore des problèmes liés au GitLab, mais de moins en moins. Nous a
 
 ### reste à corriger:
 reglages: on ne peut pas voir les cartes... 
-sauvegarder dans json lorsqu'on créé carte dans partie règlage
+sauvegarder dans json lorsqu'on créé carte dans partie règlage / save en general dans gson: verifier qu'on est bien au bon endroit
 on peut renommer 1 pile avec 1 nom qui existe déjà -> pas bien
 freeze lorsqu'on essai d'ajouter pile depuis accueil si aucune pile dans la liste de piles
 menu jouer: nombre decimal, string... non accepté
 -> smartmode: desactiver saisi frequence et 1 par defaut
 laisser plus de place pour question reponses/ adapter scene builder
-12 cartes restantes
-reglages nouvelle pile 
+12 cartes restantesreglages nouvelle pile 
 erreur clear serge
-
 l'histoire du refresh dans vueQuestionController qui Carte card = this.model.nexCarte();
 

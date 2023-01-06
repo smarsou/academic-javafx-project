@@ -85,7 +85,7 @@ public class VueJouerController implements Observer{
         model.sc.callFunctFromController("startQuestion");
         this.model.gestionFrequence();
         this.model.mettreOrdreCartesAleat();
-
+        model.callObservers();
     }
 
     @FXML

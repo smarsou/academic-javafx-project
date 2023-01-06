@@ -43,7 +43,7 @@ public class VueQuestionController implements Observer {
     private Button brep;
 
     private Timeline timeline;
-
+    private Carte currentCarte;
     
 
     private static int indexCourant = 0;
@@ -51,6 +51,8 @@ public class VueQuestionController implements Observer {
     public void start()  {
         this.model.setCard();
         System.out.println("Game started");
+        currentCarte = this.model.nexCarte();
+
         this.refresh();
         Answer();
         
@@ -60,6 +62,7 @@ public class VueQuestionController implements Observer {
     public VueQuestionController(Model model){
         this.model = model;
         this.model.observers.add(this);
+        
         // this.model.setCard();
 
     }
@@ -121,6 +124,8 @@ public class VueQuestionController implements Observer {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
+            currentCarte = this.model.nexCarte();
+
             //this.timeline.stop();
 
         }else{
@@ -142,6 +147,8 @@ public class VueQuestionController implements Observer {
             model.indexCurrentCarte++;
             this.refresh();
             this.Answer();
+            currentCarte = this.model.nexCarte();
+
             //this.timeline.stop();
 
         }else{
@@ -156,12 +163,9 @@ public class VueQuestionController implements Observer {
         this.Reponse.setText(null);
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
-        Carte card = this.model.nexCarte();
-        if (card == null){
-            System.err.println("ERROR: Can't refresh VueQuestion because carte is null");
-            return;
-        }
-        this.Question.setText(card.getQuestion());
+        // Carte card = this.model.nexCarte();
+        
+        this.Question.setText(currentCarte.getQuestion());
         this.brep.setVisible(true);
         this.brep.setDisable(false);
         this.pastrouve.setDisable(true);
