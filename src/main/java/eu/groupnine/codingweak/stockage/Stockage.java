@@ -52,17 +52,9 @@ public class Stockage {
         Couple taux1 = new Couple();
 
         ArrayList<String> nombrePartieJouer1 = new ArrayList<String>();
-        ArrayList<String> nombrePartieJouer2 = new ArrayList<String>();
-        nombrePartieJouer1.add("0");
-        nombrePartieJouer2.add("1");
-        nombrePartieJouer1.add("2");
-        nombrePartieJouer2.add("3");
+        
         ArrayList<Float> tauxDeReussite1 = new ArrayList<Float>();
-        ArrayList<Float> tauxDeReussite2 = new ArrayList<Float>();
-        tauxDeReussite1.add((float) 1);
-        tauxDeReussite2.add((float) 20);
-        tauxDeReussite1.add((float) 70);
-        tauxDeReussite2.add((float) 90);
+        
 
 
         ArrayList<Carte> cars = new ArrayList<Carte>();
