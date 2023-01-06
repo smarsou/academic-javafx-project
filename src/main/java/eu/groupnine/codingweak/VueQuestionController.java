@@ -52,6 +52,7 @@ public class VueQuestionController implements Observer {
     public void start()  {
         this.model.setCard();
         System.out.println("Game started");
+        currentCarte = this.model.nexCarte();
         this.refresh();
         Answer();
         
@@ -68,9 +69,7 @@ public class VueQuestionController implements Observer {
 
     @FXML
     public void ShowAnswer()  {
-        
-        
-        int id = VueQuestionController.indexCourant;
+        int id = model.indexCurrentCarte;
         
         Carte c = this.model.PileCartes.get(id);
         
@@ -121,9 +120,10 @@ public class VueQuestionController implements Observer {
         //Passer à carte suivante
         if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
             model.indexCurrentCarte++;
-            this.refresh();
+            
             this.Answer();
             currentCarte = this.model.nexCarte();
+            this.refresh();
 
             //this.timeline.stop();
 
@@ -132,7 +132,6 @@ public class VueQuestionController implements Observer {
             model.sc.callFunctFromController("saveStats");
             model.callObservers();
         }
-
     }
 
     @FXML
@@ -145,9 +144,10 @@ public class VueQuestionController implements Observer {
         //Passer à carte suivante
         if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
             model.indexCurrentCarte++;
-            this.refresh();
+            
             this.Answer();
             currentCarte = this.model.nexCarte();
+            this.refresh();
 
             //this.timeline.stop();
 
@@ -162,7 +162,7 @@ public class VueQuestionController implements Observer {
     public void refresh()  {
         //choisir question et reponses dans pile
         this.Reponse.setText(null);
-        int id = VueQuestionController.indexCourant;
+        int id = model.indexCurrentCarte;
         // Carte card = this.model.PileCartes.get(id);
         // Carte card = this.model.nexCarte();
         this.Question.setText(currentCarte.getQuestion());
