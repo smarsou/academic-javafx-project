@@ -92,10 +92,10 @@ public class VueStatGlobalController implements Observer, Initializable{
 
         for(int i = 0 ; i < stats.taux.nombrePartieJouer.size(); i++){
             dataSeries1.getData().add(new XYChart.Data<String, Number>(stats.taux.nombrePartieJouer.get(i), stats.taux.tauxDeReussite.get(i)));
+            System.out.println(stats.cartesJouees);
         }
-        /*dataSeries1.getData().add(new XYChart.Data<String, Number>("Serge", 9));
-        dataSeries1.getData().add(new XYChart.Data<String, Number>("Soulaiman", 2));
-        dataSeries1.getData().add(new XYChart.Data<String, Number>("Louis", 1));*/
+        System.out.println(dataSeries1);
+
 
         barChart.getData().add(dataSeries1);
         barChart.setTitle("Stats de la pile " + model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).getNom());

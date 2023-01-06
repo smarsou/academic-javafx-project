@@ -23,7 +23,7 @@
         </VBox>
         <Label layoutX="54.0" layoutY="257.0" prefHeight="27.0" prefWidth="170.0" text="Modification des cartes" />
         <Button fx:id="RegisterButton" layoutX="760.0" layoutY="133.0" mnemonicParsing="false" onAction="#Register" text="Register" />
-        <TableView fx:id="Table" layoutX="546.0" layoutY="293.0" onMouseClicked="#rowClicked" prefHeight="245.0" prefWidth="411.0">
+        <TableView fx:id="Table" layoutX="546.0" layoutY="293.0" onMouseClicked="#rowClicked" prefHeight="245.0" prefWidth="411.0" stylesheets="@table_view.css">
             <columns>
                 <TableColumn fx:id="idCartes" prefWidth="78.0" text="Id" />
                 <TableColumn fx:id="Questions" prefWidth="160.0" text="Question" />
