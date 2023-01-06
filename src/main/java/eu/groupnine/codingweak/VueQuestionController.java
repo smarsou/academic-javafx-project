@@ -28,7 +28,8 @@ public class VueQuestionController implements Observer {
 
     @FXML
     private Label Reponse;
-
+    @FXML
+    private Label cartesRestantes;
     @FXML
     private ProgressBar progressbar;
                                                                
@@ -131,11 +132,11 @@ public class VueQuestionController implements Observer {
 
     @FXML
     public void NotFound()  {
-        //mettre à jour les stats
+        // pour mettre à jour les stats
         
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesNonTrouvees++;
-        
+        this.model.ajouterCarteSmart();
         //Passer à carte suivante
         if (model.indexCurrentCarte < this.model.PileCartes.size()-1) {
             model.indexCurrentCarte++;
@@ -163,7 +164,7 @@ public class VueQuestionController implements Observer {
         this.trouve.setDisable(true);
         this.pastrouve.setVisible(false);
         this.trouve.setVisible(false);
-        
+        this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
         
         
         

@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 import java.util.Collections;
 
 import eu.groupnine.codingweak.stockage.Stats;
@@ -35,7 +36,13 @@ public class Model extends Observateur{
         super();
         stockFromDisk = new Stockage();
         stockFromDisk.load();
-
+        //initialiser PilesCartes
+        Set<String> pileNames = stockFromDisk.EnsembleDesPiles.keySet();
+        for (String pilename : pileNames){
+            keyClicked = pilename;
+            PileCartes = getCurrentPile().cartes;
+            break;
+        }
     }
 
     public Carte nexCarte(){
