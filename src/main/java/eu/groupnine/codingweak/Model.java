@@ -20,7 +20,6 @@ public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
     String keyClicked;
-    Boolean isInGame = false;
     // public long time = 5;
 
     public long time;
