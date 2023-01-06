@@ -64,6 +64,11 @@ public class Model extends Observateur{
             System.err.println("ERROR: PilesCartes is null");
             return null;
         }
+        else if (this.PileCartes.isEmpty()) {
+            System.err.println("ERROR:PilesCartes is empty");
+            return null;
+
+        }
         return PileCartes.get(indexCurrentCarte);
     }
 

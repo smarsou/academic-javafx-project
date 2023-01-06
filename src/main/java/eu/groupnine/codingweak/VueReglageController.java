@@ -153,7 +153,7 @@ public class VueReglageController implements Observer {
         String id = this.idCarte.getText();
         String answer = this.reponse.getText();
         String quest = this.question.getText();
-        
+        System.out.println(this.model.PileCartes.size());
         for (Carte c : this.model.PileCartes) {
             if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
                 
@@ -200,7 +200,9 @@ public class VueReglageController implements Observer {
             this.Table.getItems().add(CurrentCartes.get(i));
         }
         this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
-    }catch(NullPointerException exception){
+    }
+    
+    catch(NullPointerException exception){
         
     }
         
