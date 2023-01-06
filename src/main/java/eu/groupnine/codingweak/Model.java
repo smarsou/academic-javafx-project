@@ -13,6 +13,7 @@ import org.controlsfx.control.PropertySheet.Mode;
 import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
+import javafx.scene.chart.PieChart;
 
 
 public class Model extends Observateur{
@@ -45,7 +46,24 @@ public class Model extends Observateur{
         }
     }
 
+    public Boolean checkPile(){
+        if (PileCartes==null){
+            System.err.println("PilesCartes is null");
+            return false;
+        }
+        if (PileCartes.size()==0){
+            System.err.println("Aucune cartes dans la Pile. Remplissez la Pile dans Réglage avant de jouer.");
+            return false;
+        }
+        return true;
+
+    }
+
     public Carte nexCarte(){
+        if (PileCartes == null){
+            System.err.println("ERROR: PilesCartes is null");
+            return null;
+        }
         return PileCartes.get(indexCurrentCarte);
     }
 

@@ -157,6 +157,10 @@ public class VueQuestionController implements Observer {
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
         Carte card = this.model.nexCarte();
+        if (card == null){
+            System.err.println("ERROR: Can't refresh VueQuestion because carte is null");
+            return;
+        }
         this.Question.setText(card.getQuestion());
         this.brep.setVisible(true);
         this.brep.setDisable(false);
@@ -165,8 +169,6 @@ public class VueQuestionController implements Observer {
         this.pastrouve.setVisible(false);
         this.trouve.setVisible(false);
         this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
-        
-        
         
     }
 }

@@ -179,7 +179,8 @@ public class VueReglageController implements Observer {
 
     }
     
-    public void refresh(){
+    public void refresh() throws NullPointerException{
+        try{
         this.NomPile.setText(null);
         this.Description.setText(null);
         Pile p = this.model.getCurrentPile();
@@ -199,7 +200,9 @@ public class VueReglageController implements Observer {
             this.Table.getItems().add(CurrentCartes.get(i));
         }
         this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
-
+    }catch(NullPointerException exception){
+        
+    }
         
     }
 

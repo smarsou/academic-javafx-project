@@ -93,17 +93,23 @@ public class VueAccueilController implements Observer, Initializable{
         String nouvelleCle = "";
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
         int indexPile = model.stockFromDisk.EnsembleDesPiles.size();
-
         int x = 1;
         while (x==1){
-            for (String pileName : pileNames) {
+            if (indexPile == 0){
+                x = 0;
                 nouvelleCle = "nouvelle pile n° " + indexPile;
-                if (pileName.equals(nouvelleCle)){
-                    x = 1;
-                }
-                else{
-                    x = 0;
+            }
+            
+            else{
+                for (String pileName : pileNames) {
+                    nouvelleCle = "nouvelle pile n° " + indexPile;
+                    if (pileName.equals(nouvelleCle)){
+                        x = 1;
+                    }
+                    else{
+                        x = 0;
                     
+                    }
                 }
             }
         }
@@ -140,7 +146,6 @@ public class VueAccueilController implements Observer, Initializable{
     }
 
     public void refresh() {
-        System.out.println("Refresh accueil");
         initialize(null, null);
     }
 
