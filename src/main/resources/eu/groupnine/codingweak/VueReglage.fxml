@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <fx:include source="menu-view.fxml" />
         <VBox layoutX="54.0" layoutY="82.0" prefHeight="133.0" prefWidth="634.0">
@@ -46,7 +46,7 @@
         <TextField fx:id="idCarte" disable="true" layoutX="54.0" layoutY="322.0" prefHeight="40.0" prefWidth="187.0" visible="false" />
         <Button fx:id="ModifyButton" layoutX="54.0" layoutY="612.0" mnemonicParsing="false" onAction="#Modify" text="Modifier" />
         <Button fx:id="CreateButton" layoutX="159.0" layoutY="612.0" mnemonicParsing="false" onAction="#Create" prefHeight="24.0" prefWidth="89.0" text="Creer" />
-        <Label fx:id="nbCartes" layoutX="754.0" layoutY="612.0" prefHeight="31.0" prefWidth="89.0" />
+        <Label fx:id="nbCartes" layoutX="863.0" layoutY="648.0" prefHeight="31.0" prefWidth="89.0" />
       <Button fx:id="ClearButton" layoutX="290.0" layoutY="612.0" mnemonicParsing="false" onAction="#Supp" text="Clear" />
     </children>
 </AnchorPane>
