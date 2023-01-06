@@ -226,7 +226,7 @@ public class VueReglageController implements Observer, Initializable {
         icon1.setFitHeight(30); 
         RegisterButton.setGraphic(icon1);
         RegisterButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
-        Image image2 = new Image(getClass().getResource("/icone/creer.png").toExternalForm()); 
+        Image image2 = new Image(getClass().getResource("/icone/ajouter.png").toExternalForm()); 
         ImageView icon2 = new ImageView(image2);
         icon2.setFitWidth(30);
         icon2.setFitHeight(30); 
@@ -238,7 +238,7 @@ public class VueReglageController implements Observer, Initializable {
         icon3.setFitHeight(30); 
         ModifyButton.setGraphic(icon3);
         ModifyButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
-        Image image4 = new Image(getClass().getResource("/icone/nettoyer.png").toExternalForm()); 
+        Image image4 = new Image(getClass().getResource("/icone/supprimer.png").toExternalForm()); 
         ImageView icon4 = new ImageView(image4);
         icon4.setFitWidth(30);
         icon4.setFitHeight(30); 
