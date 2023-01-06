@@ -6,7 +6,7 @@ public class Pile {
     private String nom;
     private String description;
     public ArrayList<Carte> cartes;
-    Stats stats;
+    public Stats stats;
     public Pile() {
         cartes = new ArrayList<>();
         this.stats = new Stats();

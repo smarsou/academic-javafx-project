@@ -3,7 +3,10 @@ package eu.groupnine.codingweak;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
@@ -12,21 +15,32 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import javafx.scene.input.MouseEvent;
+
+
 public class VueJouerController implements Observer, Initializable{
     Model model;
 
     @FXML
-    TextField valeurTemps,valeurFrequence;
+    TextField valeurTemps;
+    
+    @FXML
+    TextField valeurFrequence;
 
     @FXML
     Button boutonJouer;
@@ -37,20 +51,64 @@ public class VueJouerController implements Observer, Initializable{
     @FXML
     ChoiceBox<String> valeurOrdre;
 
+    /* label pour page d'erreur */
+    @FXML
+    Label texteErreur;
+
     public VueJouerController(Model model){
         this.model = model;
+
+        // EventHandler<KeyEvent> eventHandlerTextField = new EventHandler<KeyEvent>() { 
+        //     @Override 
+        //     public void handle(KeyEvent event) { 
+        //         System.out.println("ouiiiiii");
+        //     }           
+        // };
+
+        // //Handling the mouse clicked event(on box) 
+        // EventHandler<MouseEvent> eventHandlerBox = new EventHandler<javafx.scene.input.MouseEvent>() {
+        //     @Override 
+        //     public void handle(javafx.scene.input.MouseEvent e) { 
+        //         System.out.println("ouiiiiii"); 
+        //     } 
+
+
+        // };
+
+        // if (valeurTemps != null){
+
+        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
+        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
+
+        // }
+        // else { 
+        //     valeurTemps = new TextField("5");
+
+        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
+        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
+        // }
     }
 
     public void choixTemps() throws Exception{
         
-        if (Long.parseLong(valeurTemps.getText())>0 || valeurTemps.getText()!="") {
+        if (Long.parseLong(valeurTemps.getText())>0 ) {
             model.time = Long.parseLong(valeurTemps.getText());
             }
         else {
             model.time = 3;
-            empecherJouer();
         }
     }
+
+
+
+
+    // public void actionTemps(){
+
+    //     if (valeurTemps.getText().isEmpty()){
+    //     }
+    //     if (Long.parseLong(valeurTemps.getText()) <0 || Long.parseLong(valeurTemps.getText()) >30){
+    //     }
+    // }
 
     public void choixOrdre(){
         model.ordrePile = true;
@@ -66,7 +124,6 @@ public class VueJouerController implements Observer, Initializable{
         }
         else {
             model.frequencePile = 1;
-            empecherJouer();
         }
     }
 
@@ -92,11 +149,29 @@ public class VueJouerController implements Observer, Initializable{
         this.model.gestionFrequence();
         this.model.mettreOrdreCartesAleat();
         model.callObservers();
+
+        empecherJouer("Attention, le temps et la fréquence choisis doiventt être des entiers positifs.");
+
     }
 
     @FXML
-    public void empecherJouer(){
+    public void empecherJouer(String textVoulu) throws IOException{
+        
+        
         this.boutonJouer.setDisable(true);
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("VueErreur.fxml"));
+        loader.setControllerFactory(iC->this);
+        Parent rootPage = loader.load();
+
+        // afficher les données de la page
+        texteErreur.setText(textVoulu);
+
+        Scene scene = new Scene(rootPage);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 
 
