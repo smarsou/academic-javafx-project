@@ -114,4 +114,17 @@ public class Model extends Observateur{
         PileCartes = getCurrentPile().cartes;
 
     }
+
+    public void suppCarte(int parseInt) {
+        this.PileCartes.remove(parseInt);
+    }
+
+    public Carte getCard(int id) {
+        for (Carte c : this.PileCartes) {
+            if (c.getId() == id) {
+                return c;
+            }
+        }
+        return null;
+    }
 }
