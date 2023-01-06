@@ -174,7 +174,5 @@ public class VueQuestionController implements Observer {
         this.trouve.setVisible(false);
         this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
         
-        
-        
     }
 }

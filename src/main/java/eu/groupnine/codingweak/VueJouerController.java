@@ -77,6 +77,10 @@ public class VueJouerController implements Observer{
         this.choixFrequence();
         this.choixSmartMode();
         model.reinit();
+        if (!model.checkPile()){
+            System.err.println("Error with the Pile: Can't Play");
+            return;
+        }
         model.sc.afficherParent("Jeu");
         model.sc.callFunctFromController("startQuestion");
         this.model.gestionFrequence();

@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 import java.util.Collections;
 
 import eu.groupnine.codingweak.stockage.Stats;
@@ -12,12 +13,14 @@ import org.controlsfx.control.PropertySheet.Mode;
 import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
+import javafx.scene.chart.PieChart;
 
 
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
     String keyClicked;
+    Boolean isInGame = false;
     // public long time = 5;
 
     public long time;
@@ -35,10 +38,33 @@ public class Model extends Observateur{
         super();
         stockFromDisk = new Stockage();
         stockFromDisk.load();
+        //initialiser PilesCartes
+        Set<String> pileNames = stockFromDisk.EnsembleDesPiles.keySet();
+        for (String pilename : pileNames){
+            keyClicked = pilename;
+            PileCartes = getCurrentPile().cartes;
+            break;
+        }
+    }
+
+    public Boolean checkPile(){
+        if (PileCartes==null){
+            System.err.println("PilesCartes is null");
+            return false;
+        }
+        if (PileCartes.size()==0){
+            System.err.println("Aucune cartes dans la Pile. Remplissez la Pile dans Réglage avant de jouer.");
+            return false;
+        }
+        return true;
 
     }
 
     public Carte nexCarte(){
+        if (PileCartes == null){
+            System.err.println("ERROR: PilesCartes is null");
+            return null;
+        }
         return PileCartes.get(indexCurrentCarte);
     }
 
