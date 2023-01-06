@@ -179,22 +179,44 @@ public class VueReglageController implements Observer, Initializable {
         String q = this.question.getText();
         String rep = this.reponse.getText();
         if ((id == null)&&(q != null)&&(rep != null)) {
-            int indLast = this.model.PileCartes.size() -1;
-
-            int lastId = this.model.PileCartes.get(indLast).getId();
-
-            boolean resq = this.model.findQuestionInPile(q);
-                
-            boolean resrep = this.model.findReponseInPile(rep);
-
-            if ((resq == false)&&(resrep == false)) {
-                this.model.PileCartes.add(new Carte(lastId+1, q, rep));
+            
+            if (this.model.PileCartes.isEmpty()) {
+                System.out.println("ok");
+                this.model.PileCartes.add(new Carte(1, q, rep));
                 this.model.callObservers();
+                
 
             }
             else {
-                //afficher avertissement existe déjà
+                int indLast = this.model.PileCartes.size() - 1;
+
+            
+                int lastId = this.model.PileCartes.get(indLast).getId();
+                boolean resq = this.model.findQuestionInPile(q);
+                
+            
+                boolean resrep = this.model.findReponseInPile(rep);
+
+            
+                if ((resq == false)&&(resrep == false)) {
+                
+                    this.model.PileCartes.add(new Carte(lastId+1, q, rep));
+                
+                    this.model.callObservers();
+
+            
+                }
+            
+                else {
+                
+                    //afficher avertissement existe déjà
+            
+                }
+
+
             }
+            
+            
 
         }
         else {
