@@ -56,6 +56,7 @@ public class VueReglageController implements Observer {
     public VueReglageController(Model model){
         this.model = model;
         this.model.observers.add(this);
+        this.model.setCard();
     }
 
     
@@ -105,16 +106,22 @@ public class VueReglageController implements Observer {
             int id = Integer.parseInt(ind);
             String q = this.question.getText();
             String rep = this.reponse.getText();
-            this.model.ModifyQuestionCarte(id,q);
-            this.model.ModifyReponseCarte(id,rep);
-            this.model.callObservers();
+            Carte c = this.model.getCard(id);
+            if (c != null) {
+                this.model.ModifyQuestionCarte(this.model.PileCartes.indexOf(c),q);
+            
+                this.model.ModifyReponseCarte(this.model.PileCartes.indexOf(c),rep);
+            
+                this.model.callObservers();
+
+            }
+            
             this.idCarte.setText(null);
             this.question.setText(null);
             this.reponse.setText(null);
 
         }
         
-
     }
 
     @FXML
@@ -146,18 +153,21 @@ public class VueReglageController implements Observer {
         String id = this.idCarte.getText();
         String answer = this.reponse.getText();
         String quest = this.question.getText();
-        ArrayList<Carte> copy = new ArrayList<>();
-        for (Carte c : this.model.getCurrentPile().cartes) {
-            copy.add(c);
+        
+        for (Carte c : this.model.PileCartes) {
             if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
-                System.out.println(quest);
+                
+                this.model.suppCarte(this.model.PileCartes.indexOf(c));
+                this.model.callObservers();
                 break;
             }
+           
+            
+            
         }
-        this.model.getCurrentPile().cartes.clear();
-        this.model.getCurrentPile().cartes.addAll(copy);
         
-        this.model.callObservers();
+        
+        
         this.idCarte.setText(null);
     
             
@@ -182,11 +192,12 @@ public class VueReglageController implements Observer {
         this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("inforeponse"));
         this.Table.getItems().clear();
         
-        ArrayList<Carte> CurrentCartes = this.model.getCurrentPile().cartes;
+        ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+        
         
         
         for (int i = 0;i<CurrentCartes.size();i++) {
-            this.Table.getItems().add(new Carte(i,CurrentCartes.get(i).getQuestion(),CurrentCartes.get(i).getReponse()));
+            this.Table.getItems().add(CurrentCartes.get(i));
         }
         this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
     }catch(NullPointerException exception){
