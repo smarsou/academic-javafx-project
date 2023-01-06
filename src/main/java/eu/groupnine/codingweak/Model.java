@@ -63,6 +63,7 @@ public class Model extends Observateur{
     }
 
     public Pile getCurrentPile(){
+        System.out.println("pile choisie");
         return Stockage.EnsembleDesPiles.get(keyClicked);
     }
 
