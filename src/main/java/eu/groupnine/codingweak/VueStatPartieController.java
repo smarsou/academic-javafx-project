@@ -56,8 +56,16 @@ public class VueStatPartieController implements Observer{
         resultat.setLabelsVisible(true);
     }
 
+<<<<<<< HEAD
     // public Float CalculTaux(Pile pile){
     //     Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
     //     return taux;
     // }
 }
+=======
+    public Float CalculTaux(Pile pile){
+        Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
+        return taux;
+    }
+}
+>>>>>>> a460ec4380cfabe85dafaf755b8a65d023310450
