@@ -118,7 +118,7 @@ public class VueReglageController implements Observer, Initializable {
 
 
     @FXML
-    public void Modify()  {
+    public void Modify() throws Exception  {
         String ind = this.idCarte.getText();
         if (ind != null) {
             int id = Integer.parseInt(ind);
@@ -143,15 +143,17 @@ public class VueReglageController implements Observer, Initializable {
 
                 
                     if (resq == true) {
-                    
-                        //afficher avertissement
+                        model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
+                        model.afficherErreur();
+                        return;
                 
                     }
 
                 
                     if (resrep == true) {
-                    
-                        //afficher avertissement
+                        model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
+                        model.afficherErreur();
+                        return;
 
                 
                     }
@@ -174,7 +176,7 @@ public class VueReglageController implements Observer, Initializable {
     }
 
     @FXML
-    public void Create()  {
+    public void Create() throws Exception  {
         String id = this.idCarte.getText();
         String q = this.question.getText();
         String rep = this.reponse.getText();
@@ -208,8 +210,9 @@ public class VueReglageController implements Observer, Initializable {
                 }
             
                 else {
-                
-                    //afficher avertissement existe déjà
+                    model.setErrorMessage("Erreur avec le choix de pile: elle existe déjà !");
+                    model.afficherErreur();
+                    return;
             
                 }
 
@@ -220,7 +223,9 @@ public class VueReglageController implements Observer, Initializable {
 
         }
         else {
-            //avertissement remplir les 2 champs
+            model.setErrorMessage("Erreur : il faut remplir les deux champs !");
+            model.afficherErreur();
+            return;
         }
         this.idCarte.setText(null);
     
@@ -234,12 +239,14 @@ public class VueReglageController implements Observer, Initializable {
 
 
     @FXML
-    public void Supp() {
+    public void Supp() throws Exception {
         String id = this.idCarte.getText();
         String answer = this.reponse.getText();
         String quest = this.question.getText();
         if ((id == null)||(answer == null)||(quest == null)) {
-            //avertissement
+            model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
+            model.afficherErreur();
+            return;
 
         }
         else {
