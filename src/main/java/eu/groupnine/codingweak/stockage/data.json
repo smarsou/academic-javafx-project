@@ -1,22 +1,22 @@
 {
   "pile1": {
-    "nom": "QI",
-    "description": "Développer son esprit critique",
+    "nom": "pile1",
+    "description": "description pile 1",
     "cartes": [
       {
         "id": 1,
-        "question": "Combien font 0-0 ?",
-        "reponse": "La tête à ... je me tais d'accord."
+        "question": "question1",
+        "reponse": "reponse1"
       },
       {
         "id": 2,
-        "question": "Qu'est ce qui est jaune et qui atteeeeeend ?",
-        "reponse": "Jonhataaaaaan lol"
+        "question": "question1",
+        "reponse": "reponse1"
       },
       {
         "id": 3,
-        "question": "Pourquoi êtes vous ici ?",
-        "reponse": "Parce que j'ai envie de vous enlevez 10 points sur votre note."
+        "question": "question1",
+        "reponse": "reponse1"
       }
     ],
     "stats": {
@@ -38,27 +38,24 @@
     }
   },
   "pile2": {
-    "nom": "Telecom Training",
-    "description": "Un questionnaire pour préparer son cerveau à TN... ",
+    "nom": "pile2",
+    "description": "description pile 2",
     "cartes": [
       {
         "id": 1,
-        "question": "A quelle heure arrive-t-on en classe pour un cours à 8h ?",
-        "reponse": "Jamais... On vient pas en cours."
+        "question": "question1",
+        "reponse": "reponse1"
       },
       {
         "id": 2,
-        "question": "Pourquoi dois tu venir à  TN ?",
-        "reponse": " Pour arrêter de vivre sa vie sociale et apprendre à coder !"
+        "question": "question1",
+        "reponse": "reponse1"
       },
       {
         "id": 3,
-        "question": "Qu'est ce qui est dur à TN ?",
-        "reponse": "Les projeeeeeets :'("
-      },
-      {"id": 4,
-      "question": "Est-ce que le foot à TN c'est bien ?",
-      "reponse": "Ouiiiiiiii, venez vous inscriiiiire !"}
+        "question": "question1",
+        "reponse": "reponse1"
+      }
     ],
     "stats": {
       "cartesJouees": 0,
