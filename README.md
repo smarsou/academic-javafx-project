@@ -40,7 +40,7 @@ Finir les fonctionnalités Apprentissage et Création si besoin.
 
 ## Diagramme de classe
 
-Le diagramme de classe correspond à l'application que l'on espère obtenir.
+Ce diagramme de classe de conception correspond à l'application que l'on espère obtenir. Il a été conçu pendant le premier jour de la coding week (et n'a pas été mis à jour).
 
 ![Diagramme de classe](./gp/classDiagram.png)
 

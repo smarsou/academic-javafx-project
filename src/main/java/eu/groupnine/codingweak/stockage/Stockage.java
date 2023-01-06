@@ -89,7 +89,8 @@ public class Stockage {
             Gson gson = new Gson();
             Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
             EnsembleDesPiles = gson.fromJson(reader, fooType);
-            if (EnsembleDesPiles==null){
+
+            if (EnsembleDesPiles==null || EnsembleDesPiles.size() == 0){
                 init();
                 save();
             }
