@@ -115,21 +115,6 @@ public class Model extends Observateur{
     }
 
 
-
-
-    // public void setCard(){
-    //     this.PileCartes = new ArrayList<>();
-        
-    //     Carte carte1 = new Carte(1,"question1","reponse1");
-    //     Carte carte2 = new Carte(2,"question2","reponse2");
-    //     Carte carte3 = new Carte(3,"question3","reponse3");
-
-        
-    //     this.PileCartes.add(carte1);
-    //     this.PileCartes.add(carte2);
-    //     this.PileCartes.add(carte3);
-        
-    // }
     public void setCard(){
         this.PileCartes = getCurrentPile().cartes;
     }

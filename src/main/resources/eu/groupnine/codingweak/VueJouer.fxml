@@ -13,7 +13,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <fx:include source="menu-view.fxml" />
-      <Label fx:id="titrePile" alignment="CENTER" layoutX="117.0" layoutY="44.0" prefHeight="56.0" prefWidth="391.0" text="titre de la pile" textAlignment="CENTER">
+      <Label fx:id="UNtitrePile" alignment="CENTER" layoutX="117.0" layoutY="44.0" prefHeight="56.0" prefWidth="391.0" text="titre de la pile" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>

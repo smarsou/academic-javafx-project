@@ -52,40 +52,12 @@ public class VueJouerController implements Observer, Initializable{
     ChoiceBox<String> valeurOrdre;
 
     @FXML
-    Label titrePile;
+    Label UNtitrePile;
 
-    public VueJouerController(Model model){
+    public VueJouerController(Model model) {
         this.model = model;
+        this.model.observers.add(this);
 
-        // EventHandler<KeyEvent> eventHandlerTextField = new EventHandler<KeyEvent>() { 
-        //     @Override 
-        //     public void handle(KeyEvent event) { 
-        //         System.out.println("ouiiiiii");
-        //     }           
-        // };
-
-        // //Handling the mouse clicked event(on box) 
-        // EventHandler<MouseEvent> eventHandlerBox = new EventHandler<javafx.scene.input.MouseEvent>() {
-        //     @Override 
-        //     public void handle(javafx.scene.input.MouseEvent e) { 
-        //         System.out.println("ouiiiiii"); 
-        //     } 
-
-
-        // };
-
-        // if (valeurTemps != null){
-
-        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
-        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
-
-        // }
-        // else { 
-        //     valeurTemps = new TextField("5");
-
-        //     valeurTemps.addEventHandler(KeyEvent.KEY_TYPED, eventHandlerTextField);
-        //     valeurTemps.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, eventHandlerBox);
-        // }
     }
 
 
@@ -100,15 +72,6 @@ public class VueJouerController implements Observer, Initializable{
     }
 
 
-
-
-    // public void actionTemps(){
-
-    //     if (valeurTemps.getText().isEmpty()){
-    //     }
-    //     if (Long.parseLong(valeurTemps.getText()) <0 || Long.parseLong(valeurTemps.getText()) >30){
-    //     }
-    // }
 
     public void choixOrdre(){
         model.ordrePile = true;
@@ -195,7 +158,7 @@ public class VueJouerController implements Observer, Initializable{
     }
 
     public void refresh(){
-        this.titrePile.setText(model.getCurrentPile().getNom());
+        this.UNtitrePile.setText(model.getCurrentPile().getNom());
     }
 
     @Override
