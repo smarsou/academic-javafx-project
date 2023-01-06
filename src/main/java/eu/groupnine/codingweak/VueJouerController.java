@@ -151,9 +151,10 @@ public class VueJouerController implements Observer, Initializable{
         model.callObservers();
 
         empecherJouer("Attention, le temps et la fréquence choisis doiventt être des entiers positifs.");
-        System.out.println("ok");
+
     }
 
+    @FXML
     public void empecherJouer(String textVoulu) throws IOException{
         
         
@@ -166,6 +167,7 @@ public class VueJouerController implements Observer, Initializable{
 
         // afficher les données de la page
         texteErreur.setText(textVoulu);
+
         Scene scene = new Scene(rootPage);
         Stage stage = new Stage();
         stage.setScene(scene);
