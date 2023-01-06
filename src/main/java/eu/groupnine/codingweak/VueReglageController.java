@@ -131,7 +131,7 @@ public class VueReglageController implements Observer, Initializable {
         }
 
         else {
-            model.setErrorMessage("Choisir un nom et une description !");
+            model.setErrorMessage("Choisir un nom et une description pour la pile !");
                     
             model.afficherErreur();
         }
@@ -216,9 +216,11 @@ public class VueReglageController implements Observer, Initializable {
     @FXML
     public void Create() throws Exception  {
         String id = this.idCarte.getText();
+        
         String q = this.question.getText();
         String rep = this.reponse.getText();
-        if ((id == null)&&(q != null)&&(rep != null)) {
+        
+        if ((q != null)&&(rep != null)) {
             
             if (this.model.PileCartes.isEmpty()) {
                 
@@ -257,15 +259,12 @@ public class VueReglageController implements Observer, Initializable {
 
 
             }
+
             
             
 
         }
-        else {
-            model.setErrorMessage("Erreur : il faut remplir les deux champs !");
-            model.afficherErreur();
-            
-        }
+        
         this.idCarte.setText(null);
     
             

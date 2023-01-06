@@ -167,14 +167,25 @@ public class VueQuestionController implements Observer {
         int id = model.indexCurrentCarte;
         // Carte card = this.model.PileCartes.get(id);
         // Carte card = this.model.nexCarte();
-        this.Question.setText(currentCarte.getQuestion());
-        this.brep.setVisible(true);
-        this.brep.setDisable(false);
-        this.pastrouve.setDisable(true);
-        this.trouve.setDisable(true);
-        this.pastrouve.setVisible(false);
-        this.trouve.setVisible(false);
-        this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
+        if (currentCarte != null) {
+            this.Question.setText(currentCarte.getQuestion());
+        
+            this.brep.setVisible(true);
+        
+            this.brep.setDisable(false);
+        
+            this.pastrouve.setDisable(true);
+        
+            this.trouve.setDisable(true);
+        
+            this.pastrouve.setVisible(false);
+        
+            this.trouve.setVisible(false);
+        
+            this.cartesRestantes.setText(Integer.toString(model.PileCartes.size()-model.indexCurrentCarte));
+
+        }
+        
         
     }
 }

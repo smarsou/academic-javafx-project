@@ -108,7 +108,7 @@ public class VueJouerController implements Observer, Initializable{
             model.reinit();
             this.model.mettreOrdreCartesAleat();
             if (!model.checkPile()){
-                model.setErrorMessage("Erreur avec le choix de pile: on ne peut pas jouer");
+                model.setErrorMessage("Erreur avec le choix de pile: Pile vide, veuillez ajouter de nouvelles cartes !");
                 model.afficherErreur();
                 return;
             }
