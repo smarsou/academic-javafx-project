@@ -13,12 +13,14 @@ import org.controlsfx.control.PropertySheet.Mode;
 import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
+import javafx.scene.chart.PieChart;
 
 
 public class Model extends Observateur{
     SceneController sc;
     ArrayList<Carte> PileCartes;
     String keyClicked;
+    Boolean isInGame = false;
     // public long time = 5;
 
     public long time;
@@ -46,6 +48,10 @@ public class Model extends Observateur{
     }
 
     public Carte nexCarte(){
+        if (PileCartes == null){
+            System.err.println("ERROR: PilesCartes is null");
+            return null;
+        }
         return PileCartes.get(indexCurrentCarte);
     }
 
