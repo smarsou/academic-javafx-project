@@ -90,7 +90,7 @@ public class VueQuestionController implements Observer {
         this.timeline = new Timeline(
         new KeyFrame(Duration.ZERO, new KeyValue(this.progressbar.progressProperty(), 0)),
         new KeyFrame(Duration.seconds(this.model.time), e-> {
-            // do anything you need here on completion...
+            
             int id = VueQuestionController.indexCourant;
             Carte c = this.model.PileCartes.get(id);
             this.Reponse.setText(c.getReponse());
@@ -100,14 +100,14 @@ public class VueQuestionController implements Observer {
             this.pastrouve.setDisable(false);
             this.brep.setDisable(true);
             this.brep.setVisible(false);
-            //this.fin = true;
+            
             this.timeline.stop();
-            //System.out.println("Minute over");
+            
         }, new KeyValue(this.progressbar.progressProperty(), 1)));
         this.timeline.setCycleCount(Animation.INDEFINITE);
         this.timeline.play();
         
-        //timeline.stop();
+        
         
         
     }

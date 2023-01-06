@@ -9,6 +9,7 @@ import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -93,7 +95,7 @@ public class VueReglageController implements Observer, Initializable {
 
     @FXML
     public void Register() {
-        Pile p = this.model.getCurrentPile();
+        
         
         String n = this.NomPile.getText();
         String d = this.Description.getText();
@@ -103,6 +105,7 @@ public class VueReglageController implements Observer, Initializable {
             this.model.callObservers();
 
         }
+        //System.out.println("ok");
         this.NomPile.setText(null);
         this.Description.setText(null);
         this.idCarte.setText(null);
@@ -123,11 +126,42 @@ public class VueReglageController implements Observer, Initializable {
             String rep = this.reponse.getText();
             Carte c = this.model.getCard(id);
             if (c != null) {
-                this.model.ModifyQuestionCarte(this.model.PileCartes.indexOf(c),q);
-            
-                this.model.ModifyReponseCarte(this.model.PileCartes.indexOf(c),rep);
-            
-                this.model.callObservers();
+                if ((q != null)&&(rep != null)) {
+                    boolean resq = this.model.findQuestionInPile(q);
+                
+                    boolean resrep = this.model.findReponseInPile(rep);
+                
+                    if (resq == false) {
+                        this.model.ModifyQuestionCarte(this.model.PileCartes.indexOf(c),q);
+                
+                    }
+                    if (resrep == false) {
+                    
+                        this.model.ModifyReponseCarte(this.model.PileCartes.indexOf(c),rep);
+                
+                    }
+
+                
+                    if (resq == true) {
+                    
+                        //afficher avertissement
+                
+                    }
+
+                
+                    if (resrep == true) {
+                    
+                        //afficher avertissement
+
+                
+                    }
+
+                
+                    this.model.callObservers();
+
+                
+                }
+                
 
             }
             
@@ -141,24 +175,38 @@ public class VueReglageController implements Observer, Initializable {
 
     @FXML
     public void Create()  {
-        
+        String id = this.idCarte.getText();
         String q = this.question.getText();
         String rep = this.reponse.getText();
-        if ((q != null)&&(rep != null)) {
+        if ((id == null)&&(q != null)&&(rep != null)) {
             int indLast = this.model.PileCartes.size() -1;
 
             int lastId = this.model.PileCartes.get(indLast).getId();
-    
-            this.model.PileCartes.add(new Carte(lastId+1, q, rep));
-    
-            this.model.callObservers();
-            this.idCarte.setText(null);
-    
-            this.question.setText(null);
-    
-            this.reponse.setText(null);
+
+            boolean resq = this.model.findQuestionInPile(q);
+                
+            boolean resrep = this.model.findReponseInPile(rep);
+
+            if ((resq == false)&&(resrep == false)) {
+                this.model.PileCartes.add(new Carte(lastId+1, q, rep));
+                this.model.callObservers();
+
+            }
+            else {
+                //afficher avertissement existe déjà
+            }
 
         }
+        else {
+            //avertissement remplir les 2 champs
+        }
+        this.idCarte.setText(null);
+    
+            
+        this.question.setText(null);
+    
+            
+        this.reponse.setText(null);
     }
 
 
@@ -168,19 +216,24 @@ public class VueReglageController implements Observer, Initializable {
         String id = this.idCarte.getText();
         String answer = this.reponse.getText();
         String quest = this.question.getText();
-        
-        for (Carte c : this.model.PileCartes) {
-            if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
-                
-                this.model.suppCarte(this.model.PileCartes.indexOf(c));
-                this.model.callObservers();
-                break;
-            }
-           
-            
-            
+        if ((id == null)||(answer == null)||(quest == null)) {
+            //avertissement
+
         }
-        
+        else {
+            for (Carte c : this.model.PileCartes) {
+                if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
+                    
+                    this.model.suppCarte(this.model.PileCartes.indexOf(c));
+                    this.model.callObservers();
+                    break;
+                }
+               
+                
+                
+            }
+
+        }
         
         
         this.idCarte.setText(null);
@@ -196,27 +249,45 @@ public class VueReglageController implements Observer, Initializable {
     
     public void refresh() throws NullPointerException{
         try{
-        this.NomPile.setText(null);
-        this.Description.setText(null);
-        Pile p = this.model.getCurrentPile();
-        this.NomPile.setText(p.getNom());
-        this.Description.setText(p.getDescription());
         
-        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("Id"));
-        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Question"));
-        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponse"));
-        this.Table.getItems().clear();
+            this.NomPile.setText(null);
         
-        ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+            this.Description.setText(null);
         
-        for (int i = 0;i<CurrentCartes.size();i++) {
-            this.Table.getItems().add(CurrentCartes.get(i));
+            Pile p = this.model.getCurrentPile();
+        
+            this.NomPile.setText(p.getNom());
+        
+            this.Description.setText(p.getDescription());
+        
+        
+            this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("Id"));
+        
+            this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Question"));
+        
+            this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponse"));
+        
+            this.Table.getItems().clear();
+        
+        
+            ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+        
+        
+            for (int i = 0;i<CurrentCartes.size();i++) {
+            
+                this.Table.getItems().add(CurrentCartes.get(i));
+        
+            }
+        
+            this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
+    
         }
-        this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
-    }catch(NullPointerException exception){
+        catch(NullPointerException exception){
         
-    }
+    
+        }
         
+    
     }
 
     public void setIcone(){

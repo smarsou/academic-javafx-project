@@ -151,4 +151,30 @@ public class Model extends Observateur{
         }
         return null;
     }
+
+    public boolean findQuestionInPile(String quest) {
+        
+        for (Carte c : this.PileCartes) {
+            if (c.getQuestion().equals(quest)) {
+                return true;
+
+            }
+        }
+        return false;
+
+
+    }
+
+    public boolean findReponseInPile(String rep) {
+        for (Carte c : this.PileCartes) {
+            if (c.getQuestion().equals(rep)) {
+                return true;
+
+            }
+        }
+        return false;
+
+    }
+
+    
 }
