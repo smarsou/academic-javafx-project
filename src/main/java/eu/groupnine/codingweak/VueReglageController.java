@@ -79,8 +79,7 @@ public class VueReglageController implements Observer {
     @FXML
     public void Register() {
         Pile p = this.model.getCurrentPile();
-        p.getNom();
-        p.getDescription();
+        
         String n = this.NomPile.getText();
         String d = this.Description.getText();
         if ((n != null)&&(d != null)) {
