@@ -202,9 +202,9 @@ public class VueReglageController implements Observer, Initializable {
         this.NomPile.setText(p.getNom());
         this.Description.setText(p.getDescription());
         
-        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("idcard"));
-        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("infoquestion"));
-        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("inforeponse"));
+        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("Id"));
+        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("Question"));
+        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("Reponse"));
         this.Table.getItems().clear();
         
         ArrayList<Carte> CurrentCartes = this.model.PileCartes;
