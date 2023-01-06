@@ -1,5 +1,6 @@
 package eu.groupnine.codingweak;
 
+import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stats;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,28 +34,30 @@ public class VueStatPartieController implements Observer{
 
     public ObservableList<PieChart.Data> initializeData(){
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("Réponses justes", stats.cartesTrouvees),
-                new PieChart.Data("Réponses fausses", stats.cartesNonTrouvees));
+                new PieChart.Data("Correct: " + stats.cartesTrouvees, stats.cartesTrouvees),
+                new PieChart.Data("Faux: " + stats.cartesNonTrouvees, stats.cartesNonTrouvees));
         return pieChartData;
     }
+
     public void saveStats() throws IOException {
-        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(this.stats.cartesNonTrouvees,this.stats.cartesTrouvees, this.stats.cartesJouees, this.stats.cartesParMinutes, this.stats.tempsPasse, "" + this.stats.taux.nombrePartieJouer.size(), CalculTaux());
+        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(this.stats.cartesNonTrouvees,this.stats.cartesTrouvees, this.stats.cartesJouees, this.stats.cartesParMinutes, this.stats.tempsPasse, "" + this.stats.taux.nombrePartieJouer.size(), CalculTaux(model.getCurrentPile()));
         model.stockFromDisk.save();
     }
 
     public void refresh(){
         this.stats = model.currentStats;
-        System.out.println("Refresh stats");
-        System.out.println(stats.cartesJouees + " " + stats.tempsPasse);
-        float cpmValue = 60*stats.cartesJouees/stats.tempsPasse;
-        cpm.setText(Float.toString(cpmValue));
-        temps.setText(Float.toString(stats.tempsPasse));
+        float cpmValue = 0;
+        // 60*stats.cartesJouees/stats.tempsPasse;
+        if (model.currentStats.cartesJouees != 0){
+            cpm.setText(model.currentStats.cartesTrouvees*100/model.currentStats.cartesJouees+ " %");
+        }
+        // temps.setText(Float.toString(stats.tempsPasse));
         resultat.setData(initializeData());
         resultat.setLabelsVisible(true);
     }
 
-    public Float CalculTaux(){
-        Float taux = (float) (this.stats.cartesTrouvees/this.stats.taux.nombrePartieJouer.size());
+    public Float CalculTaux(Pile pile){
+        Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
         return taux;
     }
 }

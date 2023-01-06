@@ -86,7 +86,7 @@ public class VueAccueilController implements Observer, Initializable{
     public void Seetings(){
         model.sc.afficherParent("Reglage");
         //model.sc.callFunctFromController("InitializeReglage");
-        System.out.println(model.keyClicked);
+        // System.out.println(model.keyClicked);
         model.PileCartes = model.getCurrentPile().cartes;
         this.model.callObservers();
         
