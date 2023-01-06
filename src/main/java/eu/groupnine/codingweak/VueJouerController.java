@@ -37,7 +37,7 @@ public class VueJouerController implements Observer{
 
     public void choixTemps() throws Exception{
         
-        if (Long.parseLong(valeurTemps.getText())>0) {
+        if (Long.parseLong(valeurTemps.getText())>0 || valeurTemps.getText()!="") {
             model.time = Long.parseLong(valeurTemps.getText());
             }
         else {
