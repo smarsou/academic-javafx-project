@@ -1,5 +1,7 @@
 package eu.groupnine.codingweak;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.security.PublicKey;
 import java.util.ArrayList;
@@ -94,7 +96,7 @@ public class VueReglageController implements Observer, Initializable {
     }
 
     @FXML
-    public void Register() {
+    public void Register() throws FileNotFoundException, IOException {
         
         
         String n = this.NomPile.getText();
@@ -102,10 +104,11 @@ public class VueReglageController implements Observer, Initializable {
         if ((n != null)&&(d != null)) {
             this.model.getCurrentPile().setNom(n);
             this.model.getCurrentPile().setDescription(d);
+            model.stockFromDisk.save();
             this.model.callObservers();
 
         }
-        //System.out.println("ok");
+
         this.NomPile.setText(null);
         this.Description.setText(null);
         this.idCarte.setText(null);
@@ -158,7 +161,7 @@ public class VueReglageController implements Observer, Initializable {
                 
                     }
 
-                
+                    model.stockFromDisk.save();
                     this.model.callObservers();
 
                 
@@ -198,7 +201,7 @@ public class VueReglageController implements Observer, Initializable {
         if ((id == null)&&(q != null)&&(rep != null)) {
             
             if (this.model.PileCartes.isEmpty()) {
-                System.out.println("ok");
+                
                 this.model.PileCartes.add(new Carte(1, q, rep));
                 this.model.callObservers();
                 
@@ -219,7 +222,7 @@ public class VueReglageController implements Observer, Initializable {
                     
                 
                     this.model.PileCartes.add(new Carte(lastId+1, q, rep));
-                
+                    model.stockFromDisk.save();
                     this.model.callObservers();
 
             
@@ -270,6 +273,7 @@ public class VueReglageController implements Observer, Initializable {
                 if ((String.valueOf(c.getId()).equals(id))&&(c.getQuestion().equals(quest))&&(c.getReponse().equals(answer))) {
                     
                     this.model.suppCarte(this.model.PileCartes.indexOf(c));
+                    model.stockFromDisk.save();
                     this.model.callObservers();
                     break;
                 }
