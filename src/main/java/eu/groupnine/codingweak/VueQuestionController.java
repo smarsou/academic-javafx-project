@@ -1,5 +1,6 @@
 package eu.groupnine.codingweak;
 
+import java.io.IOException;
 import java.net.URL;
 
 import java.util.ResourceBundle;
@@ -51,7 +52,6 @@ public class VueQuestionController implements Observer {
     public void start()  {
         this.model.setCard();
         System.out.println("Game started");
-
         this.refresh();
         Answer();
         
@@ -112,7 +112,7 @@ public class VueQuestionController implements Observer {
         
     }
     @FXML
-    public void Found()  {
+    public void Found() throws IOException  {
         //mettre à jour les stats
         this.model.currentStats.cartesJouees++;
         this.model.currentStats.cartesTrouvees++;
@@ -129,13 +129,14 @@ public class VueQuestionController implements Observer {
 
         }else{
             model.sc.afficherParent("StatPartie");
+            model.sc.callFunctFromController("saveStats");
             model.callObservers();
         }
 
     }
 
     @FXML
-    public void NotFound()  {
+    public void NotFound() throws IOException  {
         // pour mettre à jour les stats
         
         this.model.currentStats.cartesJouees++;
@@ -152,6 +153,7 @@ public class VueQuestionController implements Observer {
 
         }else{
             model.sc.afficherParent("StatPartie");
+            model.sc.callFunctFromController("saveStats");
             model.callObservers();
         }
     }

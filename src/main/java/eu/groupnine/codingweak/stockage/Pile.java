@@ -38,12 +38,12 @@ public class Pile {
         return this.stats;
     }
     
-    public void addStats(int cnt, int ct,int cj, float cpm, int tp, String cnp, Float cta){
+    public void addStats(int cnt, int ct,int cj, String cnp, float cta){
         stats.cartesNonTrouvees+= cnt;
         stats.cartesTrouvees+=ct;
         stats.cartesJouees+=cj;
-        stats.cartesParMinutes+=cpm;
-        stats.tempsPasse+=tp;
+        // stats.cartesParMinutes+=cpm;
+        // stats.tempsPasse+=tp;
         stats.taux.nombrePartieJouer.add(cnp);
         stats.taux.tauxDeReussite.add(cta);
     }
