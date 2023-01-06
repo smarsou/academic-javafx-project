@@ -89,18 +89,14 @@ public class Stockage {
             Gson gson = new Gson();
             Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
             EnsembleDesPiles = gson.fromJson(reader, fooType);
-<<<<<<< HEAD
             if (EnsembleDesPiles==null){
                 init();
                 save();
             }
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
-=======
-
->>>>>>> b61924dfef29be97ac6a41ae351d5ea0945a2d90
         }
     }
-
+    
     public Boolean loadFrom(String filePath) throws FileNotFoundException, IOException, JsonSyntaxException {
         Path path = Paths.get(filePath);
 
