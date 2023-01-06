@@ -67,7 +67,7 @@ public class MenuViewController implements Observer, Initializable{
         model.callObservers();
     }
 
-    public void importPile() throws IOException,NullPointerException {
+    public void importPile() throws Exception {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open JSON file");
         fileChooser.getExtensionFilters().setAll(
@@ -75,21 +75,30 @@ public class MenuViewController implements Observer, Initializable{
 );
         File file = fileChooser.showOpenDialog(stage);
         try{
-        model.stockFromDisk.loadFrom(file.getAbsolutePath());
+        if (!model.stockFromDisk.loadFrom(file.getAbsolutePath())){
+            model.setErrorMessage("Le fichier Json n'est pas au bon format pour cette application.");
+            model.afficherErreur();
+        }
         }catch(NullPointerException e){
-            System.err.println("Can't load File");
+            System.err.println("Impossible de charger le fichier");
+            model.setErrorMessage("Impossible de charger le fichier");
+            model.afficherErreur();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         model.callObservers();
         
     }
 
 
-    public void exportPile() throws IOException {
+    public void exportPile() throws Exception {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         File selectedDirectory = directoryChooser.showDialog(stage);
 
         if ( selectedDirectory == null){
             System.err.println("ERROR: path not found");
+            model.setErrorMessage("ERROR: path not found !");
+            model.afficherErreur();
         }else{
             model.stockFromDisk.saveAt(selectedDirectory.getAbsolutePath()+"/export.json");
         }

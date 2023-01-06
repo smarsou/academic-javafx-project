@@ -86,7 +86,7 @@ public class Model extends Observateur{
 
     public void mettreOrdreCartesAleat(){
         if (ordrePile==false){
-            Collections.shuffle(PileCartes); 
+            Collections.shuffle(PileCartes, new Random()); 
         }
     }
 
@@ -115,6 +115,7 @@ public class Model extends Observateur{
     }
 
 
+
     public void setCard(){
         this.PileCartes = getCurrentPile().cartes;
     }
@@ -130,9 +131,10 @@ public class Model extends Observateur{
     }
     
     public void reinit(){
-        this.indexCurrentCarte = 0;
+        this.indexCurrentCarte =0;
         currentStats = new Stats();
         PileCartes = getCurrentPile().cartes;
+
     }
 
     public void suppCarte(int parseInt) {
