@@ -5,11 +5,15 @@ import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -47,6 +51,7 @@ public class VueAccueilController implements Observer, Initializable{
         PlayButton.setDisable(true);
         DeleteButton.setDisable(true);
         SeetingsButton.setDisable(true);
+        setIcone();
         chargePile();
         
     }
@@ -143,6 +148,34 @@ public class VueAccueilController implements Observer, Initializable{
     public void DeletePile() {
         model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
         model.callObservers();
+    }
+
+    public void setIcone(){
+        Image image1 = new Image(getClass().getResource("/icone/jouer.png").toExternalForm()); 
+        ImageView icon1 = new ImageView(image1);
+        icon1.setFitWidth(30);
+        icon1.setFitHeight(30); 
+        PlayButton.setGraphic(icon1);
+        PlayButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image2 = new Image(getClass().getResource("/icone/option.png").toExternalForm()); 
+        ImageView icon2 = new ImageView(image2);
+        icon2.setFitWidth(30);
+        icon2.setFitHeight(30); 
+        SeetingsButton.setGraphic(icon2);
+        SeetingsButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image3 = new Image(getClass().getResource("/icone/supprimer.png").toExternalForm()); 
+        ImageView icon3 = new ImageView(image3);
+        icon3.setFitWidth(30);
+        icon3.setFitHeight(30); 
+        DeleteButton.setGraphic(icon3);
+        DeleteButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        Image image4 = new Image(getClass().getResource("/icone/ajouter.png").toExternalForm()); 
+        ImageView icon4 = new ImageView(image4);
+        icon4.setFitWidth(30);
+        icon4.setFitHeight(30); 
+        AddButton.setGraphic(icon4);
+        AddButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        
     }
 
     public void refresh() {

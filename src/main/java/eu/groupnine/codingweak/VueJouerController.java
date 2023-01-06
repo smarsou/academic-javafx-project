@@ -3,20 +3,26 @@ package eu.groupnine.codingweak;
 import eu.groupnine.codingweak.stockage.Pile;
 import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+import java.net.URL;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class VueJouerController implements Observer{
+public class VueJouerController implements Observer, Initializable{
     Model model;
 
     @FXML
@@ -91,6 +97,17 @@ public class VueJouerController implements Observer{
 
 
     public void refresh(){
+        
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Image image1 = new Image(getClass().getResource("/icone/jouer.png").toExternalForm()); 
+        ImageView icon1 = new ImageView(image1);
+        icon1.setFitWidth(50);
+        icon1.setFitHeight(50); 
+        boutonJouer.setGraphic(icon1);
+       boutonJouer.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
         
     }
 }
