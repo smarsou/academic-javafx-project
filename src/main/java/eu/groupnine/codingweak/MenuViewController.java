@@ -86,6 +86,7 @@ public class MenuViewController implements Observer, Initializable{
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        model.stockFromDisk.save();
         model.callObservers();
         
     }

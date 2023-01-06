@@ -11,6 +11,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Objects;
@@ -144,11 +146,12 @@ public class VueAccueilController implements Observer, Initializable{
                 }
                 i++;
             }
-            System.out.println("bbbbbbbb   " + model.keyClicked);
+            
     }
 
-    public void DeletePile() {
+    public void DeletePile() throws FileNotFoundException, IOException {
         model.stockFromDisk.EnsembleDesPiles.remove(model.keyClicked);
+        model.stockFromDisk.save();
         model.callObservers();
     }
 
@@ -182,6 +185,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void refresh() {
         initialize(null, null);
+        
     }
 
 }

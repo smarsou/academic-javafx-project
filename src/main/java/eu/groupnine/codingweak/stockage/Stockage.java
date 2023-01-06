@@ -100,7 +100,6 @@ public class Stockage {
             Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
             EnsembleDesPiles = gson.fromJson(reader, fooType);
 
-            // System.out.println(EnsembleDesPiles2.get("pile1").nom);
         }
     }
 
@@ -118,20 +117,13 @@ public class Stockage {
                 System.err.println("Error import weird json");
                 return false;
             }
-            // Set<String> pileNamesToAdd = EnsembleToAdd.keySet();
-            // for (String pileNameToAdd : pileNamesToAdd){
-            //     if (EnsembleDesPiles.containsKey(pileNameToAdd)){
-            //         System.err.println("Import Warning: Import Pile with an existing name failed");
-            //         EnsembleToAdd.remove(pileNameToAdd);
-            //     }
-            // }
+
             Set<String> pileNamesToAddUpdate = EnsembleToAdd.keySet();
             for (String pileNameToAdd : pileNamesToAddUpdate){
                     EnsembleDesPiles.put(pileNameToAdd, EnsembleToAdd.get(pileNameToAdd));
                 }
             }
         return true;
-            // System.out.println(EnsembleDesPiles2.get("pile1").nom);
         }
 
     //Permet de mettre à jour les données stockées en dur par rapport à EnsembleDesPiles
@@ -165,8 +157,4 @@ public class Stockage {
     }
 
 
-    // // plus utile
-    // public Pile getPile(){
-    //     return null;
-    // }
 }

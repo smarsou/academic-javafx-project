@@ -20,12 +20,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Parent root = FXMLLoader.load(getClass().getResource("Hello.fxml"));
-        // Scene scene = new Scene(root);
 
-        // primaryStage.setTitle("CodingWeak");
-        // primaryStage.setScene(scene);
-        // primaryStage.show();
         Model model = new Model();
         MenuViewController.setModel(model);
         MenuViewController.stage = primaryStage;
