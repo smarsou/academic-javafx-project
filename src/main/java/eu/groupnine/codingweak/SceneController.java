@@ -1,5 +1,6 @@
 package eu.groupnine.codingweak;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import javafx.fxml.FXMLLoader;
@@ -47,7 +48,7 @@ public class SceneController {
         
     }
 
-    public void callFunctFromController(String name){
+    public void callFunctFromController(String name) throws IOException{
         if (name == "startQuestion"){
             if (this.getController("Jeu").getClass().getName() == "eu.groupnine.codingweak.VueQuestionController"){
                 VueQuestionController ctrl = (VueQuestionController) this.getController("Jeu");
@@ -58,6 +59,12 @@ public class SceneController {
             if (this.getController("Reglage").getClass().getName() == "eu.groupnine.codingweak.VueReglageController"){
                 VueReglageController ctrl = (VueReglageController) this.getController("Reglage");
                 ctrl.refresh();
+            };
+        }
+        if (name == "saveStats"){
+            if (this.getController("StatPartie").getClass().getName() == "eu.groupnine.codingweak.VueStatPartieController"){
+                VueStatPartieController ctrl = (VueStatPartieController) this.getController("StatPartie");
+                ctrl.saveStats();
             };
         }
         

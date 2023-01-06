@@ -40,7 +40,7 @@ public class VueStatPartieController implements Observer{
     }
 
     public void saveStats() throws IOException {
-        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(this.stats.cartesNonTrouvees,this.stats.cartesTrouvees, this.stats.cartesJouees, this.stats.cartesParMinutes, this.stats.tempsPasse, "" + this.stats.taux.nombrePartieJouer.size(), CalculTaux(model.getCurrentPile()));
+        model.stockFromDisk.EnsembleDesPiles.get(model.keyClicked).addStats(model.currentStats.cartesNonTrouvees, model.currentStats.cartesTrouvees, model.currentStats.cartesJouees, Integer.toString(model.getCurrentPile().stats.taux.nombrePartieJouer.size()) , model.currentStats.cartesTrouvees*100/model.currentStats.cartesJouees);
         model.stockFromDisk.save();
     }
 
@@ -56,8 +56,8 @@ public class VueStatPartieController implements Observer{
         resultat.setLabelsVisible(true);
     }
 
-    public Float CalculTaux(Pile pile){
-        Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
-        return taux;
-    }
+    // public Float CalculTaux(Pile pile){
+    //     Float taux = (float) (this.stats.cartesTrouvees/pile.stats.taux.nombrePartieJouer.size());
+    //     return taux;
+    // }
 }
