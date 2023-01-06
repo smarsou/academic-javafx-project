@@ -159,7 +159,9 @@ public class VueJouerController implements Observer, Initializable{
     }
 
     public void refresh(){
-        this.UNtitrePile.setText(model.getCurrentPile().getNom());
+        if (model.getCurrentPile() != null){
+            this.UNtitrePile.setText(model.getCurrentPile().getNom());
+        }
     }
 
     @Override

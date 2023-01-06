@@ -35,57 +35,47 @@ public class Stockage {
     public void init(){
         HashMap<String,Pile> EnsembleDesPiles2 = new HashMap<>();
         Pile pile1 = new Pile();
-        Pile pile2 = new Pile();
 
-        pile1.setNom("pile1");
-        pile1.setDescription("description pile 1");
-        pile2.setNom("pile2");
-        pile2.setDescription("description pile 2");
+        pile1.setNom("didacticiel");
+        pile1.setDescription("description de votre première pile");
+
 
         EnsembleDesPiles2.put("pile1",pile1);
-        EnsembleDesPiles2.put("pile2",pile2);
+
         this.EnsembleDesPiles = EnsembleDesPiles2;
 
-        Carte carte1 = new Carte(1,"question1","reponse1");
-        Carte carte2 = new Carte(2,"question1","reponse1");
-        Carte carte3 = new Carte(3,"question1","reponse1");
+        Carte carte1 = new Carte(1,"la face avant de votre première carte","la face arrière");
+        Carte carte2 = new Carte(2,"une deuxième carte","la face arrière");
+
         Stats stat1 = new Stats();
-        Stats stat2 = new Stats();
+
         Couple taux1 = new Couple();
-        Couple taux2 = new Couple();
+
         ArrayList<String> nombrePartieJouer1 = new ArrayList<String>();
         ArrayList<String> nombrePartieJouer2 = new ArrayList<String>();
         nombrePartieJouer1.add("0");
-        nombrePartieJouer2.add("0");
-        nombrePartieJouer1.add("1");
         nombrePartieJouer2.add("1");
+        nombrePartieJouer1.add("2");
+        nombrePartieJouer2.add("3");
         ArrayList<Float> tauxDeReussite1 = new ArrayList<Float>();
         ArrayList<Float> tauxDeReussite2 = new ArrayList<Float>();
-        tauxDeReussite1.add((float) 0);
-        tauxDeReussite2.add((float) 0);
-        tauxDeReussite1.add((float) 2);
-        tauxDeReussite2.add((float) 4);
+        tauxDeReussite1.add((float) 1);
+        tauxDeReussite2.add((float) 20);
+        tauxDeReussite1.add((float) 70);
+        tauxDeReussite2.add((float) 90);
 
 
         ArrayList<Carte> cars = new ArrayList<Carte>();
         cars.add(carte1);
         cars.add(carte2);
-        cars.add(carte3);
+
         pile1.cartes = cars;
         pile1.stats = stat1;
         pile1.stats.taux = taux1;
         pile1.stats.taux.nombrePartieJouer = nombrePartieJouer1;
         pile1.stats.taux.tauxDeReussite = tauxDeReussite1;
 
-        ArrayList<Carte> cars2 = new ArrayList<Carte>();
-        cars2.add(carte1);
-        cars2.add(carte2);
-        cars2.add(carte3);
-        pile2.cartes = cars2;
-        pile2.stats = stat2;
-        pile2.stats.taux = taux2;
-        pile2.stats.taux.nombrePartieJouer = nombrePartieJouer2;
-        pile2.stats.taux.tauxDeReussite = tauxDeReussite2;
+
     
     }
 
@@ -99,7 +89,10 @@ public class Stockage {
             Gson gson = new Gson();
             Type fooType = new TypeToken<HashMap<String,Pile>>() {}.getType();
             EnsembleDesPiles = gson.fromJson(reader, fooType);
-
+            if (EnsembleDesPiles==null){
+                init();
+                save();
+            }
             // System.out.println(EnsembleDesPiles2.get("pile1").nom);
         }
     }

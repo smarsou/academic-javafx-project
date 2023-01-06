@@ -60,6 +60,7 @@ public class VueAccueilController implements Observer, Initializable{
 
     public void chargePile(){
         //Obtenir l'ensemble des clés du dictionnaire
+
         Set<String> pileNames = model.stockFromDisk.EnsembleDesPiles.keySet();
         
         if (pileNames == null){
