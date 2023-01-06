@@ -9,8 +9,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <fx:include source="menu-view.fxml" />
         <GridPane layoutX="2.0" layoutY="26.0" prefHeight="665.0" prefWidth="966.0">
@@ -24,8 +25,14 @@
                 <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
             </rowConstraints>
          <children>
-            <Label fx:id="Question" lineSpacing="1.0" prefHeight="129.0" prefWidth="540.0" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Label fx:id="Reponse" prefHeight="119.0" prefWidth="541.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label fx:id="Question" lineSpacing="1.0" prefHeight="129.0" prefWidth="540.0" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="Reponse" prefHeight="119.0" prefWidth="541.0" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <Line endX="412.29290771484375" startX="-100.0" strokeWidth="2.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
             <GridPane prefHeight="79.0" prefWidth="600.0">
               <columnConstraints>
@@ -45,15 +52,27 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Temps" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                        <Label text="Temps" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
                         <Label text="cartes restantes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <GridPane.margin>
-                              <Insets right="80.0" />
+                              <Insets right="110.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Label fx:id="cartesRestantes" alignment="CENTER_RIGHT" layoutX="16.0" layoutY="24.0" prefHeight="16.0" prefWidth="25.0" />
+                              <Label fx:id="cartesRestantes" alignment="CENTER_RIGHT" layoutX="75.0" layoutY="41.0" prefHeight="16.0" prefWidth="25.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                            </children>
                         </AnchorPane>
                      </children>
