@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import eu.groupnine.codingweak.stockage.Carte;
 import eu.groupnine.codingweak.stockage.Pile;
+import eu.groupnine.codingweak.stockage.Stockage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -181,30 +182,47 @@ public class VueReglageController implements Observer {
     
     public void refresh() throws NullPointerException{
         try{
-        this.NomPile.setText(null);
-        this.Description.setText(null);
-        Pile p = this.model.getCurrentPile();
-        this.NomPile.setText(p.getNom());
-        this.Description.setText(p.getDescription());
         
-        this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("idcard"));
-        this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("infoquestion"));
-        this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("inforeponse"));
-        this.Table.getItems().clear();
+            this.NomPile.setText(null);
         
-        ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+            this.Description.setText(null);
+        
+            Pile p = this.model.getCurrentPile();
+        
+            this.NomPile.setText(p.getNom());
+        
+            this.Description.setText(p.getDescription());
         
         
+            this.idCartes.setCellValueFactory(new PropertyValueFactory<Carte, Integer>("idcard"));
         
-        for (int i = 0;i<CurrentCartes.size();i++) {
-            this.Table.getItems().add(CurrentCartes.get(i));
-        }
-        this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
-    }
+            this.Questions.setCellValueFactory(new PropertyValueFactory<Carte, String>("infoquestion"));
+        
+            this.Reponses.setCellValueFactory(new PropertyValueFactory<Carte, String>("inforeponse"));
+        
+            this.Table.getItems().clear();
+        
+        
+            ArrayList<Carte> CurrentCartes = this.model.PileCartes;
+        
+        
+        
+        
+            for (int i = 0;i<CurrentCartes.size();i++) {
+            
+                this.Table.getItems().add(CurrentCartes.get(i));
+        
+            }
+        
+            this.nbCartes.setText(CurrentCartes.size() + " " +"Cartes");
     
-    catch(NullPointerException exception){
+        }
+    
+    
+        catch(NullPointerException exception){
         
-    }
+    
+        }
         
     }
 
