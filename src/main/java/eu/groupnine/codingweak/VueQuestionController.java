@@ -163,7 +163,6 @@ public class VueQuestionController implements Observer {
         int id = VueQuestionController.indexCourant;
         // Carte card = this.model.PileCartes.get(id);
         // Carte card = this.model.nexCarte();
-        
         this.Question.setText(currentCarte.getQuestion());
         this.brep.setVisible(true);
         this.brep.setDisable(false);

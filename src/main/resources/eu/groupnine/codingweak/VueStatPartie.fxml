@@ -11,9 +11,9 @@
       <fx:include source="menu-view.fxml" />
       <PieChart fx:id="resultat" layoutX="220.0" layoutY="114.0" prefHeight="254.0" prefWidth="380.0" title="Résultat" titleSide="BOTTOM" />
       <Label fx:id="cpm" layoutX="106.0" layoutY="157.0" text="8" />
-      <Label layoutX="50.0" layoutY="184.0" text="cartes par minutes" />
-      <Label fx:id="temps" layoutX="99.0" layoutY="231.0" text="47s" />
-      <Label layoutX="43.0" layoutY="261.0" text="passés sur cette pile" />
+      <Label layoutX="50.0" layoutY="184.0" text="taux de réussite" />
+      <!-- <Label fx:id="temps" layoutX="99.0" layoutY="231.0" text="47s" />
+      <Label layoutX="43.0" layoutY="261.0" text="passés sur cette pile" /> -->
       <Label layoutX="227.0" layoutY="46.0" text="Bravo !" textAlignment="CENTER">
          <font>
             <Font size="40.0" />
