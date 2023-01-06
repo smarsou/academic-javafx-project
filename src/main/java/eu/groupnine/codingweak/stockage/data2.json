@@ -1,0 +1,81 @@
+{
+  "pile1": {
+    "nom": "QI",
+    "description": "Développer son esprit critique",
+    "cartes": [
+      {
+        "id": 1,
+        "question": "Combien font 0-0 ?",
+        "reponse": "La tête à ... je me tais d'accord."
+      },
+      {
+        "id": 2,
+        "question": "Qu'est ce qui est jaune et qui atteeeeeend ?",
+        "reponse": "Jonhataaaaaan lol"
+      },
+      {
+        "id": 3,
+        "question": "Pourquoi êtes vous ici ?",
+        "reponse": "Parce que j'ai envie de vous enlevez 10 points sur votre note."
+      }
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          2.0
+        ]
+      }
+    }
+  },
+  "pile2": {
+    "nom": "Telecom Training",
+    "description": "Un questionnaire pour préparer son cerveau à TN... ",
+    "cartes": [
+      {
+        "id": 1,
+        "question": "A quelle heure arrive-t-on en classe pour un cours à 8h ?",
+        "reponse": "Jamais... On vient pas en cours."
+      },
+      {
+        "id": 2,
+        "question": "Pourquoi dois tu venir à  TN ?",
+        "reponse": " Pour arrêter de vivre sa vie sociale et apprendre à coder !"
+      },
+      {
+        "id": 3,
+        "question": "Qu'est ce qui est dur à TN ?",
+        "reponse": "Les projeeeeeets :'("
+      },
+      {"id": 4,
+      "question": "Est-ce que le foot à TN c'est bien ?",
+      "reponse": "Ouiiiiiiii, venez vous inscriiiiire !"}
+    ],
+    "stats": {
+      "cartesJouees": 0,
+      "cartesTrouvees": 0,
+      "cartesNonTrouvees": 0,
+      "cartesParMinutes": 0.0,
+      "tempsPasse": 0,
+      "taux": {
+        "nombrePartieJouer": [
+          "0",
+          "1"
+        ],
+        "tauxDeReussite": [
+          0.0,
+          4.0
+        ]
+      }
+    }
+  }
+}
