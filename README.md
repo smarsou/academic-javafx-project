@@ -1,5 +1,9 @@
 # Coding Week G9
 
+# Vidéo de présentation
+
+https://youtu.be/sAErV-kfg3c
+
 # Lancement à partir du .jar
 
 Pour lancer l'application, il vous faudra installer javafx.
