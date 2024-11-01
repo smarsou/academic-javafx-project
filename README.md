@@ -1,4 +1,14 @@
-# Coding Week JAVA/JAVAFX
+# Coding Week JAVAFX
+
+**English :**
+
+This academic JAVA project took place over a 5-day week. We had to implement a JAVA application using JAVAFX for the GUI, all while following agile project management.    
+Here are the skills demonstrated by the project:
+- Forecast planning for the week and tracking progress against the schedule
+- Designing a JAVA application in MVC with a UML class diagram (which you can find below)
+- Implementing the JAVA application iteratively (one deliverable per day).
+
+**French :**
 
 Ce projet académique JAVA s'est déroulé sur une semaine de 5 jours. Nous devions implémenter une application en JAVA en utilisant JAVAFX pour le GUI. Tout cela avec une gestion de projet agile.
 Voici les compétences que reflète le projet :
