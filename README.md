@@ -1,4 +1,10 @@
-# Coding Week G9
+# Coding Week JAVA/JAVAFX
+
+Ce projet académique JAVA s'est déroulé sur une semaine de 5 jours. Nous devions implémenter une application en JAVA en utilisant JAVAFX pour le GUI. Tout cela avec une gestion de projet agile.
+Voici les compétences que reflète le projet :
+- Plannification prévisionnelle de la semaine et suivie de l'avancée du planning
+- Conception d'une application JAVA en MVC avec un diagramme de classe UML (que vous pouvez retrouver plus bas).
+- Implémentation de l'application JAVA de façon itérative (un livrable par jour).
 
 # Vidéo de présentation
 
